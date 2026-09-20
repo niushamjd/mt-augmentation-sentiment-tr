@@ -4,18 +4,25 @@ import argparse
 
 def prepare_english():
     ds = load_dataset("fancyzhx/amazon_polarity", split="train[:200000]")
-    print(ds)
-    print(ds[0])
 
     df = ds.to_pandas()
+    df = df.rename(columns={"content": "text"})
+    print(df["text"].duplicated().sum())
+    df = df.drop_duplicates(subset="text")
+
     print(df.shape)
     print(df["label"].value_counts())
 
 def prepare_turkish():
-    df = pd.read_excel("data/raw/e-ticaret_yorumlari.xlsx") # uses openpyxl
+    ds = load_dataset("fthbrmnby/turkish_product_reviews", split="train")
+
+    df = ds.to_pandas()
+    df = df.rename(columns={"sentence": "text", "sentiment": "label"})
+    df = df.drop_duplicates(subset="text")
+
     print(df.shape)
-    print(df.columns.tolist()) # column names as list
-    print(df.head())
+    print(df["label"].value_counts())
+
 
 def main():
     parser = argparse.ArgumentParser()
