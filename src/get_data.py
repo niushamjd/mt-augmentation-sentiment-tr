@@ -45,6 +45,27 @@ def prepare_turkish():
     print(df.shape)
     print(df["label"].value_counts())
 
+    def take(pool, n_per_class):
+        neg = pool[pool["label"] == 0].sample(n=n_per_class, random_state=42)
+        pos = pool[pool["label"] == 1].sample(n=n_per_class, random_state=42)
+        part = pd.concat([neg, pos]).sample(frac=1, random_state=42)
+        return part, pool.drop(part.index)
+
+    test, df = take(df, 1000)
+    dev, df = take(df, 500)
+    train, df = take(df, 1000)
+
+    assert len(set(train["text"]) & set(dev["text"])) == 0
+    assert len(set(train["text"]) & set(test["text"])) == 0
+    assert len(set(dev["text"]) & set(test["text"])) == 0
+
+    os.makedirs("data/sentiment", exist_ok=True)
+    for name, part in [("train", train), ("dev", dev), ("test", test)]:
+        path = f"data/sentiment/real_{name}.tsv"
+        part[["text", "label"]].to_csv(path, sep="\t", index=False)
+        print(name, part.shape, dict(part["label"].value_counts()))
+    print("Leftover pool:", df.shape)
+
 
 def main():
     parser = argparse.ArgumentParser()
