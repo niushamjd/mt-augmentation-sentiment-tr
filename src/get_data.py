@@ -11,7 +11,11 @@ def prepare_english():
     print(df.shape)
     print(df["label"].value_counts())
 
-
+def prepare_turkish():
+    df = pd.read_excel("data/raw/e-ticaret_yorumlari.xlsx") # uses openpyxl
+    print(df.shape)
+    print(df.columns.tolist()) # column names as list
+    print(df.head())
 
 def main():
     parser = argparse.ArgumentParser()
@@ -25,3 +29,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
