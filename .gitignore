@@ -222,3 +222,6 @@ joeynmt/
 data/raw/
 .DS_Store
 ~$*
+
+# MT model checkpoints (large, regenerable from configs/)
+models/
