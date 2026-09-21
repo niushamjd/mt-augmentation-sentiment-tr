@@ -217,3 +217,11 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 joeynmt/
+
+# Project data
+data/raw/
+.DS_Store
+~$*
+
+# MT model checkpoints (large, regenerable from configs/)
+models/

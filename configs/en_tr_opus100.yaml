@@ -1,0 +1,146 @@
+############## EN->TR translation model for synthetic sentiment data ##############
+#  Corpus: Helsinki-NLP/opus-100 (en-tr pair), loaded directly via HF `datasets`
+#  (no local copy needed: dataset_type "huggingface" streams straight from the
+#  HF Hub cache). Modeled on joeynmt/configs/iwslt14_deen_sp.yaml.
+#
+#  All commands below are run from inside the (untracked, locally-cloned)
+#  `joeynmt/` directory, pointing back at this repo's config/data with `../`:
+#
+#  Build the joint SentencePiece vocab (subsampled to 200k sents for speed):
+#   $ python scripts/build_vocab.py ../configs/en_tr_opus100.yaml --joint --random-subset 200000
+#
+#  Train:
+#   $ python -m joeynmt train ../configs/en_tr_opus100.yaml
+#
+#  NOTE: this is a placeholder tokenizer trained on the OPUS-100 corpus itself,
+#  standing in until Buse's shared review-domain SentencePiece model (trained on
+#  ~20k sampled Turkish/English reviews) is ready. Swap `tokenizer_cfg.model_file`
+#  and `voc_file` below to point at the shared model once it exists -- everything
+#  else in this config should still hold.
+name: "en_tr_opus100"
+joeynmt_version: "2.3.0"
+model_dir: "../models/en_tr_opus100"
+use_cuda: False    # CPU-only on this team's laptops (no MPS support in JoeyNMT/torch 2.1.2)
+fp16: False
+random_seed: 42
+
+data:
+    train: "Helsinki-NLP/opus-100"
+    dev: "Helsinki-NLP/opus-100"      # "dev" is auto-mapped to HF's "validation" split
+    test: "Helsinki-NLP/opus-100"
+    dataset_type: "huggingface"
+    dataset_cfg:
+        name: "en-tr"
+    sample_train_subset: 200000       # laptop-friendly subset of the 1M train pairs
+    sample_dev_subset: -1
+    src:
+        lang: "en"
+        max_length: 100
+        lowercase: True
+        normalize: False
+        level: "bpe"
+        voc_limit: 8000
+        voc_min_freq: 1
+        voc_file: "../data/mt/opus100_en_tr/sp.vocab"
+        tokenizer_type: "sentencepiece"
+        tokenizer_cfg:
+            model_file: "../data/mt/opus100_en_tr/sp.model"
+            model_type: "unigram"
+            character_coverage: 1.0
+            alpha: 0.1
+            pretokenizer: "moses"
+    trg:
+        lang: "tr"
+        max_length: 100
+        lowercase: True
+        normalize: False
+        level: "bpe"
+        voc_limit: 8000
+        voc_min_freq: 1
+        voc_file: "../data/mt/opus100_en_tr/sp.vocab"
+        tokenizer_type: "sentencepiece"
+        tokenizer_cfg:
+            model_file: "../data/mt/opus100_en_tr/sp.model"
+            model_type: "unigram"
+            character_coverage: 1.0
+            alpha: 0.1
+            pretokenizer: "moses"
+    special_symbols:
+        unk_token: "<unk>"
+        unk_id: 0
+        pad_token: "<pad>"
+        pad_id: 1
+        bos_token: "<s>"
+        bos_id: 2
+        eos_token: "</s>"
+        eos_id: 3
+
+testing:
+    n_best: 1
+    beam_size: 5
+    beam_alpha: 1.0
+    batch_size: 32
+    batch_type: "sentence"
+    max_output_length: 100
+    eval_metrics: ["bleu"]
+    sacrebleu_cfg:
+        tokenize: "13a"
+        lowercase: True
+
+training:
+    optimizer: "adamw"
+    normalization: "tokens"
+    adam_betas: [0.9, 0.999]
+    scheduling: "warmupinversesquareroot"
+    learning_rate_warmup: 2000
+    learning_rate: 0.0002
+    learning_rate_min: 0.00000001
+    weight_decay: 0.0
+    label_smoothing: 0.1
+    loss: "crossentropy"
+    batch_size: 4096
+    batch_type: "token"
+    batch_multiplier: 2
+    early_stopping_metric: "bleu"
+    epochs: 30              # starting point -- tune down/up once you see per-epoch time on CPU
+    validation_freq: 500
+    logging_freq: 100
+    overwrite: False
+    shuffle: True
+    print_valid_sents: [0, 1, 2, 3]
+    keep_best_ckpts: 3
+
+model:
+    initializer: "xavier_uniform"
+    bias_initializer: "zeros"
+    init_gain: 1.0
+    embed_initializer: "xavier_uniform"
+    embed_init_gain: 1.0
+    tied_embeddings: True
+    tied_softmax: True
+    encoder:
+        type: "transformer"
+        num_layers: 4
+        num_heads: 4
+        embeddings:
+            embedding_dim: 256
+            scale: True
+            dropout: 0.
+        hidden_size: 256
+        ff_size: 1024
+        dropout: 0.1
+        layer_norm: "pre"
+        activation: "relu"
+    decoder:
+        type: "transformer"
+        num_layers: 4
+        num_heads: 4
+        embeddings:
+            embedding_dim: 256
+            scale: True
+            dropout: 0.
+        hidden_size: 256
+        ff_size: 1024
+        dropout: 0.1
+        layer_norm: "pre"
+        activation: "relu"
