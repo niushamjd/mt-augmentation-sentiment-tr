@@ -36,10 +36,13 @@ def prepare_english():
     print("Wrote", out)
 
 def prepare_turkish():
+    # Source is already strictly binary (ClassLabel: negative/positive only) --
+    # no neutral/3-star category exists to drop.
     ds = load_dataset("fthbrmnby/turkish_product_reviews", split="train")
 
     df = ds.to_pandas()
     df = df.rename(columns={"sentence": "text", "sentiment": "label"})
+    df = df[df["text"].str.strip() != ""]
     df = df.drop_duplicates(subset="text")
 
     print(df.shape)
