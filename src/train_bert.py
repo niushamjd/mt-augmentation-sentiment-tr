@@ -103,6 +103,12 @@ def main() -> None:
     ap.add_argument("--batch-size", type=int, default=16)
     ap.add_argument("--results-csv", default="results/results_niyousha.csv")
     ap.add_argument("--notes", default="")
+    ap.add_argument(
+        "--dev-only", action="store_true",
+        help="for hyperparameter search: train + pick best epoch on dev, skip test "
+             "entirely (Section 1.2: no hyperparameter decision on the test set). "
+             "Prints a DEV_RESULT line instead of logging to results.csv.",
+    )
     args = ap.parse_args()
 
     set_seed(args.seed)
@@ -117,7 +123,7 @@ def main() -> None:
         n_synth = len(synth_df)
         train_df = pd.concat([train_df, synth_df], ignore_index=True)
     dev_df = load_tsv(Path(args.dev))
-    test_df = load_tsv(Path(args.test))
+    test_df = None if args.dev_only else load_tsv(Path(args.test))
     synth_ratio = (n_synth / n_real) if n_real else 0.0
 
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
@@ -126,7 +132,6 @@ def main() -> None:
 
     train_ds = SentimentDataset(train_df["text"], train_df["label"], tokenizer)
     dev_ds = SentimentDataset(dev_df["text"], dev_df["label"], tokenizer)
-    test_ds = SentimentDataset(test_df["text"], test_df["label"], tokenizer)
 
     # shuffling controlled by the same seed set above -> generator makes the
     # DataLoader's own shuffling reproducible independent of global torch state
@@ -134,7 +139,6 @@ def main() -> None:
     g.manual_seed(args.seed)
     train_loader = DataLoader(train_ds, batch_size=args.batch_size, shuffle=True, generator=g)
     dev_loader = DataLoader(dev_ds, batch_size=64, shuffle=False)
-    test_loader = DataLoader(test_ds, batch_size=64, shuffle=False)
 
     optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr)
     total_steps = len(train_loader) * MAX_EPOCHS
@@ -182,6 +186,16 @@ def main() -> None:
     model.load_state_dict(best_state)
     model.to(device)
 
+    if args.dev_only:
+        print(
+            f"DEV_RESULT lr={args.lr} batch_size={args.batch_size} "
+            f"best_epoch={best_epoch} epochs_run={epochs_run} "
+            f"best_dev_f1={best_dev_f1:.4f} train_time_s={train_time_s:.1f}"
+        )
+        return
+
+    test_ds = SentimentDataset(test_df["text"], test_df["label"], tokenizer)
+    test_loader = DataLoader(test_ds, batch_size=64, shuffle=False)
     test_preds = predict(model, test_loader, device)
     run_id = f"bert_{args.condition}_{args.mt_system}_{args.seed}"
     evaluate_and_log(
