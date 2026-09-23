@@ -225,3 +225,4 @@ data/raw/
 
 # MT model checkpoints (large, regenerable from configs/)
 models/
+data/spm/train_text.txt
