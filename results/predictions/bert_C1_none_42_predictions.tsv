@@ -46,7 +46,7 @@ idx	text	gold	pred	correct
 44	öncelikle bana ulaşması çok çabuk oldu. kitaplığınızda olması gereken bir kitap. fiyatı da çok uygun. üstelik üç kitap seçince bir de kitap hediye aldım.	1	1	1
 45	full hd uydu alıcılı usb led yazınca sankı uydusu icindeymiş gibi anlaşıyor oysa uydusu harici var ve kumandada kanal ayarları zor	0	0	1
 46	makine elime ulaşır ulaşmaz hemen kullandım motoru gayet güçlü ama torna vida uçları yumuşak malzemeden yapılmış. fiyatına göre iyi sayılır..	0	1	0
-47	çok kaliteli olduğunu söyleyemem. fiyatına göre sanki bir tık aşağıda.	0	0	1
+47	çok kaliteli olduğunu söyleyemem. fiyatına göre sanki bir tık aşağıda.	0	1	0
 48	fiyatıyla doğru orantılı bir ürün. benim beklentilerimi karşıladı.	0	1	0
 49	hepsiburadadan aldık çok memnun kaldık herkese teşekkür ederim.tavsiye ederiz	1	1	1
 50	tek yaşayanlar evi çok kirlenmeyenler için iyi bir araç. yorumlardaki gibi çok sesli bir araç değil normal bi makine ne kadar çıkarıyorsa o kadar ses cıkarıyor.	1	1	1
@@ -70,7 +70,7 @@ idx	text	gold	pred	correct
 68	500ml sıvı arap sabunu	0	1	0
 69	ürün yeni elime geçti çok harika fiyatı da çok uygun boş zamanlarımda kullanıyorum kesinlikle tavsiye ederim bu fiyata böyle bir ürün baska yerde yok	1	1	1
 70	hızlı gonderim için tesekkur edıyorum	1	1	1
-71	yorumlarını yazan arkadaşlar ilklere gösterilecek kadar kalıcı değil yazın kullanılabilecek hafif bir parfüm, parfüm alacak olursam bundan sonra bu siteyi tercih ederim,başka alışverişlerimde hızlı ve güvenli alışverişle karşılaştım,teşekkürler hepsi burada com.	0	1	0
+71	yorumlarını yazan arkadaşlar ilklere gösterilecek kadar kalıcı değil yazın kullanılabilecek hafif bir parfüm, parfüm alacak olursam bundan sonra bu siteyi tercih ederim,başka alışverişlerimde hızlı ve güvenli alışverişle karşılaştım,teşekkürler hepsi burada com.	0	0	1
 72	çok begendim.ebat olarak iyiki bunu almışım.tek kelimeyle kalite.camıda çok kalın.	1	1	1
 73	urun ve gonderim gayet basarili tesekkurler	1	1	1
 74	bir jilet gibi değil. biraz uğraştırıcı	0	0	1
@@ -113,7 +113,7 @@ idx	text	gold	pred	correct
 111	siparişi verdim, özelliklerini uzun süre araştırdım kullanan arkadaşlara sordum sabırsızlıkla bekliyorum. yanında samsung bluetoth kulaklık ve kılıfını da sipariş ettim.	1	1	1
 112	2. wd hdd im. öncekini alalı neredeyse 10 sene oldu bir gün tık demeden çalıştı. veri transfer hızı da oldukça başarılı. boyut ve ağırlıkta gömlek cebinde taşınabilicek kadar uygun...	1	1	1
 113	daha once baska markalar almıştım ama memnun kalmadım. bu ürün kesinlikle fiyat ve kullanım açısından iyi. yanlış tartmıyor ve çok şık. aldığımdan beri sorunsuz kullanıyorum.	1	1	1
-114	öncelikle; bu ürünün şişsiz ve ısı ayarı olmayanı arkadaşımda var ve uzun süre kullandım.	0	1	0
+114	öncelikle; bu ürünün şişsiz ve ısı ayarı olmayanı arkadaşımda var ve uzun süre kullandım.	0	0	1
 115	ürün ilk yeni alındığı zamanlar sıkıntısız çalışıyor. i̇şinizi görür. ancak ileriki zamanlarda isterseniz sabaha kadar pillerini şarj edin iki dakika kullanımdan sonra fıs. aniden bitiyor. piller ölüyor sanırım . bu fiyatın iki katına daha kullanımlı ya da elektrikli vidalamaları tercih etmeniz daha karınıza olacaktır. zira ben öyle yaptım.	0	0	1
 116	ürün çok şık çok kullanışlı çam oluşu hem sağlıklı hemde estetik, suyun kaynamasını ve çayın demini görüyorsunuz gerçekten çok şirin sevimli kullanışlı tuşları dokunmatik, estetik ön planda valla herkese tavsiye ederim gönül rahatlığıyla kendime almıştım anneme de almayı düşünüyorum...	1	1	1
 117	ben aldim memnun kalmadım çok basıt ve sert  almayın bence pişman olursunuz hiç kulanışlı deyıl	0	0	1
@@ -164,7 +164,7 @@ idx	text	gold	pred	correct
 162	3 ayda pili bozuldu şu na sıfır duracell pil takıyorum 2 haftaya pili bitiriyor. ayrıca hassas ayar yaparken sıkıntılı online fps oyunlarında uzaktaki kişilere nişan almakta zorlanırsınız günlük kullanım için yeterli, sesssiz çalışıyor, malzeme kalitesi de iyi, pil sorunu olmasa yine kullanırdım.	0	1	0
 163	çok beğendim güzel bir ürün sıvı pompa ayarı ile ne kadar sıvının akacağını belirleme avantajı var mutfak,banyo her yerde rahatlıkla kullanılabilir.	1	1	1
 164	hızlı kargo muhteşem gece sipariş verdim kahvaltı sonrası geldi	1	1	1
-165	arada çekince bantları kopsa da genel olarak memnunum	1	0	0
+165	arada çekince bantları kopsa da genel olarak memnunum	1	1	1
 166	sürekli alışveriş yapıyorum hepsi buradadan ürünlerim kısa zamanda ve temiz bir şekilde teslim edildi teşekkürler	1	1	1
 167	10 numara bebek bezidir.	1	1	1
 168	arkadaşlar note 3 daha iyi note 4 şebeke sorunu ciddi şekilde var bazen mesajlar geç geliyor birisi aradagında telefon kapali gösteriyor almayın paraniza yazık ben aldim pişman oldum note 3 daha iyi	0	0	1
@@ -178,7 +178,7 @@ idx	text	gold	pred	correct
 176	adore vlt-270 manager elite yönetici koltuğu	0	1	0
 177	tam bir tasarım harikası... usb 3.0 olmadığı için hız olarak onlarla yarışamaz ancak şahane bir usb 2.0 flash bellek... sizden görüpte hediye etmenizi isteyecek çok kişi olacaktır emin olun :)	1	1	1
 178	2 günde di̇ki̇şleri̇ açildi üst kisimdan zorlamaya bi̇le gerek kalmadi i̇ade etmek zorunda kaldim.	0	0	1
-179	tam bir visco yatak olmadığını bilerek aldım,evimde gerçek visco yatağım var onun gibi kesinlikle değil, zaten orijinal visco yatakların fiyatı belli. kız arkadaşıma hediye olarak aldım bende yatıyorum gayet rahat fakat fazla kilolu kişilerin çok rahat edebileceğini düşünmüyorum. ben 73 kiloyum benim popo kısmım fazla çöküyor gibi sabah biraz bel ağrım oluyor. fakat kız arkadaşım çok çok memnun yattığı gibi uyuyor. bence yastığınızı daha yumuşak seçerseniz yatakla uyum sağlayabilir.genellemede bu fiyata gayet iyi bir yatak diyebilirim.	1	0	0
+179	tam bir visco yatak olmadığını bilerek aldım,evimde gerçek visco yatağım var onun gibi kesinlikle değil, zaten orijinal visco yatakların fiyatı belli. kız arkadaşıma hediye olarak aldım bende yatıyorum gayet rahat fakat fazla kilolu kişilerin çok rahat edebileceğini düşünmüyorum. ben 73 kiloyum benim popo kısmım fazla çöküyor gibi sabah biraz bel ağrım oluyor. fakat kız arkadaşım çok çok memnun yattığı gibi uyuyor. bence yastığınızı daha yumuşak seçerseniz yatakla uyum sağlayabilir.genellemede bu fiyata gayet iyi bir yatak diyebilirim.	1	1	1
 180	küçük olsa bile rahatlıkla birçok oyun yüklenebiliyor hafif ve küçük olduğu için rahatlıkla kullanılabiliyor.küçük çocuklar rahatlıkla kullanabilr.tavsi̇ye ederi̇m... teşekkürler hepsi̇burada.	1	1	1
 181	bu deneyimlerim passat aracım için geçerlidir.	0	1	0
 182	uzun süredir uygun fiyatlı oto koltuğu arıyorduk, yorumları okuyarak aldık. gerçekten çok kaliteli ve kullanışlı kesinlikle tavsiye edilir. çocuğumuz çok rahat bir şekilde oturuyor hatta ilk oturttuğumuzda hemen uyudu	1	1	1
@@ -211,7 +211,7 @@ idx	text	gold	pred	correct
 209	eski jilet yöntemine dönüş kaçınılmaz.	0	0	1
 210	armaninin her ürününde olduğu gibi bu ürünüde harika koku çok fresh bir koku ve kalıcılığı da gün boyunca üzerinizde oluyor zaten bir parfümden beklentiniz bu olmalı bence tabiki zevkler görecelidir, önce  bi deneme yapıp sonra kararınızı verin derim....	1	1	1
 211	gönderim süresi çok uzun. hepsiburada, bu kargo işine bir çözüm üretmesi lazım. özellikle aynı gün kargo 1 haftada geliyor.	0	0	1
-212	hepten kötü de değil bu fiyata ancak bu kadar	0	0	1
+212	hepten kötü de değil bu fiyata ancak bu kadar	0	1	0
 213	dışarıda içtiğiniz  basit makine kahvelerinden daha basit bir tadım sunuyor. ekonomik bir kahve kullanımı var ama her bardakta su tadı ağır basıyor. pratik , kullanımı kolay ancak istediğim tat değil. i̇ade ettim . bu arada iade sürecinde hiç sorun çıkarmayan ve hatta destek olan hepsiburada.com a teşekkürler ..	0	0	1
 214	buradaki yorumlara dayanarak ürünü aldım.az kullanılması açısından uzun süre dayanıyo.ama o kadarda iddialı bi ürün değil. kapatıcı özelliği daha yüksek bi ürün seçsinler	0	0	1
 215	ürün gerçekten çok iyi. i̇şimi gayet iyi görüyor.	1	1	1
@@ -255,14 +255,14 @@ idx	text	gold	pred	correct
 253	touch ped yaramaz imleç zor oynuyor yerinden. harflerin sagindaki karakterleri yazdiramadim ornegin @ karakterini yazdiramadim. bu fiyata yaramaz.	0	0	1
 254	çünkü bu ürün hakkında bir fikir vermez. herkes için bu süreç değişkendir. ancak ürünü beğendim.kıllarının yumuşaklığı, fırçalarken diş etinde oluşan rahatlama beni memnun etti.en fazla üç ay kullanılmalı ve değiştirilmeli.	1	1	1
 255	tuvalet geldi ama yavru kedim daha gelmedi bakalım görünce ne yapacak.	1	0	0
-256	yemin ederim kolonya bile daha farkedilir ve daha kalıcı	0	1	0
+256	yemin ederim kolonya bile daha farkedilir ve daha kalıcı	0	0	1
 257	kullanmaya başladım. amacına uygun ve yeterli. pahalı ürünlerin gördüğü ayni işi görüyor.	0	1	0
 258	hizli kargo güzel ürün eğer si̇zde beni̇m gi̇bi̇ tek ki̇şi̇li̇k yatak kullaniyorsaniz ürün büyük geli̇yor ancak problem çikarmiyor. yatak üzeri̇nde aşiri bol durmuyor. kullanişli	1	1	1
 259	fiyatına göre hoş bir parfüm .. memmun kaldım.. inş stajlarda kullanacağım	1	1	1
 260	oysa spigen ne de kaliteli bir markadır	0	1	0
 261	normal tel uzunluk: 4-14 mm, genişlik: 12 mm	1	0	0
 262	bacak çalıştırma aparatı yere çok çinliler kendilerine göre yapmış herhalde :) onun dışında fena değil ..	0	0	1
-263	3 seridir note kullanıyorum. pil ömrü, dayanıklılık ve kullanış olarak özellikle note 4'ün üzerine telefon kullanmadım.	1	0	0
+263	3 seridir note kullanıyorum. pil ömrü, dayanıklılık ve kullanış olarak özellikle note 4'ün üzerine telefon kullanmadım.	1	1	1
 264	önceden kullandığım ledler içerisinde en iyi aydınlatan diyebilirim. sağlam ve düzgün duruyor. tek handikapı beyaz olduğu için krom tarzı avizelerde çok hoş görünmüyor	1	0	0
 265	ürün 2 gün içerisinde teslim oldu, fiyat performans açısından yeterli bir ürün. verdiğiniz ücretten fazlasını beklemeyin, kullanışlı ve bilekte şık duruyor.	1	1	1
 266	ürün salonu bile açıldığı anda kırıyor tek eksik yanı ilk başta kulagınıza az gelen sesi gittikçe baş ağrısı yapıyor. tek eksisi ses..	0	0	1
@@ -315,7 +315,7 @@ idx	text	gold	pred	correct
 313	çok güzel donuyor adeta taş kesiliyor ama yapıştırdığım yeri tutmadı anlamadım neyse aldık birkere teşekkürler hepsiburada...	0	0	1
 314	erkek arkadaşım bunu bulamadığı için siyahını almıştı. markasının çok fazla reklamı yapılmadığı için ya da ben görmedim insanlar pek bilmiyor. ama şunu söyleyebilirm. erkek parfümleri arasında sıralamada ilklerde yerini alabilir.	1	0	0
 315	artık çoğu evde çift cam var ancak bu ürün buna uygun nitelikte değil mıknatıs yeterli gelmiyor o yüzden sadece tek camlı pencereler için ideal	0	0	1
-316	ürünü dün taktırdım çekim gücü iyi yalnız cam modülü özelliği var diye aldıgım kumandanın bu özelliği fiat palio 2007 aracımda çalışmadı ayrıca cam kaldırma modülü aldım.kumanda kalitesi fena değil sert plastikten yapılmış.kapi kartonlarinin çikarılmasına gerek kalmadan taktı usta hem cam modülünü hem kumandayı.	1	0	0
+316	ürünü dün taktırdım çekim gücü iyi yalnız cam modülü özelliği var diye aldıgım kumandanın bu özelliği fiat palio 2007 aracımda çalışmadı ayrıca cam kaldırma modülü aldım.kumanda kalitesi fena değil sert plastikten yapılmış.kapi kartonlarinin çikarılmasına gerek kalmadan taktı usta hem cam modülünü hem kumandayı.	1	1	1
 317	harika bir ürün şiddetle tavsiye ederim.dayanıklı yapısı kalitesinin en belirgin özelliği ayrıca, kullanıldığı yüzeylerde tam temizlik yapması inanılmaz,hem çok güzel hemde güzel bir hediye.	1	1	1
 318	y.içi kargonun kibar personeli telefonla haber ederek sorunsuz şekilde teslim etti hepsiburadaya ve kargo şirketine teşekkür ederim	1	1	1
 319	ürün 24 saat sonra elimde oldu. çok teşekkürler.	1	1	1
@@ -365,7 +365,7 @@ idx	text	gold	pred	correct
 363	ürün iyi ama doğru ürünü göndermeleri biraz zaman aldı???	0	0	1
 364	alkol iceriyor bu yuzden agizda ozellile dilde fazlaca yanma yapiyor. fiyati piyasaya gore oldukca uygun, ozellikle sepet indirimleri ile birlikte..	0	0	1
 365	aldım sorunluydu kendim tamir ettim ama buton çalışsada uzaktan algılamadı. fiyatı kadar bir ürün şans işi.	0	0	1
-366	kutudan çıkartıp hemen kullanmaya başladım. sadece kanal sıralaması biraz alışkanlık gerektiriyor.	1	0	0
+366	kutudan çıkartıp hemen kullanmaya başladım. sadece kanal sıralaması biraz alışkanlık gerektiriyor.	1	1	1
 367	arkadaşlar 1-kargoya verilmesi 10 gün sürdü. 2-kargoda köşesi ezilmiş halde geldi. 3-eğer kapakları takarken vida deliklerine  uyarsanız kapağın biri aşağıda biri yukarıda oluyor. 4- yanında verilen spot ampül'ü aşırı ısınıyor ben iptal ettim.(tehlikeli) 5-olsun ben yinede almak istiyorum derseniz ki diğer dolaplara göre baya ucuz 6-bende marangozluk var diyorsanız alın .	0	0	1
 368	harikanın ürün kesinlikle her evde kullanılması gereken bir cihaz	1	1	1
 369	bu siparişteki tek iyi şey siparişin zamanında gelmesi idi.	0	1	0
@@ -436,7 +436,7 @@ idx	text	gold	pred	correct
 434	üründen sipariş etmek istiyoruz fakat aklımıza takılan bir soru var. acaba alt modülün derinliği derken lavaboyla birlikte 52 cm, yoksa sadece dolabın derinliğimi 52 cm. eğer sadece dolabınsa lavabonun çıkıntısıyla birlikte derinlik kaç cm? şimdiden teşekkürler.	1	0	0
 435	hb ya hızlı kargo için tşk.	1	1	1
 436	her özelliği ile harika!!!	1	1	1
-437	merhabalar,net ortamında birçok alışverişim oldu ama bu ürün merkezi bir yere 4 günde ulaştı.	0	0	1
+437	merhabalar,net ortamında birçok alışverişim oldu ama bu ürün merkezi bir yere 4 günde ulaştı.	0	1	0
 438	lg tvlerin garantisi bitince arıza yapıyor, iki tane lg aldım. i̇kisinden de garanti bitti arıza yaptı.	0	0	1
 439	çok kolay oluyor, alış. teşekkür ediyorum. hepsi bu kadar.	1	1	1
 440	dış çekimlerde özellikle güneşli ortamlarda ekranda sadece kendi yansımanızı görüyorsunuz, çekeceklerinizi değil...	0	0	1
@@ -464,7 +464,7 @@ idx	text	gold	pred	correct
 462	arkadaslar urun albenisi ismi hos ama resme bakip aldanmayin degim, ayni urunun baska modeline goz atmaniz faydali olabilir, ben bundan aldim begenmedim iade etmeyecegim fiyati fazla degil	0	0	1
 463	kesinlikle daha fazla ücreti hak eden çok kaliteli bir mouse.hiç şüphe etmeden alın derim	1	1	1
 464	aldığım 10 inç bilgisayar yanında 15.6 inçlik bu ürün ücretsiz geldi. kesip kesip yapıştırayım mı, ne yani? ürün kalitesi kesinlikle parasına değmez. i̇çinden çıkan 3 ürünün 2'sini çöpe attım; klavye koruyucuyu da eski bilgisayarımın klavyesinin üzerine örttüm. bilgisayar koruyucu çok güçlü yapışıyor; geri çıkarmak isterken bilgisayara zarar verebilir. sonuç: ücretsiz geliyorsa bir bakın, deneyin falan ama kesinlikle para vermeyin.	0	0	1
-465	çin iphone'u diyenlere 4c iphone'un yanından geçemez derim.	0	1	0
+465	çin iphone'u diyenlere 4c iphone'un yanından geçemez derim.	0	0	1
 466	ön koltuklarda olanlar normal. ama onlarda inip biberkwn kayıyor. lastik dikmek lazim	0	0	1
 467	plank, şınav gibi ayaktan güç alınan hareketlerde mat çok esniyor hatta kayıyor hareketi tamamlamanıza olanak sağlamıyor sadece sırt üstü hareketlerde iyi yoga için ideal değil sakatlanabilirsiniz	0	0	1
 468	cihazda yüksek voltaj ve yüksek akım koruması olması gerekirken ne yazık ki yok. her an yapabileceğiniz gibi herhangi bir usb ye takma isteği aleti bozabilir. ipad sarj aletiyle usb üzerinden 5v ve 2.4a i bağladığınız anda alet bozuluyor (normalde 5v ve 2a olması gerekir yazıyor). i̇çindeki piller sağlam kaldı mı bilmiyorum ama 0.4 amper fark yüzünden aletin bozulması çok kötü, en az 2-3 tane farklı pil denedim aynı ipad şarj aletinde hiçbirinde sorun oluşmadı.	0	0	1
@@ -478,7 +478,7 @@ idx	text	gold	pred	correct
 476	opel astra aracımda olmadı.havalandırma ızgarasına tutturdum ve telefonu taktım.i̇lk tümsekte telefonla birlikte düştü.tutucu kısmın daha uzun olması gerekiyordu.çok kısa kalmış bu şekilde.	0	0	1
 477	hiç beğenmedim kullanışsız beklediğimden yavaş şarj oluyor. külüstür bişeymiş. sürekli donuyor.tuşlara zor basılıyor.önceki telefonum bozulduğu için böyle idare edecek bişey alıyım dedim pişman oldum	0	0	1
 478	hepsiburada.com'a teşekkür ediyorum. hem ürünü hızlı gönderdikleri için hem de çok hızlı bir şekilde ürünü iade aldıkları için. xiaomi markasına çok fazla güveniyorum. yorumlarda da basslarla ilgili problemleri okumuştum ama beklentilerin çok yüksek olduğunu düşünmüştüm. alır almaz test ettim. maalesef xiaomi kalitesinin çok altında kalan bir ürün olduğunu gördüm. ürün plastiği kalitesiz. bass hiç yok. volume fena değil.	0	0	1
-479	tan kıvamında balıklar ve ızgaralar yapıyoruz	1	0	0
+479	tan kıvamında balıklar ve ızgaralar yapıyoruz	1	1	1
 480	ürün tanıtıldığı özelliklerde malzeme kalitesi çok iyi aldığıma çok memnun oldum,indirimli olması da ayrıca cabası.	1	1	1
 481	süper bir ürün herkese tavsiye ederim ilk bir kaç gün gerek sünger kokusu gerekse alışamadım diye karamsarlık etsekte hem eşim hem de ben bu fiyata bu ürünü kaçırmadığımız için memnunuz..	1	1	1
 482	süper hızlı gonderi olmasına güvenip doğum günü hediyesi olarak almıştım, günler sonra elime ulaştı. kargo fiyasko ama urun kullanisli	0	1	0
@@ -498,9 +498,9 @@ idx	text	gold	pred	correct
 496	kitap kurtlarına ısrarla tavsiye ediyorum.	1	1	1
 497	ben bu kokuyu daha önce hiç üstümde denemeden, yorumlara bakarak aldım.	0	1	0
 498	3) tam olarak tek dolumda 4 kez lg g4 stylus (3000 mah),           3 kez de iphone 6s (kaç mah) bilniyorum)'i tam olarak şarj etti	1	1	1
-499	yavru kediler için güzel bir oyuncak.. ancak içerisindeki fare benim kedime 15 dakika dayanabildi.. eğer yetişkin bir kediniz varsa ömrü çok uzun olmayabilir..	0	1	0
+499	yavru kediler için güzel bir oyuncak.. ancak içerisindeki fare benim kedime 15 dakika dayanabildi.. eğer yetişkin bir kediniz varsa ömrü çok uzun olmayabilir..	0	0	1
 500	bir çok farklı ürün denedim, hatta diğer büyük markanın muadil ürününü sırf karşılaştırmak için aldım okey zero piyasadaki en kaliteli en ince en yokmuş gibi ürün	1	1	1
-501	güzel bi saat. fiyatı da fena diil. pusulası için aldım denizcilik sektöründeyim.rüzgar yönünü ölçmek, sıcaklık değerlerini almak için gayet kullanışlı ve pratik. ancak sıcaklığı ölçerken kolunuzdan çıkartmanız ortam sıcaklığını en doğru şekilde ölçmek için ideal yöntem. tek olumsuz yönü ışığı az süre yanıyor ancak çok önemli diil saatin kaç olduğunu görmek bana yetiyor.. :)	0	0	1
+501	güzel bi saat. fiyatı da fena diil. pusulası için aldım denizcilik sektöründeyim.rüzgar yönünü ölçmek, sıcaklık değerlerini almak için gayet kullanışlı ve pratik. ancak sıcaklığı ölçerken kolunuzdan çıkartmanız ortam sıcaklığını en doğru şekilde ölçmek için ideal yöntem. tek olumsuz yönü ışığı az süre yanıyor ancak çok önemli diil saatin kaç olduğunu görmek bana yetiyor.. :)	0	1	0
 502	gelen ürünler çok kötü çıktı.	0	0	1
 503	ben eski mousemla halıda kullanamıyordum.	1	0	0
 504	ürün harika. i̇ki gündür kullanıyorum. doğru tercih yaptığıma inanıyorum. zamanında gönderdiği için hepsiburada.coma teşekkür ediyorum.	1	1	1
@@ -554,7 +554,7 @@ idx	text	gold	pred	correct
 552	ürün çocuklara göre ancak bize gelen top tam yuvarlak değil sanki hafif elips gibi, bu da göze hoş gelmiyor.	0	0	1
 553	yazarken koyu renkleri sevenler için güzel bir kalem.ince uçlu kalemler gibi degil ayrıca silik de yazmıyor. ben aldım fiyatı da gerçekten uygun.	1	1	1
 554	ama bosaltması biraz tozutuyor ortalıgı.torbayı alıp cope atmaya alısan bırı icin ilk basta zor gelebilir hazneyı cıkarıp ıcını bosaltmak. hazneyı bosaltma sonrası yıkayıp takarsanız pırıl pırıl olur. yıkamazsanı kırlı kalıyor hazne ıcı cama yapısan tozlar kalıyor zamanla alısırsınız.	0	0	1
-555	saat kadranı beklediğimden büyük geldi. fakat genel olarak erkek saatleri bu boylarda. kordon gerçek deri görüntüsünden ziyade suni deri gibi görünüyor. günlük kullanım için ideal bir saat.	1	0	0
+555	saat kadranı beklediğimden büyük geldi. fakat genel olarak erkek saatleri bu boylarda. kordon gerçek deri görüntüsünden ziyade suni deri gibi görünüyor. günlük kullanım için ideal bir saat.	1	1	1
 556	ben aldım kullanıyorum, 1 yılı geçti. lavabosu gayet geniş, kurulumu kolay. kalitesi de gayet yeterli. kesinlikle tavsiye ederim.aynası vs. boyutları yeterli.	1	1	1
 557	fiyat uygun kaliteli bence alınabilir	1	1	1
 558	urun okadar kotu. hic begnmedim. simdi kedim oyuncak gibi kullaniyor. acmak zor. hep tuvalet kagit gibi duruyor. ve cok kotu kimyasal ile kokuyotdu. 24 saat balkonda havalandirdim. yane bu urun pulates icin degil.	0	0	1
@@ -564,7 +564,7 @@ idx	text	gold	pred	correct
 562	kullanımı rahat olsa da hafıza sorunu telefonu geride bırakıyor istediğin uygulamayı rahatlıkla yükleyemiyorsun 8 gb çok az şarj da yetmiyor günde 2 defa şarja katıyorum. aldıktan bi süre sonra pişman ettirecek bir telefon.	0	0	1
 563	telefonumu 2buçuk kere şarj ediyor	0	0	1
 564	ürün güzel kullanişli fakat çift camda bi işe yaramıyor artik günümüz şartlarini düşünürsek tek cam nadirdir sanirim. yinede teşekkürler hepsiburada	0	0	1
-565	eleştrip hatalı oldugunu söyleyenler olmuş. ben normal bir kullanıcı olarak bir sıkıntı görmedim üründe. 2 tane aldım ikisi de normal.	1	1	1
+565	eleştrip hatalı oldugunu söyleyenler olmuş. ben normal bir kullanıcı olarak bir sıkıntı görmedim üründe. 2 tane aldım ikisi de normal.	1	0	0
 566	ürün orijinal ve kaliteli, fiyat uygun. tek sorun hediye çantanın gönderilmemesi oldu.	1	1	1
 567	ürün kalitesi ve gönderimi iyi ancak merkezi uydu sistemine bağladım sinyal artacağı yerde dahada düştü. kullananlar nasıl yaptı bilmiyorum ama işe yaramadı.	0	0	1
 568	hızlı kargo,güzel tasarım ,leziz çaylar çok memnun kaldık	1	1	1
@@ -573,7 +573,7 @@ idx	text	gold	pred	correct
 571	ürünü kızımız için 8 aydır aralıksız kullanıyoruz. kızımızda memnun bizde... zaten bu üründen daha iyisi yok..hepsiburada avantajıyla almak tabiki daha güzel! pişiksiz günler.....	1	1	1
 572	harika bir ürün . orijinal kutusunda ve hiç el değmemiş olarak aldım çok teşekkürler.	1	1	1
 573	tablo çok güzel ve canlı renkleri var eve hoş bir nava kattı almayı düşünüyorsanız tavsiye ederim	1	1	1
-574	tek anten,i̇ki tv;  tv lerin ikisi birden açılınca, bazı kanallar çıkmıyor,tv nin birtanesi kapalı olursa verimli çalışıyor,takdir alacaklara.	0	1	0
+574	tek anten,i̇ki tv;  tv lerin ikisi birden açılınca, bazı kanallar çıkmıyor,tv nin birtanesi kapalı olursa verimli çalışıyor,takdir alacaklara.	0	0	1
 575	henuz dengede duramayan yada yeni yeni ayaklananlar icin arka tekerlekleri kilitlerseniz cok rahat surebilir.	1	0	0
 576	içinden bir tane lastik çıktı	0	0	1
 577	bundan daha i̇yi̇si̇ olamaz.mükemmel,özelli̇kle bayanlar i̇çi̇n	1	1	1
@@ -582,7 +582,7 @@ idx	text	gold	pred	correct
 580	arkadaşlar,ürünü 1 yıl önce hepsiburadan indirimli haliyle almıştım ,1 yıldır hiç sorunsuz kullanıyorum,çayın tadı gerçekten çok güzel bence,pilastik olanlara göre farkı var,çokta estetik,hoş bir görüntüsü var,ışıkları güzel görünüyor,ben çok titiz bir  araştırma yaptıktan sonra  bu ürüne karar vermiştim,kesinlikle tavsiye ediyorum.	1	1	1
 581	yerde ne kadar saç teli, toz varsa hepsini elektrik süpürgesi gibi topluyor. temizlik için zamanınız kısıtlıysa ideal bir seçim.	1	1	1
 582	eşim için aldım çok memnun kaldı.hepsi burada'ya ve mağazaya teşekkürler.	1	1	1
-583	ürünü kullanmaya bilirseniz çok güzel.boyaya başlamadan önce kapı pencere pervazları çıkıyorsa çıkartın çıkmıyorsa bir güzel bantlayın aynı şekilde yeri de bantlayın.(ben bantlamadım, sadece gazete ve hısır örtü serdim)çünkü motoru çalışırken çıkan rüzgar gazeteleri ve hışır örtüyü havalandırıyor sonuçta da her yer boya oluyor.i̇kinci bir uyarımda boyamak istemediğiniz yüzeylerin yakınını fırça yada rulo ile geçin böylece püskürtme esnasında oralar temiz kalır.başka bir uyarımda ben su bazlı plastik kullandım hava da çok sıcak oldugundan çabuk kabuklanma oldu boyayı inceltince hemen kullanın yada ilerki aşamalarda süzgeç kullanarak süzün yoksa tıkanma oluyor.tıkanınca çabuk temizleniyor ama bir sürü uğraşıyorsunuz ayrıca boyamaktan zevk almıyorsunuz.tavan boyarmı diye terettüt edenler için tutma açısını yakalarsanız tavanı da rahat boyarsınız.sonuç olarak boyadıktan sonra temizlikle de uğraşmak istemiyorsanız çok titiz bir şekilde bantlama yapın.hışır örtülerde çok kullanışlı iki tanesi koca bir salonu eşyaları ile birlikte örtebiliyor. tabancanın sesi çok fazla bir kötü özellik olarak sonrasında o na da alışıyorsunuz.evinin boyayacak arkadaşlara şimdi den kolay gelsin.	0	0	1
+583	ürünü kullanmaya bilirseniz çok güzel.boyaya başlamadan önce kapı pencere pervazları çıkıyorsa çıkartın çıkmıyorsa bir güzel bantlayın aynı şekilde yeri de bantlayın.(ben bantlamadım, sadece gazete ve hısır örtü serdim)çünkü motoru çalışırken çıkan rüzgar gazeteleri ve hışır örtüyü havalandırıyor sonuçta da her yer boya oluyor.i̇kinci bir uyarımda boyamak istemediğiniz yüzeylerin yakınını fırça yada rulo ile geçin böylece püskürtme esnasında oralar temiz kalır.başka bir uyarımda ben su bazlı plastik kullandım hava da çok sıcak oldugundan çabuk kabuklanma oldu boyayı inceltince hemen kullanın yada ilerki aşamalarda süzgeç kullanarak süzün yoksa tıkanma oluyor.tıkanınca çabuk temizleniyor ama bir sürü uğraşıyorsunuz ayrıca boyamaktan zevk almıyorsunuz.tavan boyarmı diye terettüt edenler için tutma açısını yakalarsanız tavanı da rahat boyarsınız.sonuç olarak boyadıktan sonra temizlikle de uğraşmak istemiyorsanız çok titiz bir şekilde bantlama yapın.hışır örtülerde çok kullanışlı iki tanesi koca bir salonu eşyaları ile birlikte örtebiliyor. tabancanın sesi çok fazla bir kötü özellik olarak sonrasında o na da alışıyorsunuz.evinin boyayacak arkadaşlara şimdi den kolay gelsin.	0	1	0
 584	sağlam ve dayanıklı yapıdadır.	0	1	0
 585	olumlu kısımları: öncelikle çocukları eğlendiriyor. montajı basit. farklı bir ortam sağlıyor.	0	1	0
 586	harıka gercekden sonderece kalıtelı koltuk ve tavan dosemesınde kullandım  sızı hıc yormuyor kulanımı cok sabıt  kopuk ıyıce sıkın kırı dısarı cıkarıyor bezle sılın yeter  ovalama yok  gozlerım kamasıyor bu urunu gorunce	1	1	1
@@ -637,13 +637,13 @@ idx	text	gold	pred	correct
 635	ürün aşırı kalitesiz,geldiğinde pompası çalışmadığını farkettim içindeki mekanizmada sorun vardı.alacaklara tavsiye etmiyorum,paranızı çöpe atmayın.	0	0	1
 636	ürün güzel paketlenmiş bir biçimde geldi.fiyat olarak da uygun.	1	1	1
 637	uygun fiyata, çok da seçici olmayan kalabalık bir kedi güruhunun yiyeceği bir mama arıyorsanız, işinizi göreceğini düşünüyorum.	1	1	1
-638	telefon güzel ve kullanışlı bir telefon. özellikleri oldukça iyi ancak hızlı şarj 30 dk. denmesine rağmen 2 saat alıyor. gelen çağrıyı da görmek için önce güç düğmesi sonra telefon ikonu sonra çağrıya dön ondan sonra gelen çağrıyı görebiliyorsunuz. bu özelliği iyileştirilmediği sürece diğer özellikleri çok iyi olsa da sınıfta kalır.	0	0	1
+638	telefon güzel ve kullanışlı bir telefon. özellikleri oldukça iyi ancak hızlı şarj 30 dk. denmesine rağmen 2 saat alıyor. gelen çağrıyı da görmek için önce güç düğmesi sonra telefon ikonu sonra çağrıya dön ondan sonra gelen çağrıyı görebiliyorsunuz. bu özelliği iyileştirilmediği sürece diğer özellikleri çok iyi olsa da sınıfta kalır.	0	1	0
 639	gayet şık ve sağlam kasa tasarımı var, bu fiyata alınabilecek en güzel cihaz, üzerindeki android sürümü en az 2 sene idare eder, güncelleme çıkmayacakmış haberlerine rağbet etmemek lazım.	1	1	1
 640	gönderi hızlı yapıldı, ürün beklentileri karşılıyor..	1	1	1
 641	ürünü beğenmedim. tavsiye etmiyorum.	0	0	1
 642	klasik yaylı yataklar gibi yıllarca kullanılmış deforme olmuş gibi duruyor.	0	0	1
 643	sıkılmadım güzel bir kitaptı 3 kitabı da ayrı güzel	1	1	1
-644	ürünün 2/3 kadarını 45 litre mazota ekledim, aracı 100 km 2500-3000 devir civarı kullandım, henüz yarım depo yakıt harcadım. aracımda 140 bin'de 1.3 multijet 75hp motor var. son 20 bin km'dir bazen bir kaç sefer sonra marş alıyordu, ürünü denemeye başladığımdan beri bu sorun tekrar etmedi henüz. ayrıca 1500-2000 devir arasında 5. ve 6. viteste bazen motor vuruntu yapıyordu, baya azaldığını hissettim ama tamamen geçmedi henüz.	1	1	1
+644	ürünün 2/3 kadarını 45 litre mazota ekledim, aracı 100 km 2500-3000 devir civarı kullandım, henüz yarım depo yakıt harcadım. aracımda 140 bin'de 1.3 multijet 75hp motor var. son 20 bin km'dir bazen bir kaç sefer sonra marş alıyordu, ürünü denemeye başladığımdan beri bu sorun tekrar etmedi henüz. ayrıca 1500-2000 devir arasında 5. ve 6. viteste bazen motor vuruntu yapıyordu, baya azaldığını hissettim ama tamamen geçmedi henüz.	1	0	0
 645	ürün gayet güzel ve kullanışlı resimde gösterildiği gibi	1	1	1
 646	şarjı iyi, çekiş gücü fena değil ama gerisi boş.daha önce arzum marka bir süpürge kullanıyordum. her yıl bataryası bozuluyor diye bunu aldım. ancak ürün kalitesi hiç de iyi değil. ayrıca çöp saklama haznesi çok zor açılıyor, üstelik süpürdüğünüz çöpleri geri dökülüyor. ucuna basit kapak gibi bişi koymuşlar o da kısa sürede işlevini yitiriyor. çektiği çöpü geri döküyor. önermem...	0	0	1
 647	ürün aslında çok basit, dekoratif olarak güzel duruyor, rengi de güzel, ancak çok sağlam değil, ayakkabılık olarak kullanacaksanız ağır ayakkabıları(bot gibi) çok yığmayın derim. birleştirme ve sabitlemede kullanılan çiviler çaktığınız çıtaya göre çok büyük verilmiş, çakarken ya çıta kırılıyor ya da çiviler çıtanın arkasından çıkıyor. bir rafa üç ayakkabı sığıyor. toplamda 9 ayakkabı alır. kargo yine hızlı geldi, paketleme iyiydi. ben ürünü yeni alan biri olarak çıtaların çok ince olması ve kırılması dolayısıyla hoşlanmadım. olumlu değilim, daha sağlam bir ürün tercih edin derim	0	0	1
@@ -702,7 +702,7 @@ idx	text	gold	pred	correct
 700	diğer kullandığımız bulaşık deterjanları genelde leke bırakıyordu. ama artık lekeden eser yok. ayrıca hepsiburada pek çok yerden daha uygun. teşekkürler.	1	1	1
 701	ürün gayet hızlı teslim edildi, ev için oldukça yeterli bir ürün. teşekkürler.	1	1	1
 702	üründe çok keski̇n bi̇r koku var bu koku ve i̇çeri̇si̇nde sağlik bakanliğinin  uygunluk belgesi̇ gi̇bi̇ veya  cc ve tse belgeleri̇ olabi̇li̇rdi̇.ben kullanmadim kokusundan  ci̇lde temasda zarar görmemesi̇nden çeki̇ndi̇ği̇m i̇çi̇n kullanmadiğim i̇çi̇n yorum yapamiyacagim	0	0	1
-703	2 yıl kadar önce , aynı markanın daha düşük modelini kullanıyordum. şimdi buna geçtim. aralarında çok fark gördüğümü söyleyemem. zaman uyarıcısı, seyahat kabı, fırçası, herşeyi çok profesyonel.düşünüyorsanız bence çok düşünmeden alın, manuel fırçalarla kıyaslanamaz.	1	0	0
+703	2 yıl kadar önce , aynı markanın daha düşük modelini kullanıyordum. şimdi buna geçtim. aralarında çok fark gördüğümü söyleyemem. zaman uyarıcısı, seyahat kabı, fırçası, herşeyi çok profesyonel.düşünüyorsanız bence çok düşünmeden alın, manuel fırçalarla kıyaslanamaz.	1	1	1
 704	ürün fiyatından da tahmin edileceği gibi çok kaliteli değil. geldiğinde yan demirlerden biri çıkmış ve bir rafın köşesi çatlamıştı. yine de o şekilde işimizi gördü. mutfak masamızın üzerine monte ettik, görünüşü çok sevimli oldu. çok ağır şeyler taşımaz ama biblo, baharatlık vs konulabilir. hem uygun fiyatlı olsun hem de işimi görsün diyorsanız biçilmiş kaftan.	0	0	1
 705	kargo cok hızlı, ürün başarılı. teşekkürler hb	1	1	1
 706	ucuz oldugu icin aldim, urunde hafif atmalar vardi kutuyu acinca, geri gondermek mesele... ugrasmadim acikcasi, montaj tecrubem olmasa yapamazdim, birde ne kadar ayarlasamda ayar tutmuyor sanirim delik actiklari montaj yerleri bir kac mm hatali simetrik degil, ama idare eder.	0	0	1
@@ -766,13 +766,13 @@ idx	text	gold	pred	correct
 764	bu fiyata bu ürün gayet iyi ve kaliteli.hiç düşünmeden alınabilir.hızlı bir şekilde ulaştı,genelde satın aldığım tüm ürünler hızlı bir şekilde ulaşıyor,teşekkürler hepsiburada.com	1	1	1
 765	ürünü 24,09,2016 cumartesi akşam saatlerinde sipariş verdim 28.09,2016 tarihinde geldi.kargo olarak hız gayet iyi.kata çıkardılar kurulum için servis bekliyorum o da bugun gelecek.çok beklermiyim diye düşünmeyin hafta içi 2 günde geliyor 3 günde işlem bitiyor.ürün hakkında ilk izlenimlerim ariston kalitesinin güzel yansımaları oldu.eğer bir bebeğiniz varsa bebek programlı anti alerji özellği olan ve çocuk kilidi özelliği olan 7 kglık ve ++ lı en uygun ürün piyasada bu.başka hiçbir siteye bakıp vakit kaybetmeyin en uygunu da burada.alışverişte tek eksik denilebilecek taraf ise bonus gibi çok kullanılan bir karta maximumum 5 taksit vermesi.	1	1	1
 766	çok teşekkürler.çok kibar ve ilgili bir mağaza.teslimat çok hızlı ve ürün gerçekten çok kaliteli.	1	1	1
-767	ürünü alırken tereddütlü aldım. fakat kullandıktan sonra başarılı bir ürün olduğuna karar verdim. aracım 2 akşam çam ağacı altında kaldı ve müthiş tozlu+yapış yapış vaziyette idi. sünger ile fazla bastırmadan hallettim, aşırı köpürüyor ve kokusu da çok iyi bu arada. herkese iyi alışverişler...	1	0	0
+767	ürünü alırken tereddütlü aldım. fakat kullandıktan sonra başarılı bir ürün olduğuna karar verdim. aracım 2 akşam çam ağacı altında kaldı ve müthiş tozlu+yapış yapış vaziyette idi. sünger ile fazla bastırmadan hallettim, aşırı köpürüyor ve kokusu da çok iyi bu arada. herkese iyi alışverişler...	1	1	1
 768	fiyatı itibariyle çok bişey beklememek lazım sonuçta kolay monte ediliyor şuan kullanıyorum düğmesi biraz sert sağlam basmak gerekiyor	0	1	0
 769	hızlı kargo ve okadar da özenli paketleme yapılmış ki helal olsun emeği gecenlere cok memlun olduk	1	1	1
 770	kargolama konusunda bir sıkıntı yasamadım fakat ürün 3 hafta içerisinde bozulup sarj etmemeye basladı.	0	0	1
 771	başka bir firmanın bezinden prima geçtik daha iyi ve kaliteli	1	1	1
 772	daha önce duracel,philips ve varta kullandım aralarında en uzun ömürlü pil olarak görüyorum.ayrıca fiyat avantajı çok cazip ha birde kargo bedava bence kaçırılmaması gereken bir fırsat	1	1	1
-773	çünkü tekrar tekrar kullanılabiliyor.	1	1	1
+773	çünkü tekrar tekrar kullanılabiliyor.	1	0	0
 774	ürünü 4-5 ayı geçen bir süredir kullanıyorum, eski yatağıma göre çok iyi, ama almayın, üzerinde çarşaf durmuyor, orta kısma toplanıyor çarşaf, üzerindeki dikişlerin hepsi attı neredeyse, kendi yüzeyi aşırı kaygan olduğu içinde çarşaf durmuyor, ayrıca inanılmaz derecede tüylenme oldu topak topak çarşafın altında elinize geliyor, yatağın neresi visko onu anlamak mümkün değil, ben anlamadım kafama göre çevirip çevirip yatıyorum valla, düz sünger yatak bile olabilir bu yatak visco olduğundan şüpheliyim, çok terletiyor, çok yumuşak olduğu için yatakta dönmekte zor :) almayın kardeşim gidin yatıp deneyin, ondan sonra alın.	0	0	1
 775	ürünü çok kaliteli bulmadım ama spor yapmak için iş görür, çok basit malzame kullanılmış. ama yine de bu fiyata ancak o kadar olur,	0	0	1
 776	7.)telefon büyük ve tek elde kullanım için biraz sıkıntılı ancak kasanın incelik konusunda gayet güzel	1	1	1
@@ -784,7 +784,7 @@ idx	text	gold	pred	correct
 782	ses kalitesi çok kötü onun dışında gayet iş görür	0	0	1
 783	telefon bildiğimiz samsung,fakat hantallığın önüne rootlamayla geçebilirsiniz.şarj olayı tamamen kullanıma bağlı,android arka planı sever ki bu size yetersiz pil olarak yansır.1 gün gider kısacası.	0	0	1
 784	mouse : mouse gerçekten bir problem, avucunuza oturmuyor, ayrıca lazerli algılayıcı kullanılması tam açık renkli veya tam koyu tonlu zeminlerde titreme ve atlama yapıyor. ek olarak mouse üzerinde de kapatma butonunun olmaması pil kullanımı ve ömrü konusunda şüpheye sebep oluyor.	0	0	1
-785	kalitesi mükemmel değil ancak kullanışlı tasarım süper kesimler iyi gözünüz kapalı alın derin.	1	1	1
+785	kalitesi mükemmel değil ancak kullanışlı tasarım süper kesimler iyi gözünüz kapalı alın derin.	1	0	0
 786	aldığım gün hortum başlığının olduğu kısımdan sıyrıldı ve çıktı. kullanılmaz şekilde. musluga takılan kısmındanda hep su sızdı	0	0	1
 787	kum sesi̇ geli̇yor	0	0	1
 788	kullanım kolaylıgı düşünüldüğünde harika bir ürün hem kolay hemde gösterişli.cocuklarım büyümeden keşke alsaydım.malzeme kalitesi,sesli olusu ve sesin duyulabilir yükseklikte olması nedeniyle tavsiye olunur.	1	1	1
@@ -864,7 +864,7 @@ idx	text	gold	pred	correct
 862	raf araları kumaş, kullanırken fotoğrafta durduğu gibi rijit bir görüntü söz konusu değil. kıyafet koyduğunuzda raf sarkıyor. rafları beyaz kumaş, ve baskı sadece dolabın ön yüzünde yani resimdeki gibi değil.	0	0	1
 863	ürün gerçekten güzel düzleştiriyor ama benım saçlarım biraz inatçı olduğu için ertesi gün üstünden geçmem gerekti.ama biraz uğraşırsanız jilet gibi dümdüz yapıyor gerçekten.saçları yumuşacık yapıyor sanırım iyon teknolojisinden dolayı.güzel ürün	1	1	1
 864	ürün kaliteli güzel gözüküyo kullandıkça kalitesini anlıyacağım.	1	1	1
-865	tecrübelerimize göre sırf viskodan oluşan yatak, ergonomik değil. şimdi bu visko yatakların 10-15 cmlik şilteli olanlarını alıp yaylı yatağımıza sererek denemeyi düşünüyoruz. umarız bu şekilde viskonun konforuyla yayın desteğini kullanarak kaliteli ve rahat bir uyku uyuyabiliriz.	0	0	1
+865	tecrübelerimize göre sırf viskodan oluşan yatak, ergonomik değil. şimdi bu visko yatakların 10-15 cmlik şilteli olanlarını alıp yaylı yatağımıza sererek denemeyi düşünüyoruz. umarız bu şekilde viskonun konforuyla yayın desteğini kullanarak kaliteli ve rahat bir uyku uyuyabiliriz.	0	1	0
 866	ürünün özellikleri çok güzel ancak ses kalitesi çok kötü usb bellekten dinlediğim müzik sanki radyodan dinliyor uşum gibi çok cızırtılı geliyor . ürünü geri iade ettim.	0	0	1
 867	piyasadaki en uygun rakam. 5 inç lik ekrana sahip bu rakama alınacak en iyi ürünlerden biri. biz daha iyisina karar veremediğimizden bunu aldık. fena olmayan kamera ve manuel ayarı, kulaklık sesi iyi dışarı verdiği ses yeterli. hızı ve işletim sistemi gayet akıcı. malzeme kalitesi iyi. kısaca verdiğin parayı hak ediyor.	1	1	1
 868	ürün çok çabuk geldi ama acayip ses çıkarıyor , bunu bilsem almazdın açıkcası	0	0	1
@@ -873,12 +873,12 @@ idx	text	gold	pred	correct
 871	kutulusuna bosuna fazla para vermeyin	1	0	0
 872	çok güzel bi ürün o kadar kaliteli ki ben böyle bi düzlestirici görmedim teşekkürler hepsi burada	1	1	1
 873	kitap başından itibaren sizi içine alıyor uyumak üzere olduğum bir anda elime aldım ancak bitirmeden uyuyamadım.. kesinlikle okumanızı tavsiye ederim..	1	1	1
-874	1. kuru zemin için performansı ortalama lastik düzeyinde.	0	0	1
+874	1. kuru zemin için performansı ortalama lastik düzeyinde.	0	1	0
 875	ölü deriyi temizlemedi.belki 5saat boyunca hiç durmadan bu işlemi yaparsam bir işe yarar.reklamında göründüğü gibi değil.ayrıca bu işlemi yaparken ölü deriyi un gibi havaya saçıyor .her tarafa yayılıyor yani.ben memnun kalmadim .tavsiye etmem boşuna para vermeyin.sadece parmağımdaki nasiri temizledi.inatçı sert topuklara bi faydası olmadigini söyleyebilirim.	0	0	1
 876	bu ürünü taklitleri çok yapıldığı ve sitenizde en çok satılan ürünlerden biri olduğu için aldım. keşke almasaydım. gerçi parfüm kokusu zevki kişiden kişiye değişir. ama ben beğenmedim.	0	0	1
 877	çok kötü bir ürün.kargo hızlı geldi ama ürünün güç olarak gücü çok zayıf.kaliteli pil kullanmama rağmen.	0	0	1
 878	ürünü diş doktorum önermişti ancak kullanınca hayal kırıklığına uğradım. çünkü en yüksek kademedeki su basıncı bile beklediğiniz temizliği yapmakta oldukça yetersiz. bu ürünü almak yerine bir şeyler yedikten hemen sonra ağzını su ile iyice çalkalama alışkanlığı kazansak inanın çok daha iyi bir sonuç elde ederiz. kısacası gördüm ki bu ürün para israfından başka bir şey değil.	0	0	1
-879	bu raf sistemini kesinlikle tavsiye ediyorum.adore markasını güvenerek kullanabilirsiniz.zaten 7 yıl garantili olması belli ediyor.kurulumu gayet basit,içinden her türlü malzemesi çıkıyor.duvara sabitlemeyi yapmazsanız devrilme riski var uzun olmasından dolayı dengesini kaybediyor.beyaz renk odaya ayrı bir hava kattı.	1	0	0
+879	bu raf sistemini kesinlikle tavsiye ediyorum.adore markasını güvenerek kullanabilirsiniz.zaten 7 yıl garantili olması belli ediyor.kurulumu gayet basit,içinden her türlü malzemesi çıkıyor.duvara sabitlemeyi yapmazsanız devrilme riski var uzun olmasından dolayı dengesini kaybediyor.beyaz renk odaya ayrı bir hava kattı.	1	1	1
 880	herkesin denemesini tavsiye ederim bu fiyat kaçmaz	1	1	1
 881	sipariş saatinden 20 saat sonra elime ulaştı. ürün imal tarihi yeni tarihli 07/16 teşekkürler hepsi burada	1	1	1
 882	ekran cozunurlugu fotograf kalitesi eksileri	1	0	0
@@ -897,7 +897,7 @@ idx	text	gold	pred	correct
 895	*bu fiyatlara alıcağınız apple tabletlerle eş değer özelliklerde üstüne hafıza kartı arttırma,  apk ve otg kablosu takma şansınızda bulunuyor. fiyat artmadan alın derim	1	1	1
 896	13 aydır hep prima alıyorduk ve memnunduk. fakat son aldığım kutuda bezler çok kalitesiz ve sızdırıyor. kutunun üzerinde rusça bişeler yazıyor hatta. kalite düşük bu seride.	0	0	1
 897	cok guzel aydinlatiyor.uc adet sarli pil yuvasi var.pille calisdiginda nasil aydinlattigini henuz denemedim.	1	1	1
-898	başlıkları farklı farklı, topuğa yapılanı beğendik.	0	0	1
+898	başlıkları farklı farklı, topuğa yapılanı beğendik.	0	1	0
 899	urunu hızlı geliyor fakat kullanımım bakımın dan çok sıkıntılı telefonu en fazla %40 sarj ediyor ben memnun kalmadım	0	0	1
 900	asil bir kokusu var kaliciligi cok iyi seviyede. bana kalirsa yaz icin degilde sonbahar aylarinda daha carpici bir etki birakir	0	1	0
 901	gayet başarılı telefon çok pahalı marka ile kafa tutacak özellikte 2.3 binlik telefonlarla karşılaştırınca zenfone iyi ve hepsiburada yada teşekkür ederim aynı gün elime geçti	1	1	1
@@ -969,7 +969,7 @@ idx	text	gold	pred	correct
 967	tv'nin plastik kalitesi çok iyi değil. ayaklar iyi dizayn edilmemiş.	0	0	1
 968	bu fiyat ile türkiyede tutmaz bu telefon. lumia 925 kullanıyorum 2 yıldır uygulama desteği ve 2. el piyasası pek yok	0	0	1
 969	2. sertlik olarak bridgestone turanza yaz lastikleri ile hemende aynı.	0	1	0
-970	asırı yakıcı ozelligi var, masaj icin kullanilabilir	0	0	1
+970	asırı yakıcı ozelligi var, masaj icin kullanilabilir	0	1	0
 971	çok uygun fiyat kaliteli de teşekkürler hepsiburada ürünlerin hepsi zamanında gelirse böyle herşey mükemmel.pilates topalrı arasında en uygunu en hesaplısı ve gayette kaliteli	1	1	1
 972	bu fiyata bu kadarlık ürün	0	1	0
 973	güzel pirizle calısıyo pilde takılıyo ama pil işe yaramıyo sadece elektlrlk kesilince saati otamatik ayarlıyor	0	0	1
@@ -1002,7 +1002,7 @@ idx	text	gold	pred	correct
 1000	2 yıl içerisinde 3 kez servise götürdüm ve hala aynı sorunları devam ediyor. başka bir ütü deneyin yoksa pişman olursunuz.	0	0	1
 1001	değişik avizelerimin olduğu yerde kullandım çok ayrı bi hava kattı	0	1	0
 1002	ürünü hevesle aldım. evet temizlemesi çok güzel diğer fırçalardan oldukça farklı ama 5-6 ay sonra başlığı dönmemeye başladı. pilini değiştim ama sorun yinede devam etti herhalde fırçalarken fazla bastırdım ondan olduğunu düşünüyorum. birde pil kapağı zor açılıyor. o yüzden alacaksanız şarjlı olanı alın pilli olanı uzun ömürlü değil en azından benim aldığım öyleydi.	0	0	1
-1003	sağlamlık iyi.	0	1	0
+1003	sağlamlık iyi.	0	0	1
 1004	acıtma gibi bir sorun yok fakat sert sakallara ve tüylere sahipseniz yetersiz kalıyor.	0	0	1
 1005	ürünün kullanışı açısından çok faydalı ama vakumluma ağzı kapklı olduğu için kullanışlı değil benim aldığım ise siboplu açma veya kapama derdi yok.süpürgeyi ağzına getirmeniz yeterli oluyor.	0	0	1
 1006	aldigim urunden gayet cok memnunum tesekur ederim size	1	1	1
@@ -1038,7 +1038,7 @@ idx	text	gold	pred	correct
 1036	aktarım hızı çok iyi ancak kullanmaya başladığım gün itibariyle çok ses çıkartıyor. arada bir titreyerek de çalışıyor. rahatsız edici.	0	0	1
 1037	açıp kapatmak çok zor. fonksiyonel degil ve kullanışsız	0	0	1
 1038	kompresör çalışrken sesli,onun dışında sıkıntı yok.tavsiye ederim.yalnız ürünün garanti belgesi gönderilmemiş.umarım (hepsiburada)yetkilileri garanti belgesini en kısa zamanda göndereceklerdir.	1	1	1
-1039	hepsi burada her zaman olduğu gibi çok kısa sürede  ürünü elime ulaştırdı teşekürler.ürün orjinal kapalı ambalajında geldi fakat kalıcı bir koku değil yada bende öyle	0	1	0
+1039	hepsi burada her zaman olduğu gibi çok kısa sürede  ürünü elime ulaştırdı teşekürler.ürün orjinal kapalı ambalajında geldi fakat kalıcı bir koku değil yada bende öyle	0	0	1
 1040	bugüne kadar denediğim tel taraklarla karşılaştırıldığında ezici bir üstünlük sağlıyor diyebilrim. ilk kullanımda farkı gördüm. klasik taraklarla zaman ve para kaybetmeyin. çok başarılı bir ürün.	1	1	1
 1041	ağırlık çalışan arkadaşlara önerimdir, tereddüt etmeden alabilirsiniz. yaklaşık bir aydır kullanıyorum, diğer ürünlere çok para vermenize gerek yok, fiyat performans iyi	1	1	1
 1042	diğer yorum yapan arkadaşların dediği gibi rengi turkuaz değil daha çok yeşil renkli odaya uyum sağlamadı.onun dışında malzemesinde problem yok.	0	0	1
@@ -1081,7 +1081,7 @@ idx	text	gold	pred	correct
 1079	philips markasının belirli kriterleri gözetmesi açısından ses kalitesi çıtasını gözardı etmemesi gerekirdi.ürünü kullandım klasik kulaklık işlevi açısından yeterli yalnız müzik keyfi diyorsanız egerki daha hassas ses veren kulaklıkları deneyin derim	0	0	1
 1080	şarjı çok yetersiz, çok ısınıyor navigasyon açıkken 10 dk ateş topuna dönüyor. kasan uygulamalarda hızlı ısınıp pili çabuk tükeniyor.	0	0	1
 1081	i̇ki tane çocuğum var vok acil bitmediyse hep bezlerimizi buradan alırız.bu aylık kolileri takip ederim genelde ????	1	1	1
-1082	ürün biraz yavaş ama içi en azından bilgileri alıyor.küçük olduğu için heryere sığıyor.o avantajı var.	0	1	0
+1082	ürün biraz yavaş ama içi en azından bilgileri alıyor.küçük olduğu için heryere sığıyor.o avantajı var.	0	0	1
 1083	kesinlikle çok çok ağır bir koku fakat orta yaş bayanlar için uygun olabilir 35 yaş üstü yani. kalıcılığına laf yok çok kalıcı bir parfüm sanırım çok kalıcı olan bütün parfümlerin özelliği ağır olmaları	0	0	1
 1084	urunun kargoya verilme suresi biraz daha kisa tutulabilir onun disinda surekli kullandigim urun sorun yok 5 bicaga devam...	1	0	0
 1085	hiç ama hiç bir faydası yok. yakmaktan başka	0	0	1
@@ -1093,7 +1093,7 @@ idx	text	gold	pred	correct
 1091	1983 model ascona di̇zel motor çok zayif yani̇ revi̇zyon yapilsa yeri̇di̇r .bor kullandiktan 800 km sonra yumuşak bi̇r di̇zel oldu çeki̇ş iyileşti̇ uzun rampalarda 5.vi̇tesden 4.vi̇tese çok nadi̇r düştüğü oluyor.di̇kkat edi̇n uçuyor demi̇yorum.zayif bi̇r di̇zel motorun bi̇ni̇li̇r hale geldi̇ği̇ni̇ yazdim.peri̇yodi̇k olarak kullanilmasi gereki̇r.	1	0	0
 1092	kitaplarda dizideki valinin hayatı anlatılıyor, almadan önce dizinin kitabı olduğunu düşünerek almıştım.. yeni alacak olanlar benim gibi ters köşeye yatmasın	0	0	1
 1093	ürün çok kullanışlı ve sağlam fiyat olarak çok uygun kesinlikle tavsiye ediyorum ayrıca kargo ücretsiz ve iki günde elime geçti... teşekkürler hepsiburada	1	1	1
-1094	bu cihazı almadan önce bu ürünün boyalı saçlar için olan bir üst modelini almıştım.fakat bir kullanışımda herşey belli oldu.saçlar elektriklendi ve matlaştı hemde yeterince düzleştirmedi.kısacası bü ürünü tavsiye ediyorum.mükemmel bir ürün isteklerime çok kısa bi sürede cevap alabiliyorum.	1	0	0
+1094	bu cihazı almadan önce bu ürünün boyalı saçlar için olan bir üst modelini almıştım.fakat bir kullanışımda herşey belli oldu.saçlar elektriklendi ve matlaştı hemde yeterince düzleştirmedi.kısacası bü ürünü tavsiye ediyorum.mükemmel bir ürün isteklerime çok kısa bi sürede cevap alabiliyorum.	1	1	1
 1095	ürün çok güzel. çok beğendim.	1	1	1
 1096	ürün performansı fiyatına göre oldukça iyi. malzemesi de kaliteli.	0	1	0
 1097	eksiklerini sayacağım:	0	0	1
@@ -1110,9 +1110,9 @@ idx	text	gold	pred	correct
 1108	6-velhasıl, bu markanın ürünlerinin bu şekilde olma ihtimalinin yüksek olduğunu değerlendiriyor ve tavsiye etmiyorum.	0	0	1
 1109	mutfak rafları için almıştım, boyu yüksek geldi mutfak rafında kullanamadım banyo ve gardırop için kullanmayı düşünüyorum. 5 cm kısa olsaydı daha kullanışlı olacaktı.	0	0	1
 1110	görüldüğü gibi m570m modeli hiç bir bandı desteklemiyor.	0	0	1
-1111	10 yıla yakındır aynı parfümü kullanıyorum fiyatını en uygun burada bulabildim çok hızlı teslim alamamıştım stoklarda bittiği için ancak problem uzun sürmedi tşkler.	1	0	0
+1111	10 yıla yakındır aynı parfümü kullanıyorum fiyatını en uygun burada bulabildim çok hızlı teslim alamamıştım stoklarda bittiği için ancak problem uzun sürmedi tşkler.	1	1	1
 1112	ben yaklaşık bir aydır kullanıyorum ortalama bir internet kulanımında, haber sitelerinde gezmek, wikipedia gibi kullanımlarda anca 100 dakika dayanıyor. kötü bir performans. bataryaya önem veren arkadaşlara duyrulur.....	0	0	1
-1113	bu ürüne gelince önce bir adet aldım bu fiyata orjinal olmaz diye çünkü apple storde 0.5 m si 89 tl, 2 m olanı 129 tl. kullandığım orjinal 3 adet lightining eskidi özellikle lightining uçundaki kablosu soyuldu. i̇lk ürün geldikten sonra inanamadım tamamen orjinal duruyor ve bence orjinal. araba ve pc de denedim hiç bir sorun yok. 3 tane daha aldım. kaldı ise hemen alın kalmadı ise geçmiş olsun. bu fiyata bu ürün çok iyi. önce satıcıya teşekkür ediyorum. sonra bu kadar yazıdan sonra 1 ürün bedava bekliyorum. bu yazıyı yazmamım asıl nedeni çakma ürünlerin arabada yangın çıkaracak kadar tehlike yaratabileceğini farketmem.	1	0	0
+1113	bu ürüne gelince önce bir adet aldım bu fiyata orjinal olmaz diye çünkü apple storde 0.5 m si 89 tl, 2 m olanı 129 tl. kullandığım orjinal 3 adet lightining eskidi özellikle lightining uçundaki kablosu soyuldu. i̇lk ürün geldikten sonra inanamadım tamamen orjinal duruyor ve bence orjinal. araba ve pc de denedim hiç bir sorun yok. 3 tane daha aldım. kaldı ise hemen alın kalmadı ise geçmiş olsun. bu fiyata bu ürün çok iyi. önce satıcıya teşekkür ediyorum. sonra bu kadar yazıdan sonra 1 ürün bedava bekliyorum. bu yazıyı yazmamım asıl nedeni çakma ürünlerin arabada yangın çıkaracak kadar tehlike yaratabileceğini farketmem.	1	1	1
 1114	aydınlatma gücü gayet iyi, tasarruflu ampullerden 3-4 kat daha az yakıyor. daha dayanıklı ve uzun ömürlü.	1	1	1
 1115	şirketleri bilmem ama hepsi burada.com müsteri temsilcilerine teşekkür ediyorum	0	1	0
 1116	beğendim,çok güzel..	1	1	1
@@ -1142,7 +1142,7 @@ idx	text	gold	pred	correct
 1140	malzeme gerçekten ücretini hak ediyor. kalınlık çok iyi , yer ile teması kesiyor hissetmiyorsunuz	1	1	1
 1141	düşük tavanlı mekanlarda veya uzun askılı avizelerde kullanımı önerilmez.işığı gözü inanılma rahatsız ediyor.	0	0	1
 1142	uygulaması boyaya göre biraz zor,ilk kat ince olup duvara bastırarak uyguladıktan ve kuruduktan sonra diğer katları kalın sürmek daha kolay oluyor. duvarda gerçekten ısı farkı oluştu,acele etmeden uygulamak gerekiyor,kalın olan yerler pütürlü yüzey oluşturuyor.faydası olacağını düşünüyorum, bu kış bakalım nasıl geçecek.	1	0	0
-1143	ürün tüysüz olarak geldi. arkasında ipler var . kedim çok olmasa da ara sıra oynuyor. fazla bir beklentiniz olmasın ne de olsa oyuncak.	0	1	0
+1143	ürün tüysüz olarak geldi. arkasında ipler var . kedim çok olmasa da ara sıra oynuyor. fazla bir beklentiniz olmasın ne de olsa oyuncak.	0	0	1
 1144	not: dizüstünüzü eğimli yerleştirdiğiniz takdirde aşağı doğru kayma yapar. kutuda size verilen 2 adet lastik bu kaymayı durdurmak adına, ürünün alt kısmında bulunan çentiklere takacağınız nesnelerdir.	1	0	0
 1145	başka yerden aldigim tohumlar yeserirken bunlar çıkmadı.	0	0	1
 1146	urun kullanisli sessiz ve kaliteli. markasida zaten yeter. fiyatida bircok yere gore cok uygun. 3gun icinde elime sorunsuz bir sekilde ulasti. hepsiburada ya tesekurler.	1	1	1
@@ -1250,7 +1250,7 @@ idx	text	gold	pred	correct
 1248	i̇lk sonax cilalı şampuanla yıkayım sildim güzel.	0	0	1
 1249	bu fiyata alınabilecek en güzel alet. kaçırmayın derim	1	1	1
 1250	taksit desen mevcut.alacaklara güle güle ve iyi günlerde kullansınlar.	1	1	1
-1251	ürün elime geçti..tahminimden daha iyi..boyutunun küçük olmasını eleştiren arkadaşların göz doktoruna gitmelerini tavsiye ederim.zaten sitedeki resimdede çok büyük olmadığı belliydi.	1	1	1
+1251	ürün elime geçti..tahminimden daha iyi..boyutunun küçük olmasını eleştiren arkadaşların göz doktoruna gitmelerini tavsiye ederim.zaten sitedeki resimdede çok büyük olmadığı belliydi.	1	0	0
 1252	çok iyi fiyat orjinal ürün ışık hızında kargo için teşekkürler	1	1	1
 1253	yazıcımda ve okulumuzdaki fotokopi makinalarında sorunsuz kullanıyorum, yapışma olmuyor, kağıtların kesimi güzel, yazması sorunsunz. ve en güzeli evinize kadar geliyor. fiyat konusunda bu kalite için fazlasıyla ucuz. ambalajı plastik olduğu için dayanıksız oluyor ama bir defa açtığımda kısa sürede bitirdiğim için pek önemli değil bana göre. çekimden alın, fiyatı güzel kalitesi iyi	1	1	1
 1254	oldukça güzel ve kullanışlı..	1	1	1
@@ -1287,7 +1287,7 @@ idx	text	gold	pred	correct
 1285	kokusu hoş ancak kalıcılık yok. her sabah 18-20 kez fıslatıyorsun yine de nafile, şişe boşaldı zaten.  tıraş sonrası kullandığım losyonlar kadar (2-3 saat) kalıcılığa sahip. bu parayı hak etmiyor, daha kaliteli ürünler var.	0	0	1
 1286	ürün gayet kullanışlı ele oturuyor .hepsiburadaya teşekkürler.	1	1	1
 1287	verdikleri vidalar çıtaları çatlatıp kırıyor büyük geliyor ayakkabılık bekliyorsan yanılıyorsun ince küçük çıtalardan saçma sapan bişe paraya yazık etmez	0	0	1
-1288	1 haftadir kullaniyorum. gozlemlemeye devam ediyorum. ancak kullanmaya basladiktan sonra banyoyu karincalar basti. takip edip tekrar yazacagim.	0	0	1
+1288	1 haftadir kullaniyorum. gozlemlemeye devam ediyorum. ancak kullanmaya basladiktan sonra banyoyu karincalar basti. takip edip tekrar yazacagim.	0	1	0
 1289	her kapıya olmuyor maalesef. barfiks için alacaklar kapısını ölçsün	0	0	1
 1290	mükemmel bir ürün olamaz böyle bisey boyutlar çok küçük ancak ses performansı çok etkileyici ...	1	1	1
 1291	aldım, çok memnun kaldım. sonra bizde görüp beğenenler için de aldım :) 10 watttan bu kadar ışık nasıl çıkar anlamış değilim.	1	1	1
@@ -1297,7 +1297,7 @@ idx	text	gold	pred	correct
 1295	eşime yılbaşı hediyesi aldım ve sonucu oldukça başarılı buldum.geçen gün kız kardeşime de almaya karar verdim yanındaki hediyesi çok avantajlı olmuş.	1	1	1
 1296	ürün elime sorunsuz bir şekilde ulaştı, fotoğrafta göründüğü gibi teşekkürler..	1	1	1
 1297	ilk başta tereddütüm verdı ama aldıktan ve kullanmaya başladıktan sonra öyle olmadığını gördüm. gönül rahatlığı ile alıp kullanabilirsiniz. yalnız kutunun içinden çıkan küçük aparatları duvara matkap ile tutturup vidalayın daha sağlam olduğunu göreceksiniz.	1	1	1
-1298	5 üzerinden 4 veririm.	1	1	1
+1298	5 üzerinden 4 veririm.	1	0	0
 1299	10 gün oldu hâlâ gelmedi. sizden alışveriş yapmanın bi anlamı kalmadı	0	0	1
 1300	çok kaliteli birşey beklemeyin, nerde ve nasıl kullanacağınıza göre değişir. ufak bahçeler ve çiçek sulaması için ideal olabilir. biraz daha büyük ve meyve sebze bahçeniz filan varsa yeterli olmayabilir. tabancası çok iyi yalnız, o oldukça kullanışlı.	0	0	1
 1301	*tekerleği biraz dandik gibi. tuhaf dönüyor alışamadım.	1	0	0
@@ -1339,7 +1339,7 @@ idx	text	gold	pred	correct
 1337	ben tavsiye etmem inanılmaz ağır ve çevredekiler bu ağır koku dan rahatsız oldular.fiyat olarak tabiki uygun denemeden almayın derim ama...	0	0	1
 1338	ürünü 31/10/2016 da sipariş ettim ürün bana 9/11/2016 da ulaştı. geldiği gün şarjı sondaydı ve kırmızı yanıyordu ona rağmen rahatlıkla traş oldum. 4  günlük sakalımı rahatlıkla traş etti. herhangi bir yanma veya tahriş yapmadı. eski makinem 4000 serisi 4745 ti. 10 seneden fazladır kullanıyordum ama artık yenileme vakti gelmişti. çok araştırmalarımdan sonra bu makineyi aldım. ve tavsiye ediyorum gayet kullanışlı ve hakkını veren bir makina.	1	1	1
 1339	hem çok uygun fiyatlı, hem de çok güzel ve kalıcı	1	1	1
-1340	başka bez kullandığımız zaman çocuğun popo perişan;) o yüzden fiyat iyi ;)	1	0	0
+1340	başka bez kullandığımız zaman çocuğun popo perişan;) o yüzden fiyat iyi ;)	1	1	1
 1341	ürün diğerlerine göre çok ergonomik.ucuz oyun koluna paranızı kaptırmayın.plastiği kaliteli eldee tutuşu güzel.kablosuz oluşu on numara ve ayrıntı ön alt tuslar feedback hassasiyetli	1	1	1
 1342	beden xxl ama l'den bir farkı yok	0	0	1
 1343	evimdeki kullandığım aspiratörü gürültüsü nedeniyle söküp atmıştım. uzun süredir de araştırıyordum. hem fiyatı makul olmalıydı, hem de çok sessiz... kuger d8 de karar kıldım ve internetten sipariş verdim. yaklaşık ürün 3-4 gün sonra geldi ve takıldı. 3-4 gündür de kullanıyorum. 1,2 ve 3. kademede süper sessiz.. 4. ve 5. kademede gürültü seviyesi artıyor ama bu cihaz en ağır duman çıkaran kızartmalarda bile 3. kademe yeterli gelir de artar. teşekkürler kugerr...	1	1	1
@@ -1371,7 +1371,7 @@ idx	text	gold	pred	correct
 1369	fiyatına istinaden çok kullanışlı ve çok iyi...	1	1	1
 1370	killari kırıyor yada almadan geciyor almayin	0	0	1
 1371	harika iyiki almisim 1 gunde elime ulasti bence hic dusunmeden alin yumusacik yapiyor saclari.. tesekkurler hepsiburada.com	1	1	1
-1372	arkakaşlar orjinall harika ürün fakat yurt içi kargodan kargo yapmayın ist içi 3 günde zor teslim aldık hatta kargo getirmedi biz gittik aldık	0	1	0
+1372	arkakaşlar orjinall harika ürün fakat yurt içi kargodan kargo yapmayın ist içi 3 günde zor teslim aldık hatta kargo getirmedi biz gittik aldık	0	0	1
 1373	i̇le için şirket almış kullaniyorum ama dokunmatiği resmen parmak vurma dokunma değil o zaten telefondan insanı soğutuyor bu çağda dokunmatik değil vurmaktık telefon isteyen alabilir	0	0	1
 1374	başlıktan da anlaşılacağı üzere kokusu çok rahatsız edici-ki öyle herşeyin kokusunu da alabilen biri değilimdir-.bedeni de küçük oluyor.	0	0	1
 1375	bu sabah viscoları kılıfından çıkardım, balkonda havalandırıyorum, umarım o koku kaybolur gider. yoksa öyle bir kimyasal kokuyla geceyatılmaz.	0	1	0
@@ -1383,7 +1383,7 @@ idx	text	gold	pred	correct
 1381	kirlenmiş plastik yüzeylerde işe yarıyor ve yine ufak tefek döşeme lekelerinde de sonuç veriyor ama profesyonel bir ürün değil.her tğr leke üzerinde etkili değil.	0	0	1
 1382	çok güzel çok kullanışlı, bana ulaşınca hemen kurdum, takması çok kolay 10 numara ürün her kapıya uyum sağlayabilir.benim gibi vücut geliştirme ile uğraşanlar daha çok sever. sırt,omuz,arka kol egzersizleri için çok ideal bir şey, antreman yapamadığınız günlerde açığınızı bununla doldurabilirsiniz.	1	1	1
 1383	ürün i̇yi̇ fakat soğuk oluyor i̇stedi̇ği̇n kadar isit, sütü isitmak ayrica bi̇r uğraş alani tad olarak çok i̇yi̇ deği̇l bütün kahveler 3ü bi̇r arada gi̇bi̇ yapiyor tad farki yok	0	0	1
-1384	kapılara sığmadı bize biraz uzun geldi,fakat 1.60 cmlik koridoruma oldu cok rahat kullanıslı sağlam verilen paraya deger konforlu demir biraz agır , 4 5 kilo cıvarı sabitleyebiliyorsunuzda aparatları var yanında 2 ürünü uzatmak için delta yazan yerlerini döndürmeniz yeterli	1	1	1
+1384	kapılara sığmadı bize biraz uzun geldi,fakat 1.60 cmlik koridoruma oldu cok rahat kullanıslı sağlam verilen paraya deger konforlu demir biraz agır , 4 5 kilo cıvarı sabitleyebiliyorsunuzda aparatları var yanında 2 ürünü uzatmak için delta yazan yerlerini döndürmeniz yeterli	1	0	0
 1385	beklediğimin altında bir performans.fiyata göre hayal kırıklığı.	0	0	1
 1386	arkadaşlar ürün orjinal değil kabloyu elinize aldığınızdan itibaren bunu anlayabiliyorsunuz.	0	0	1
 1387	plastik olmasına rağmen  ürünün işlevi güzel mükemmellik arayanlar için bu ürün yeterli gelmeye bilir.ve ebatı biraz daha büyük olabilirdi.benim için yeterli şuan.	0	0	1
@@ -1410,9 +1410,9 @@ idx	text	gold	pred	correct
 1408	fiyat kalite dengesi ile başarılı bir ürün. kargo hızı memnun edici.	1	1	1
 1409	evet ürünün kokusu gerçekten çok güzel. ve insanın etkilenmemesi olağan dışı. sentetikle bezenmiş şu fresh kokunun kalıcılığından bahsetmek ise gereksiz. arkadaşlarınızın bileğine sıkarsınız onlarda aaaa güzelmiş derler. tek artısı bu.	0	1	0
 1410	6 aylık bir telefonda böyle bi sorun olmaması lazım , vereceğiniz paraya yazık olur tavsiye etmem kimseye	0	0	1
-1411	ürün sade, şık ve ergonomik. lakin sanki minyatür evler için yapılmış. arkadaşom şu ürünün derinliğini 16cm kapı için yapmak nedir? kapıma uymadı kullanamıyorum!	0	1	0
+1411	ürün sade, şık ve ergonomik. lakin sanki minyatür evler için yapılmış. arkadaşom şu ürünün derinliğini 16cm kapı için yapmak nedir? kapıma uymadı kullanamıyorum!	0	0	1
 1412	ne yazıkki ben pek faydasını göremedim.	0	0	1
-1413	klişe bulanlara hayret ettim doğrusu.bittikten sonra 3-4 gün kitabı aklımdan çıkaramadım.yazarın diğer kitaplarını da istedim hemen. hepsiburadaya teşekkürler	1	0	0
+1413	klişe bulanlara hayret ettim doğrusu.bittikten sonra 3-4 gün kitabı aklımdan çıkaramadım.yazarın diğer kitaplarını da istedim hemen. hepsiburadaya teşekkürler	1	1	1
 1414	malzeme kalitesi iyi değil plastiği kokuyor.kullanmaya başlamadan önce bir kaç kez kaynatıp boşaltık suyu	0	0	1
 1415	resımdekı gıbı hava cıkısı yok tutma yerıyok banagelenın  urun fena degıl	0	0	1
 1416	ürün elime geçeli 1 hafta oldu. bilgisayara veri girerken  hızlı olmasının yanında iki disk arasında veri aktarımında da çok hızlı. kesinlikle tavsiye edebilirim.	1	1	1
@@ -1474,7 +1474,7 @@ idx	text	gold	pred	correct
 1472	parfumu begendım. tavsiye ederim. ilk sıktığınızda ağır kokuyor, zaman geçtikçe çok hafif ve hoş bir kokuya dönüşüyor.	1	1	1
 1473	ürün hassas ciltler için çok uygun.	1	1	1
 1474	sadece ergen yaştaki çocukların jilet yerine bu makinayı kullanması yeterli ama her gün kullanmalı 3 gün sonra kullanırsa işe yaramaz	0	0	1
-1475	8 yasındaki oğluma verdim.	0	0	1
+1475	8 yasındaki oğluma verdim.	0	1	0
 1476	kahvaltılarını yumurtasız geçirmeyenler için ideal bir cihaz, birden fazla yumurta pişirmeside güzel, yumurtalarınızı kontrol ederek istediğiniz kıvamda hazırlayabiliyorsunuz. unutmadan yumurta kabuklarını temizlemek sizin işiniz.	0	1	0
 1477	i̇nternet hızım 16 mbps wi fi den aldığım hızda 13 mbps 3 lük kayıp gayet normal. 3 yıldır kullanıyorum ve yeni komşuma aldım oda gayet memnun bence arkadaşların bulundukları bölgede onlarında bilmedikleri yayını kısıtlayıcı bir durum var yada modemlerinde bir sorun var. cihaz gayet iyi ve kullanışlı negatif düşünenlerle aynı fikirde değilim. bu cihaz modemin yanında bile 2 diş mi çeker. bendeki 5 tane yanıyor. düşünenlere kesinlikle tavsiye ediyorum. alın deneyin zaten 15 günlük bir iade sürecin var.	1	1	1
 1478	sadece işlemcisi biraz daha güçlü olabilirdi.	1	0	0
@@ -1489,7 +1489,7 @@ idx	text	gold	pred	correct
 1487	teleskopik boru ve supurme başlıgı berbat, kalitesi dusuk ve sürekli yerinden cıkıyor , ses seviyesi cok rahatsız edici bunlara rağmen çekiş iyi...	0	0	1
 1488	mouse asırı sekilde pil yiyor.duracell pil bile illallah etti ayda bir pil degiştiriyorum.o nedenle memnun değilim.	0	0	1
 1489	ürünü aldıktan 3 ay sonra bozuldu.sim kartı tanımıyor. lg4 telefonlarda kronik olduğunu duydum.10 gündür tamirde.	0	0	1
-1490	paran varsa daha iyisini al. ama bu fiyata normal.	0	1	0
+1490	paran varsa daha iyisini al. ama bu fiyata normal.	0	0	1
 1491	ürünü siparişetmeden önce şüphelerim vardı sallanma ve ses sorunlarını diğer yorumlarda okudum buna rağmen ürünü sipariş ettim ve görünce gözlerime inanamadım.çok kullanışlı ve kaliteli. omuz karın göğüsalt üst olmak üzere birçok yerinizi ayrı ayrı çalıştırma imkanınız var.i̇lk geldiğinde yarı kurulu geliyor zaten size sadece biriki yeri taktıktan sonra vidalarını sıkmanız gerekiyor hareketleri yaparken ne bir ses çıkıyo nede bir sallantı bu fiyata bukadar özellikli bir aleti oturduğum yerden almak beni çok mutlu etti.	1	1	1
 1492	10 yaşındaki kedimi yatağına alıştırmak için aldığım bu spray ilk kullanımda etkisini gösterdi ve kedim yatağında yatmaya başladı.ürünün satışını yapan yetkililere teşekkürler...	1	1	1
 1493	hemen noktalari almio bir sure bekliorum	0	0	1
@@ -1524,12 +1524,12 @@ idx	text	gold	pred	correct
 1522	ütüyü anneme aldım çok memnun daha önce de philips ütüsü vardı...kırışıkları çok iyi açıyor buharı çok iyi hafif ve fiyatı da çok uygun.2 günde elimize ulaştı	1	1	1
 1523	ürün beklediğimden çok daha iyi çıktı herkese tavsiye ederim	1	1	1
 1524	arkadaşlar mousu ped yuzunden aldım oede diyeceğim yok ama mouse geçekten para verilip alınacak turde değil 3 gunde sol kilk tıklamaz oldu yorumlardada goruceksiniz bence paranızı boşa yatırmayın	0	0	1
-1525	siparişten 3 gün sonra elime geçti ama ürün güzel, fiyat iyi. teşekkürler.	0	0	1
+1525	siparişten 3 gün sonra elime geçti ama ürün güzel, fiyat iyi. teşekkürler.	0	1	0
 1526	hd goruntu kalitesi iyi sayilir.belli bir sure sonra isinma meydana geliyor.bunun disinda bu ucrete iyi sayilabilir. ayni markanin baska modellerine bakilabilir	0	0	1
 1527	2 günde ürün elime ulaştı, ancak 1 ayağı kısa geldiği için tam tezgaha oturmadı. sonuç hayal kırıklığı...	0	0	1
 1528	fiyata göre kalite yetersiz kurulum zaten çok uzun sürüyor	0	0	1
 1529	emiş gücü sıfır, halının üzerinde ekmek kırıntılarını dahi zorlukla alıyor	0	0	1
-1530	firmadan teknik bilgi aldıktan sonra (yanlış kullanmama açısından) iade etmeyi düşünüyorum.	0	1	0
+1530	firmadan teknik bilgi aldıktan sonra (yanlış kullanmama açısından) iade etmeyi düşünüyorum.	0	0	1
 1531	beden tercihi yoktu ona göre ayarlanabilir açıklamaya aldanıp aldım ancak çok fazla sıkarak ancak cırt cırt lar kavuştu inşallah kan akışını engellemez belki açılır umuduyla iade yapmadım kullanıp göreceğiz artık bacak kalınlığı fazla olanlar bedeni açıkça yazılı olanlara yönelin derim ayrıca anlayamadığım acayip bir koku var teslimat zamanında gerçekleşti	0	0	1
 1532	dambılların barı çok uzun somunları takıp çıkartmak epey zaman harcıyoo o zaman sürecindede epey bir kalori yakıyosunuz zaten somunun gevşemesi çok sıkıntı değil gene yere bırakırkende yavaş bırakmak gerek içindeki kumu patlamamsı için, ben gene fena değil diyorum ucuzda olduğu için idare eder yani, ama onun yerine metal bir dambıl seti alın daha iyi derim takıp çıkarma olmayanından.	0	0	1
 1533	devir ayarı yok, doğrama kabının açılması ergonomik ve pratik değil. tavsiye etmem	0	0	1
@@ -1543,7 +1543,7 @@ idx	text	gold	pred	correct
 1541	ucuz kaliteli ve rahat daha ne olsun tesekkurler	1	1	1
 1542	ürün gayet başarılı. xiaomi gerçekten kaliteli ürünler yapıyor. bass çok iyi. ayrıca paketleme de çok güzel. teşekkürler.	1	1	1
 1543	bu fiyata casio kalitesi, harika bir saat gayet şık ve kaliteli	1	1	1
-1544	bazen 74 bazen 76 bazen 78 tartsada tasarım guzel ;)	0	0	1
+1544	bazen 74 bazen 76 bazen 78 tartsada tasarım guzel ;)	0	1	0
 1545	arkadaşlar mause gerçekten bayıldım tek sorunu üzerinde fazla gereksiz tuş var  oyun oynarken yanlışlıkla o tuşlara basıyom ama gerçekten güzel mause almanızı tavsiye  ederim	1	1	1
 1546	eşime doğum günü hediyesi olarak aldım.. ilk başta tereddütlerim vardı eşim çok beğendi.. bende doğru karar verdiğimi anladım. fiyatı uygun sertifikası ile birlikte pırlantası olması diğer bir güzel özelliği.. tavsiye ederim	1	1	1
 1547	okadar araştırdıktan sonra daha önceki deneyimime dayanarak bu ürünü aldım ama memnun kalamadım 6 farklı şekil flan verdiği yok ve plakalar arasında boşluk çok olduğu için tam olarak saç tutamını kavramıyor.s2002 modelini kullanmıştım o daha ıyıydi	0	0	1
@@ -1564,7 +1564,7 @@ idx	text	gold	pred	correct
 1562	babalar günü için hediye arayışıma hepsiburada.com çare buldu... hızlı kargo,piyasa fiyatlarına göre çok uygun ve sorunsuz...teşekkürler hepsiburada.com... :)	1	1	1
 1563	5-son olarak kameraya değiniyorum	1	1	1
 1564	cihazda sorun yok orjinal gayette saglam geldi.	0	1	0
-1565	mükemmel olduğu söylenemez ama fiyatına göre oldukça iyi. ben mağaralarda kullanacağım için yürüdükçe dizlik aşağıya inecek gibi. motor kullananlar sürekli motorda olacağı için böyle bir sorun olmaz tabi...	0	0	1
+1565	mükemmel olduğu söylenemez ama fiyatına göre oldukça iyi. ben mağaralarda kullanacağım için yürüdükçe dizlik aşağıya inecek gibi. motor kullananlar sürekli motorda olacağı için böyle bir sorun olmaz tabi...	0	1	0
 1566	mangal temizleme fırçası almak isteyenler için ideal bir ürün.çeşitli yapı marketlerde iki üç katı fazla paraya satılıyor.kaliteli bir malzemeden yapılmış.ele kolay oturuyor.tavsiye ediyorum.	1	1	1
 1567	ancak eylülden itibaren aldığımız ürünlerde ciddi sorunlar var	0	0	1
 1568	tereddüt etmeyin işini her türlü görüyor. audi a3 8p aracıma uydu ve lg g4 gibi ağır bi telefonu bile sapasağlam tutuyor.	1	1	1
@@ -1575,7 +1575,7 @@ idx	text	gold	pred	correct
 1573	hiç bir kalıcılığı yokkk almanızı tavsiye etmiyorum  kokuyu anca kendiniz alabiliyor sanız yanı başında nızda olan kişi bile kokuyu alamıyor çok kötü çok kötü çok kötü	0	0	1
 1574	ama sorun kalitede değil tasarımda	0	0	1
 1575	uzun zamandır hiçbir ürünü zamanında kargolayamayan hepsiburada, aynı kargo yazan bu ürünü 2. gün sonunda hala daha kargolayabilmiş değil. tebrikler	0	0	1
-1576	kara rsız kalanlar gözü kapalı alabilir + 200 ml olması çok iyi kokusu ve kalıcılığı da fena değil kesinlikle tavsiye ederim	1	0	0
+1576	kara rsız kalanlar gözü kapalı alabilir + 200 ml olması çok iyi kokusu ve kalıcılığı da fena değil kesinlikle tavsiye ederim	1	1	1
 1577	bizimki 2 yaşını geçti artık gündüz uykusunda altını bezlemiyoruz. bu örtüden açıyoruz ve hiç yatağa geçmiyor. teşekkürler hb..	1	0	0
 1578	uzun zamandır almak istediğim bir urundu güzel ve hızlı bir alışveriş oldu çok de tekkurler	1	1	1
 1579	ürünüm yanlış gelmişti fakat satıcı firma aynı gün işyerime kadar gelip kargomu değiştirdi harikalar...kokunun kalıcılığı ve güzelliği ise tartışılmaz tabii...teşekkürler hepsi burada	1	1	1
@@ -1593,7 +1593,7 @@ idx	text	gold	pred	correct
 1591	9 aylik oglum yuzune bile bakmadi.sirt icin destek bolumu yok.kullanilmayan oyuncaklar sepetine girdi bile.	0	0	1
 1592	çok başarılı bir ürün. herkese tavsiye ederim.	1	1	1
 1593	geceleri kulağınızı verirseniz, sese takılıp uyuyamama ihtimaliniz yüksek. ayrıca çok da bir işe yaradığını söyleyeyemem. son olarak, su değiştirme çok pratik değil ve bazen su kabının kapağını değiştirmek aşırı zorlaşıyor.	0	0	1
-1594	hari̇ka bi̇r ki̇tap sonunda hüngür hüngür ağladim etki̇si̇nden çikamadim uzun süre hepsi̇ buradaya da hizli ve sorunsuz tesli̇mat i̇çi̇n teşekkür ederi̇m	1	0	0
+1594	hari̇ka bi̇r ki̇tap sonunda hüngür hüngür ağladim etki̇si̇nden çikamadim uzun süre hepsi̇ buradaya da hizli ve sorunsuz tesli̇mat i̇çi̇n teşekkür ederi̇m	1	1	1
 1595	yorumlara baktigim için yaziyorum, asıl boyut sayesinde çocuk küçük ellerine sigdirabildigi ve sayfaları cevirebildigi için çok seviyor. içerik ve resim kalitesi çok iyi. 18ayliktan beri aliyorum bu siteden kızım 3.5 yasinda ve kitabin ne demek olduğunu çok iyi biliyor.sizde en azindan denemek için alin cocugunuza ama her kitap okunmuyor çocuğa bunlar okunacak kitaplar...	1	1	1
 1596	ürünü bilen biliyor bunun için söylenecek birşey yok. başka yerde bu fiyat ve bu kadar hızlı kargo yok.	1	1	1
 1597	ürünü henüz kullanma fırsatı bulamadık ancak hakkında çok iyi olduğuna dair iyi yorumlar okuduk.	1	1	1
@@ -1602,7 +1602,7 @@ idx	text	gold	pred	correct
 1600	paranızı çöpe atmış olursunuz benden söylemesi. olur da bukadar mı kötü olur.  geldiği gibi geri gönderdim	0	0	1
 1601	çok fazla bi işe yaradığını söyleyemem sadece çok az bi yumusatmasi var başka bisey yok yinede uygun bi ürün.	0	0	1
 1602	enteresan bir konusu var ama çok sürükleyici...bir kadının sığındığı tek insanın kuması olması acı bir durum...ama çook çook güzel bir kitap,uçurtma avcısı yazarının eseri olduğu için okumaya karar vermiştim çünkü o eserini çook beğenmiştim ve hiç pişman olmadımm aldığıma.tavsiye ediyorum.	1	1	1
-1603	küçük çocuklara çalışma masası olur.	0	0	1
+1603	küçük çocuklara çalışma masası olur.	0	1	0
 1604	ekrani tam kapliyor ancak inanilmaz toz çekiyor ve dayanıksız. alternatiflere bakılmalı.	0	0	1
 1605	hızlı geldi sorun sıkıntı yok gayet güzel çalışıyor	1	1	1
 1606	kablosu hem kisa hemde 3-4 ay sonra tutarsızlık yapmaya başlıyor telefonundan hic ellemeden kolaylıkla çıkıyor baska bir kablo ile kullanıyorum sizde o sekilde kullanacaksanız oneirirm diger türlü kablosu kafayı yedirtir. ama doğru kablo ile kullanıldığında şarj konusunda çok başarılı.	0	0	1
@@ -1616,7 +1616,7 @@ idx	text	gold	pred	correct
 1614	ürünü alalı 2 hafta oldu temizlik konusunda 10 numara.ammaaaaaaaaaa çok fazla ses çıkarıyor ve oldukça hantal(kocaman).yine belirteyim diğer makinemle boşuna temizlik yapıyormuşum.ardından toz bırakma olayı yok.seçiminizi ona göre yapın.	0	0	1
 1615	ürün elime geçeli 1 hafta oldu. fiyatına göre muhteşem bi ürün. elinize aldığınızda duruşuyla philips kalitesinin hissettiriyor zaten. ancak hava akımı gücü biraz zayıf.	1	1	1
 1616	çok hafifi güzel rahatsız etmeyen bir koku oldukçada kalıcı ben çok beğeniyorum herkese gidermi bilmem ama mis gibi kokuyor marka zaten güzel fiyatıda çok iyi	1	1	1
-1617	fakat çalışıyor, hakkını verelim :) ...	0	1	0
+1617	fakat çalışıyor, hakkını verelim :) ...	0	0	1
 1618	hepsiburadadan bir sürü oyuncak siparişi vermiştim kızımız için. fakat diğerlerinin yüzüne bile bakmadı diyebilirim.. bütün gün sadece bununla oynuyor. teşekkürler hepsiburada	1	0	0
 1619	sesi iyi çıkmıyor. telefona bağlıyken sesi az çıkıyor. yani ben hata yaptım siz yapmayın	0	0	1
 1620	eşim için aldım, gayet kibar ve kullanışlı duruyor. aşırı hız beklemeyenler için ideal diye düşünüyorum.  tavsiye ederim. fiyatı da uygun.	1	1	1
@@ -1644,7 +1644,7 @@ idx	text	gold	pred	correct
 1642	gayet güzel,bu fiyata mükemmel ,küçük ve zarif bir tv.	1	1	1
 1643	küçük, zarif, kibar olması çok iyi. anahtarlığa taktım gayet iyi durdu. fiyatına diyecek lafım yok gayet iyi. dışının plastik olmaması kırılma riskini ortadan kaldırıyor. yanlışlıkla çamaşır makinasında da yıkandı bir şey olmadı	1	1	1
 1644	yorumlar yanıltmasın 1,5 voltla çalışıyor siz düşünün ))) içinde tek kalem pil var ve çok zayıf kalıyor.	0	0	1
-1645	tek kelimeyle daha iyisi yok bu gramajda	1	0	0
+1645	tek kelimeyle daha iyisi yok bu gramajda	1	1	1
 1646	eğer fitness yapan bi̇ri̇ i̇seni̇z kesi̇nli̇kle tavsi̇ye ederi̇m.gözününde bi̇r kapiya takin ve geli̇p geçti̇kçe asilin.	1	1	1
 1647	ürün elime 22 eylül de ulaştı telefonu biraz kullandım ve çok ısındığımı gördüm. telefonun sabip olduğu özelliklere bakarak fiyat-performans ürünü gibi gözükse de özellikle şarzdayken, fotoğraf çekerken, internette dolaşırken vs gibi işlemlerde bile çok fazla ısınıyor. oyun oynarken denemedim bile kim bilir o zaman nasıl bir ısı oluşur. üründen kesinlikle memnun kalmadım. alacak arkadaşlar bunu göz önünde bulundursun ben yandim siz de yanmayın.	0	0	1
 1648	fiyat - kalite dengesi çok iyi. hızlı bir şekilde ve sorunsuz olarak ulaştı. yalnız kargo elemanları dış kapıya bırakıp gitmeye çalışıyorlar.	1	1	1
@@ -1724,14 +1724,14 @@ idx	text	gold	pred	correct
 1722	ürünü görmeden önce tereddütlerim vardı fakat kullanmaya başladığımda gördüm ki pahalı cihazları almaya hiç gerek yok. çekimi çok kuvvetli ve uzun sapı ile eğilmeden süpürebiliyorsunuz. herkese tavsiye ederim.	1	1	1
 1723	ürün 2 günde geldi. hızlı olması güzel. caydanlık ne ufak ne büyük. 4-5 kişilik bir aile icin ideal. celiği ince falanda deyil gayet dayanıklı .. tutma kulplara cok estetik ve saglam. caydanlık tasarımıda cok harika. okadarda internetten alısveris yaptım hayal kırıklıkları yasadıgımda oldu ama arkadaslar diyorumki ürün süper gercekten kacırmayın derim. tsk ederim satıcı firma ve hepsi burayaya..	1	1	1
 1724	urun guzel ayni gun kargo yapildi tesekur ederim	1	1	1
-1725	urun guzel	1	1	1
+1725	urun guzel	1	0	0
 1726	ürünü harika bir kapak ile kova köpükle doluyor temizlemeside güzel bence ideal denemenizde fayda var aynı üründen sipariş vericem tekrar	1	1	1
 1727	ürün 1 gün içinde elime ulaştı  anneme hediye olarak aldım  denemeyi  ben yaptım   ilk defa kullandığımdan  mi  bilmem ama su sıkma konusunda  sıkıntılı  çok  ıslak  bırakıyor	0	0	1
 1728	6 yıldır kullanıyorum çok memnunum	1	1	1
 1729	arkadaşlar herkes güzel falan diyorda benim umduğum gibi değil fotoğrafta üst tarafta kenarlar ceviz üst beyaz görünüyor halbuki sehba nın üst ve yan kısım tamamen beyaz vidalara yapışkan vermişler onlarda hemen düşüyor gerçekten de o kdar sağlam bişey değil aldım ama köye götürcem	0	0	1
 1730	eksi yanları: akıllı uyandırma özelliği çok iyi düşünülmüş ancak kolunuzu yukarı kaldırmadan tam çalışmıyor, bu yüzden eliniz aşağıdayken bileğinizi çevirip bakmak istediğinizde saat ekranı gelmiyor. sallamanız veya yukarı kaldırmanız gerekiyor. bazen telefon üzerinden çağrı cevapladığınızda saat üzerinden ses veriyor, saatten telefona geçmeye çalışıyorsunuz o anda... i̇ki tuşu var ve ikisi de sağda, bence sol tarafa da bir tuş eklenebilirmiş. örneğin saat sol bileğinizdeyken sağ elinizle işlemleri yaptığınızda  baş parmak ile sol tarafta tuş arıyorsunuz.böyle bir üçüncü tuş olsa çok daha rahat kullanım olabilirmiş. her ne kadar şu anda işinizi gören uygulamalar olsa da uygulama genişliği çok çok az. facebook, twitter, whatsapp gibi en sık kullanılan uygulamaların resmi saat uygulamaları acilen gelmeli.	1	0	0
 1731	bu ürünü radyo için alacaksanız, almayın. 50 tane hafızası var ve 87.7den başlayarak bulduğu ilk 50 kanalı hafızaya alıyor. 97.4den sonraki kanalları isteseniz de dinleyemiyorsunuz. (istanbulda çok radyo olduğu için)	0	0	1
-1732	ya bu ürünün nesini begenmisler anlamadim. zorluk derecesi diye bir sey yok. ayaklarini havada bosa çevir aynı etki. tel falan demeyin teli videodaki gibi aynen taktik. bu bisikletle kondisyon falan yapamazsiniz. ucuz etin yahnisi yenmez sözünün doğruluğunu bir kere daha anladim.	0	1	0
+1732	ya bu ürünün nesini begenmisler anlamadim. zorluk derecesi diye bir sey yok. ayaklarini havada bosa çevir aynı etki. tel falan demeyin teli videodaki gibi aynen taktik. bu bisikletle kondisyon falan yapamazsiniz. ucuz etin yahnisi yenmez sözünün doğruluğunu bir kere daha anladim.	0	0	1
 1733	lastikleri güzel bir şekilde temizleyip siyah olması sağlıyor ancak çok fazla bir parlaklık sağlamıyor çok memnun kaldığım söylenemez yinede lastiklerini temiz görmek isteyenler alsın derim	0	0	1
 1734	üründe kalite problemi var kesinlikle. kokunun kalıcılığı ve kokunun derecesi yok denecek kadar az. tavsiye etmiyorum!	0	0	1
 1735	kontrol ekranı seçenekleri 2 adet başka seçenek yok,	0	1	0
@@ -1739,7 +1739,7 @@ idx	text	gold	pred	correct
 1737	*içinden çıkan plastik süzgeç kullanışlı değil. zaten bu tarz ürünleri plastik olduğu için kullanmak istemiyorum.	0	0	1
 1738	mama sahane, kopegim mamayi gordukce zipliyor :)	1	1	1
 1739	urunleri eksiksiz olarak 2 gun icerisinde teslim aldim.	1	1	1
-1740	çok paranız varsa süper bir makine alabilirsiniz ancak 500ytlye kadar alabileceğiniz standart ürünlrin performansı emin olun bu makineden iyi olmayacaktır. fiyatının iki katını hakediyor yani. annemde kuru süpürgesi bende halı yıkamalı modeli var. kaçırmamak gerekir.	1	0	0
+1740	çok paranız varsa süper bir makine alabilirsiniz ancak 500ytlye kadar alabileceğiniz standart ürünlrin performansı emin olun bu makineden iyi olmayacaktır. fiyatının iki katını hakediyor yani. annemde kuru süpürgesi bende halı yıkamalı modeli var. kaçırmamak gerekir.	1	1	1
 1741	bütün özelliklerini gösteren bir ütü. gerçekten çok memnun kaldık.her zaman kaliteyi almak lazım.	1	1	1
 1742	burdaki yorumlardan biraz tedirgin yaklaştım cihaza ama boş çıktı. cihaz çekim kalitesi olarak çok iyi. gönül rahatlığıyla alabilirsiniz.	1	1	1
 1743	ürün yanaklarda sinek kaydı boyunlarda cok ugrastıyor	1	0	0
@@ -1784,7 +1784,7 @@ idx	text	gold	pred	correct
 1782	diğer yorumcuların yorumlarına katılıyorum. çabuk şişiyor, 3 nefeste tamamen kullanılabilir oluyor. alçak yastık sevenler için uygun ancak yüksek seviyorsanız beğenmeyebilirsiniz.	1	0	0
 1783	oldukça etkili bir parfüm. kalıcılığı oldukça uzun sürüyor.kokusunu ben çok beğendim, çevremdeki insanlar da beğendiler. kullanılabilecek kaliteli parfümlerden bir tanesi.	1	1	1
 1784	fiyatına göre gayet performanslı bir cihaz. uygulamasında herhangi bir sorun yok , rahatça entegre edilebiliyor. şarj konusunda mükemmel 1 hafta önce aldım hala %70 civarında şarjı var.	1	1	1
-1785	hızlı şarj değil boşuna almayın. normal şarj ediyor. note 4'te denendi.	0	1	0
+1785	hızlı şarj değil boşuna almayın. normal şarj ediyor. note 4'te denendi.	0	0	1
 1786	kapakla firin arasindaki̇ lasti̇k fi̇ti̇l i̇lk kullanimda eli̇mde kaldi, çünki̇ o kadar basi̇t bi̇r şeki̇lde yapilmiş ki̇ anlatamam şöyle köşelerde bi̇rleşme noktalari var ve yapiştirici i̇le onlara tutturulmuş. satana kadar dayansin yeter di̇ye düşünmüşler sanirim	0	0	1
 1787	makine çok güzel kalan süreyi öğrenmek için kapağı açmak gerekiyor. yıkaması güzel fiyta değer	1	1	1
 1788	kesinlikle bu kamerayı alın.  pişman olmazsınız	1	1	1
@@ -1895,7 +1895,7 @@ idx	text	gold	pred	correct
 1893	ürün dün elime ulaştı. gayet güzel ve kullanışlı. uzun barda sıkıştırma civataları çabuk gevşiyor. tek sorun bu. ama oda yapılmayacak bişey değil. teşekkürler	1	1	1
 1894	ürün cabuk ısınıyor, ancak sacta cok bekletmek ve tutamlar az almak gerekiyor, gür saclılara göre değil, çok yorucu oluyor cünkü	0	0	1
 1895	iki yıldır kullanıyoruz hiç bir sorun yaşamadık hediye olarak alıyoruz tavsiye ederim. hepsi burada dan en kısa zamanda gelmesini bekliyoruz	1	1	1
-1896	kitap başta çok güzel gidiyordu normalde tam tersi olur ya. ben sonlara doğru sıkılmaya başladım. ne oldu diye merak ederek değil de bitirmek için okudum. ama herkesin bakış açısı farklıdır tabi... keyifli okumalar...	0	0	1
+1896	kitap başta çok güzel gidiyordu normalde tam tersi olur ya. ben sonlara doğru sıkılmaya başladım. ne oldu diye merak ederek değil de bitirmek için okudum. ama herkesin bakış açısı farklıdır tabi... keyifli okumalar...	0	1	0
 1897	belden sırt tarafından kaçırıyor,bebeğin sırtına hep bulaşıyor	0	0	1
 1898	thermoform iyidir diye aldım ama ilk yıkamada küçücük oldu çorap. giydikten sonra açılmada yapmadı, hatta ayağımı fazla sıktığı için daha fazla üşüdü ayaklarım.	0	0	1
 1899	ürün 1 gün sonra elime geçti.yastıklar dolu dolu,çok yumuşak değil,bana göre ideal yastık..tavsiye ederim..teşekkürler.emeği geçenlere..	0	0	1
@@ -1907,7 +1907,7 @@ idx	text	gold	pred	correct
 1905	kirlenene kadar kullan sonra da  at. çok rahat. çanta için de ideal. alt açma sıkıntısı yaşamak istemiyenler için ideal. hem evde hem de dışarıda sadece bu ürünü kullanıyoruz. tavsiye ediyorum.	1	1	1
 1906	jellerden nefrest eden bir insan olarak ilk defa deneyeceğim. öneren cok arkadasım var. yalnız fiyatı başka x bir markete göre gercekten yarı yarıya. kargo da ödemiyorsunuz. değerlendirin derim.	1	1	1
 1907	aynı anda kingston ve san disk siparişi verdim. kingston daha pahalı olduğu halde, sandisk ten yavaş kaldı	1	0	0
-1908	a4 tech iyi marka aslında ama bu modelde açma kapama düğmesi yok. üstelik kablolu maouslarda mause hareket edinci kırmızı ışık yanıyordu burda yanmıyor yani çalışıp çalışmadığı belli değil. açma kapama düğmesinin olmaması bilmiyorum kullanımı ne kadar etkileyecek. i̇lk kurulum biraz uzun sürebilir. ben ilk taktığımda bir an tanımadı zannettim ama biraz bekleyince tanıdı. sabırlı olun. fiyatına göre uygun. keşke açma kapama düğmeside olsaydı.	0	1	0
+1908	a4 tech iyi marka aslında ama bu modelde açma kapama düğmesi yok. üstelik kablolu maouslarda mause hareket edinci kırmızı ışık yanıyordu burda yanmıyor yani çalışıp çalışmadığı belli değil. açma kapama düğmesinin olmaması bilmiyorum kullanımı ne kadar etkileyecek. i̇lk kurulum biraz uzun sürebilir. ben ilk taktığımda bir an tanımadı zannettim ama biraz bekleyince tanıdı. sabırlı olun. fiyatına göre uygun. keşke açma kapama düğmeside olsaydı.	0	0	1
 1909	urun çok tatlı çok beğendik ailece.	1	1	1
 1910	panasonic marka traş bıçağının pillerini bu piller ile değistirdim. bunların amperi daha yüksek olması sebebi ile şarz suresi uzadı haliyle diğerleri 20 dakika da biterken bu piller şimdiden bu sureyi geçti  bakalım ne kadar daha sürecek. ayrıca yaklaşık 15 yıllık hepsiburada musterisiyim gün geçtikçe hizmet kalitesi artmakta çok nadir de olsa yaşanan aksaklıklara yapıcı çözümler sunarak bizlere güven veriyor. mağazalarda yaşadığımız sıkıntıyı burada yaşamıyoruz desem yeridir.	1	1	1
 1911	beklediğimden daha kaliteli ve hafif	1	1	1
@@ -1922,12 +1922,12 @@ idx	text	gold	pred	correct
 1920	son derece hizli ve profesyonel bir makine.	1	1	1
 1921	seramik değil ama şık.beğendim.gayet güzel	1	1	1
 1922	ürünü sabah saat 10:00 da sipariş verdim ürünle beraber arka koruyucu şeffaf kılıf ve ön koruyucu saydam kılıf siparişide verdim, her üç üründe aynı anda aynı gün saat 14:20 de kargoya verildi, şaşırdım, hızlı kargo için teşekkürler.	1	1	1
-1923	açıklamada bahsedildiği gibi 140 cm e kadar uzayabiliyor 110 cm duvarda gayet kolay kuruluyor ancak sıkmak biraz zor yaninda sıkmak için bir aparat verilebilirdi ama yaninda verilen dübel tarzı şeyler kullanılabilir uzattıkça taşıyabileceği yükte azalıyor tabii ki .	1	1	1
+1923	açıklamada bahsedildiği gibi 140 cm e kadar uzayabiliyor 110 cm duvarda gayet kolay kuruluyor ancak sıkmak biraz zor yaninda sıkmak için bir aparat verilebilirdi ama yaninda verilen dübel tarzı şeyler kullanılabilir uzattıkça taşıyabileceği yükte azalıyor tabii ki .	1	0	0
 1924	değil cebimde çantamda taşımak bile sorun olurdu. kullanmadan geri gönderdim.	0	0	1
 1925	2-çok hafif	1	0	0
 1926	yalnız şişe tasarımı iyi. kalıcılık orta düzeyde. 1 saat sonra bir şey kalmıyor gibi. parasını hak etmiyor bence.	0	0	1
 1927	urun dogru olcum yapmiyor ilkinde 81 kg gosteriyor 2denemede 83 kg hatali yag su ölçme oranlari tamamen yanlis tavsiye etmem sade bi cihaz almak bundan cok daha iyi parasini hakketmiyor	0	0	1
-1928	biz kuru mama ile karıştırıp dışardaki köpeklere veriyoruz hepsi sevdi, biraz sulu bir mama bu arada.	1	1	1
+1928	biz kuru mama ile karıştırıp dışardaki köpeklere veriyoruz hepsi sevdi, biraz sulu bir mama bu arada.	1	0	0
 1929	2 tane almıştım. 3. gün civarı ilki taktığımda cihazı görmemeye başladı. birkaç hafta sonra da diğeri. bir daha bu markaya bulaşmam	0	0	1
 1930	tavsiye etmem. parasına göre kalitesi çok zayıf	0	0	1
 1931	ama genel olarak bu fiyatlara daha iyisini bulmak zor,samsung da olsa alınabilir bir telefon olduğunu belirtmek isterim.	0	1	0
