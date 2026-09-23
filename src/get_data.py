@@ -25,21 +25,41 @@ def prepare_english():
     neg = df[df["label"] == 0].sample(n=10000, random_state=42)
     pos = df[df["label"] == 1].sample(n=10000, random_state=42)
     df = pd.concat([neg, pos]).sample(frac=1, random_state=42)
+
+    df = df.reset_index(drop=True)
+    df["id"] = df.index
     print("Final:", df.shape)
     print(df["label"].value_counts())
 
-    print("Rows with tab or newline:", df["text"].str.contains("\t|\n").sum())
+    n_bad = df["text"].str.contains("\t|\n|\r").sum()
+    assert n_bad == 0, f"{n_bad} rows contain a tab or newline"
 
-    out = "data/mt/en_reviews_20k.tsv"
     os.makedirs("data/mt", exist_ok=True)
-    df[["text", "label"]].to_csv(out, sep="\t", index=False)
-    print("Wrote", out)
+
+    out_tsv = "data/mt/en_reviews_20k.tsv"
+
+    df[["id", "text", "label"]].to_csv(out_tsv, sep="\t", index=False)
+    print("Wrote", out_tsv)
+
+    out_src = "data/mt/en_reviews_20k.src"
+    with open(out_src, "w", encoding="utf-8") as f:
+        for text in df["text"]:
+            f.write(text + "\n")
+    print("Wrote", out_src)
+
+    with open(out_src, encoding="utf-8") as f:
+        n_lines = sum(1 for line in f)
+    assert n_lines == len(df), f"src has {n_lines} lines but df has {len(df)} rows"
+    print("src lines:", n_lines)
 
 def prepare_turkish():
+    # Source is already strictly binary (ClassLabel: negative/positive only) --
+    # no neutral/3-star category exists to drop.
     ds = load_dataset("fthbrmnby/turkish_product_reviews", split="train")
 
     df = ds.to_pandas()
     df = df.rename(columns={"sentence": "text", "sentiment": "label"})
+    df = df[df["text"].str.strip() != ""]
     df = df.drop_duplicates(subset="text")
 
     print(df.shape)

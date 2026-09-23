@@ -1,28 +1,24 @@
 """
-Build the joint SentencePiece vocab for the EN-TR MT model, sourced from a
-random subsample of Helsinki-NLP/opus-100 (en-tr).
+Build the joint SentencePiece BPE vocab for the EN-TR MT model
+(PROJECT_INSTRUCTIONS.md Section 3.2: "Joint SentencePiece BPE, 8k merges,
+trained on the training portion only").
 
-Bypasses joeynmt's `scripts/build_vocab.py --random-subset`: for a
-huggingface-backed dataset that script's subsampling path calls
-`HuggingfaceTranslationDataset.sample_random_subset()`, which doesn't exist
-in the installed joeynmt==2.3.0 (AttributeError), and even without
-subsampling its `get_list()` filters via `idx in self.indices` -- an O(n)
-membership check per example against what is effectively a list, so an O(n^2)
-crawl over 1M rows that doesn't finish in a reasonable time. This script
-calls sentencepiece directly instead, replicating what
-`scripts/build_vocab.py`'s `train_spm()` would have produced (same special
-symbols, same moses-pretokenize + lowercase preprocessing as
-configs/en_tr_opus100.yaml), so the output is a drop-in sp.model/sp.vocab
-for that config.
+Sources sentences from data/mt/opus_en_tr/train.{en,tr} -- the already
+filtered/capped/split OpenSubtitles corpus produced by
+src/prepare_mt_corpus.py. Deliberately reads only the *train* split (never
+dev/test), per the spec.
 
-Placeholder tokenizer: trained on OPUS-100 itself, not the team's shared
-review-domain corpus. Swap for Buse's tokenizer once it's ready.
+Calls sentencepiece directly (not joeynmt/scripts/build_vocab.py -- see
+src/prepare_mt_corpus.py's docstring history / project memory for why that
+script's subsampling path is unreliable for large corpora). Preprocesses
+with moses pretokenize + lowercase first, matching the `tokenizer_cfg` the
+MT JoeyNMT config applies at load time, so the vocab is fit to the same
+text distribution the model will actually see.
 """
 import argparse
 from pathlib import Path
 
 import sentencepiece as spm
-from datasets import load_dataset
 from sacremoses import MosesTokenizer
 
 VOCAB_SIZE = 8000
@@ -34,35 +30,30 @@ SPECIAL_SYMBOLS = {
 }
 
 
-def preprocessed_sents(dataset, lang: str) -> list:
+def preprocessed_sents(path: Path, lang: str) -> list:
     tokenizer = MosesTokenizer(lang=lang)
-    return [
-        tokenizer.tokenize(ex["translation"][lang], return_str=True).lower()
-        for ex in dataset
-    ]
+    lines = path.read_text(encoding="utf-8").splitlines()
+    return [tokenizer.tokenize(line, return_str=True).lower() for line in lines]
 
 
-def main(n_pairs: int, seed: int, out_dir: Path) -> None:
-    print(f"Loading Helsinki-NLP/opus-100 (en-tr) and sampling {n_pairs} pairs...")
-    ds = load_dataset("Helsinki-NLP/opus-100", "en-tr", split="train")
-    ds = ds.shuffle(seed=seed).select(range(n_pairs))
-
-    print("Pre-processing (moses tokenize + lowercase) to match config...")
-    en_sents = preprocessed_sents(ds, "en")
-    tr_sents = preprocessed_sents(ds, "tr")
+def main(train_dir: Path, out_dir: Path) -> None:
+    print(f"Reading train split from {train_dir} ...")
+    en_sents = preprocessed_sents(train_dir / "train.en", "en")
+    tr_sents = preprocessed_sents(train_dir / "train.tr", "tr")
+    assert len(en_sents) == len(tr_sents), (len(en_sents), len(tr_sents))
     pooled = en_sents + tr_sents
-    print(f"Pooled {len(pooled)} sentences for joint vocab training.")
+    print(f"Pooled {len(pooled)} sentences ({len(en_sents)} en + {len(tr_sents)} tr) for joint vocab training.")
 
     out_dir.mkdir(parents=True, exist_ok=True)
     input_file = out_dir / "_spm_train_input.txt"
     input_file.write_text("\n".join(pooled), encoding="utf-8")
 
     model_prefix = out_dir / "sp"
-    print("Training SentencePiece model...")
+    print("Training SentencePiece BPE model...")
     spm.SentencePieceTrainer.Train(" ".join([
         f"--input={input_file}",
         f"--model_prefix={model_prefix}",
-        "--model_type=unigram",
+        "--model_type=bpe",
         f"--vocab_size={VOCAB_SIZE}",
         "--character_coverage=1.0",
         "--accept_language=en,tr",
@@ -83,8 +74,7 @@ def main(n_pairs: int, seed: int, out_dir: Path) -> None:
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--n-pairs", type=int, default=200_000)
-    ap.add_argument("--seed", type=int, default=42)
-    ap.add_argument("--out-dir", type=str, default="data/mt/opus100_en_tr")
+    ap.add_argument("--train-dir", type=str, default="data/mt/opus_en_tr")
+    ap.add_argument("--out-dir", type=str, default="data/mt/opus_en_tr")
     args = ap.parse_args()
-    main(args.n_pairs, args.seed, Path(args.out_dir))
+    main(Path(args.train_dir), Path(args.out_dir))
