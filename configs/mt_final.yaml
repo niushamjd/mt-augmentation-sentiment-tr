@@ -1,3 +1,4 @@
+# Decoding config for mt_final. Identical to transformer_en_tr.yaml except load_model.
 name: "transformer_en_tr"
 joeynmt_version: "2.3.0"
 model_dir: "models/transformer_en_tr"
@@ -31,6 +32,7 @@ data:
       model_file: "data/mt/opus_en_tr/sp.model"
 
 testing:
+  load_model: "models/mt_final.ckpt"   # copy of best.ckpt from the training run
   n_best: 1
   beam_size: 5
   beam_alpha: 1.0

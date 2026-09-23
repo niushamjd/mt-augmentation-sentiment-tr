@@ -1,3 +1,7 @@
+# Translation config for mt_early (JoeyNMT "test" mode, which saves scores).
+# Same model and decoding as mt_early.yaml; only the data section differs:
+# no dev set, and "test" points to the file to translate: data/mt/to_translate.en
+# (no .tr file must exist next to it, otherwise JoeyNMT treats it as references).
 name: "transformer_en_tr"
 joeynmt_version: "2.3.0"
 model_dir: "models/transformer_en_tr"
@@ -6,8 +10,7 @@ random_seed: 42
 
 data:
   train: "data/mt/opus_en_tr/train"
-  dev: "data/mt/opus_en_tr/dev"
-  test: "data/mt/opus_en_tr/test"
+  test: "data/mt/to_translate"   # reads data/mt/to_translate.en
   dataset_type: "plain"
   src:
     lang: "en"
@@ -31,6 +34,7 @@ data:
       model_file: "data/mt/opus_en_tr/sp.model"
 
 testing:
+  load_model: "models/mt_early.ckpt"   # saved checkpoint closest to 25% of total training steps (rule fixed before training)
   n_best: 1
   beam_size: 5
   beam_alpha: 1.0

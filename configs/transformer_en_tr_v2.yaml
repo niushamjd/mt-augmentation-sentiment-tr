@@ -1,6 +1,10 @@
-name: "transformer_en_tr"
+# Run 2: identical to run 1 (transformer_en_tr.yaml) except
+#  - cased SentencePiece model (run 1 used one trained on lowercased text -> capitals were <unk>)
+#  - new model_dir
+#  - epochs 30 -> 12 (run 1 plateaued at ~18k steps, ~1,930 steps per epoch)
+name: "transformer_en_tr_v2"
 joeynmt_version: "2.3.0"
-model_dir: "models/transformer_en_tr"
+model_dir: "models/transformer_en_tr_v2"
 use_cuda: True
 random_seed: 42
 
@@ -15,20 +19,20 @@ data:
     lowercase: False
     normalize: False
     level: "bpe"
-    voc_file: "data/mt/opus_en_tr/sp.vocab"
+    voc_file: "data/mt/opus_en_tr/sp_cased.joey.vocab"
     tokenizer_type: "sentencepiece"
     tokenizer_cfg:
-      model_file: "data/mt/opus_en_tr/sp.model"
+      model_file: "data/mt/opus_en_tr/sp_cased.model"
   trg:
     lang: "tr"
     max_length: 100
     lowercase: False
     normalize: False
     level: "bpe"
-    voc_file: "data/mt/opus_en_tr/sp.vocab"
+    voc_file: "data/mt/opus_en_tr/sp_cased.joey.vocab"
     tokenizer_type: "sentencepiece"
     tokenizer_cfg:
-      model_file: "data/mt/opus_en_tr/sp.model"
+      model_file: "data/mt/opus_en_tr/sp_cased.model"
 
 testing:
   n_best: 1
@@ -55,7 +59,7 @@ training:
   batch_type: "token"
   validation_freq: 1000
   logging_freq: 100
-  epochs: 30
+  epochs: 12
   early_stopping_metric: "bleu"
   keep_best_ckpts: -1   # never delete checkpoints: the ~25% one is needed as mt_early (RQ4)
 
