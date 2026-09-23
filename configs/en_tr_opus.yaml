@@ -1,38 +1,43 @@
 ############## EN->TR translation model for synthetic sentiment data ##############
-#  Corpus: Helsinki-NLP/opus-100 (en-tr pair), loaded directly via HF `datasets`
-#  (no local copy needed: dataset_type "huggingface" streams straight from the
-#  HF Hub cache). Modeled on joeynmt/configs/iwslt14_deen_sp.yaml.
+#  Corpus: OPUS OpenSubtitles v2018 (en-tr), filtered/capped/split locally by
+#  src/prepare_mt_corpus.py -> data/mt/opus_en_tr/{train,dev,test}.{en,tr}.
+#  See that script's docstring for the filtering pipeline and source choice.
+#  Uses dataset_type "plain" (local Moses-format files), not the huggingface
+#  loader -- our filtering (length ratio, langid, dedup) isn't something
+#  JoeyNMT's HF wrapper can express, so it's done upstream and these files
+#  are the final product.
 #
 #  All commands below are run from inside the (untracked, locally-cloned)
 #  `joeynmt/` directory, pointing back at this repo's config/data with `../`:
 #
-#  Build the joint SentencePiece vocab (subsampled to 200k sents for speed):
-#   $ python scripts/build_vocab.py ../configs/en_tr_opus100.yaml --joint --random-subset 200000
+#  Corpus + vocab are already built (see src/prepare_mt_corpus.py and
+#  src/build_mt_vocab.py at the repo root). To rebuild from scratch:
+#   $ python src/prepare_mt_corpus.py --en <raw.en> --tr <raw.tr> --max-raw-lines 1500000
+#   $ python src/build_mt_vocab.py
 #
 #  Train:
-#   $ python -m joeynmt train ../configs/en_tr_opus100.yaml
+#   $ python -m joeynmt train ../configs/en_tr_opus.yaml
 #
-#  NOTE: this is a placeholder tokenizer trained on the OPUS-100 corpus itself,
-#  standing in until Buse's shared review-domain SentencePiece model (trained on
-#  ~20k sampled Turkish/English reviews) is ready. Swap `tokenizer_cfg.model_file`
-#  and `voc_file` below to point at the shared model once it exists -- everything
-#  else in this config should still hold.
-name: "en_tr_opus100"
+#  mt_early / mt_final (Section 3.3): JoeyNMT only writes a checkpoint file
+#  when a validation run beats the previous best, so an arbitrary "25% of
+#  training" checkpoint is NOT guaranteed to survive by default.
+#  keep_best_ckpts is set to -1 (keep every best-so-far checkpoint, never
+#  prune) specifically so this is possible -- once training finishes, look
+#  through model_dir for the checkpoint whose step count is closest to 25%
+#  of the final step count and copy it out as mt_early; copy best.ckpt as
+#  mt_final. This is a manual step, do it deliberately, don't skip it.
+name: "en_tr_opus"
 joeynmt_version: "2.3.0"
-model_dir: "../models/en_tr_opus100"
+model_dir: "../models/en_tr_opus"
 use_cuda: False    # CPU-only on this team's laptops (no MPS support in JoeyNMT/torch 2.1.2)
 fp16: False
 random_seed: 42
 
 data:
-    train: "Helsinki-NLP/opus-100"
-    dev: "Helsinki-NLP/opus-100"      # "dev" is auto-mapped to HF's "validation" split
-    test: "Helsinki-NLP/opus-100"
-    dataset_type: "huggingface"
-    dataset_cfg:
-        name: "en-tr"
-    sample_train_subset: 200000       # laptop-friendly subset of the 1M train pairs
-    sample_dev_subset: -1
+    train: "../data/mt/opus_en_tr/train"
+    dev: "../data/mt/opus_en_tr/dev"
+    test: "../data/mt/opus_en_tr/test"
+    dataset_type: "plain"
     src:
         lang: "en"
         max_length: 100
@@ -41,11 +46,11 @@ data:
         level: "bpe"
         voc_limit: 8000
         voc_min_freq: 1
-        voc_file: "../data/mt/opus100_en_tr/sp.vocab"
+        voc_file: "../data/mt/opus_en_tr/sp.vocab"
         tokenizer_type: "sentencepiece"
         tokenizer_cfg:
-            model_file: "../data/mt/opus100_en_tr/sp.model"
-            model_type: "unigram"
+            model_file: "../data/mt/opus_en_tr/sp.model"
+            model_type: "bpe"
             character_coverage: 1.0
             alpha: 0.1
             pretokenizer: "moses"
@@ -57,11 +62,11 @@ data:
         level: "bpe"
         voc_limit: 8000
         voc_min_freq: 1
-        voc_file: "../data/mt/opus100_en_tr/sp.vocab"
+        voc_file: "../data/mt/opus_en_tr/sp.vocab"
         tokenizer_type: "sentencepiece"
         tokenizer_cfg:
-            model_file: "../data/mt/opus100_en_tr/sp.model"
-            model_type: "unigram"
+            model_file: "../data/mt/opus_en_tr/sp.model"
+            model_type: "bpe"
             character_coverage: 1.0
             alpha: 0.1
             pretokenizer: "moses"
@@ -82,7 +87,7 @@ testing:
     batch_size: 32
     batch_type: "sentence"
     max_output_length: 100
-    eval_metrics: ["bleu"]
+    eval_metrics: ["bleu", "chrf"]
     sacrebleu_cfg:
         tokenize: "13a"
         lowercase: True
@@ -103,12 +108,12 @@ training:
     batch_multiplier: 2
     early_stopping_metric: "bleu"
     epochs: 30              # starting point -- tune down/up once you see per-epoch time on CPU
-    validation_freq: 500
+    validation_freq: 1000
     logging_freq: 100
     overwrite: False
     shuffle: True
     print_valid_sents: [0, 1, 2, 3]
-    keep_best_ckpts: 3
+    keep_best_ckpts: -1     # keep every best-so-far checkpoint -- needed to recover an mt_early snapshot, see note above
 
 model:
     initializer: "xavier_uniform"
@@ -121,12 +126,12 @@ model:
     encoder:
         type: "transformer"
         num_layers: 4
-        num_heads: 4
+        num_heads: 8
         embeddings:
-            embedding_dim: 256
+            embedding_dim: 512
             scale: True
             dropout: 0.
-        hidden_size: 256
+        hidden_size: 512
         ff_size: 1024
         dropout: 0.1
         layer_norm: "pre"
@@ -134,12 +139,12 @@ model:
     decoder:
         type: "transformer"
         num_layers: 4
-        num_heads: 4
+        num_heads: 8
         embeddings:
-            embedding_dim: 256
+            embedding_dim: 512
             scale: True
             dropout: 0.
-        hidden_size: 256
+        hidden_size: 512
         ff_size: 1024
         dropout: 0.1
         layer_norm: "pre"
