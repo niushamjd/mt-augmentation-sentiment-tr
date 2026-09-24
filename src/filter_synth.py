@@ -178,7 +178,7 @@ def main() -> None:
     ap.add_argument("--en", required=True, type=Path)
     ap.add_argument("--tr", required=True, type=Path)
     ap.add_argument("--labels", required=True, type=Path, help="en_reviews_20k.tsv (id, text, label)")
-    ap.add_argument("--mt-system", required=True, choices=["final", "early"])
+    ap.add_argument("--mt-system", required=True, choices=["final", "early", "pretrained"])
     ap.add_argument("--scores", type=Path, default=None, help="JoeyNMT --save-scores output, one float/line")
     ap.add_argument("--out-dir", type=Path, default=Path("data/sentiment"))
     ap.add_argument("--no-write", action="store_true", help="report only, don't write synth_*.tsv")
@@ -206,7 +206,7 @@ def main() -> None:
     if args.no_write:
         return
 
-    suffix = "" if args.mt_system == "final" else "_early"
+    suffix = "" if args.mt_system == "final" else f"_{args.mt_system}"
     write_tsv(args.out_dir / f"synth_all{suffix}.tsv", tr_lines, labels)
     print(f"wrote {args.out_dir / f'synth_all{suffix}.tsv'} ({n} rows, unfiltered)")
 
