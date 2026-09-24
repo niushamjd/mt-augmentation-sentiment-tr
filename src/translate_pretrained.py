@@ -34,7 +34,7 @@ import torch
 from transformers import MarianMTModel, MarianTokenizer
 
 MODEL_NAME = "Helsinki-NLP/opus-mt-tc-big-en-tr"
-BATCH_SIZE = 64
+BATCH_SIZE = 16  # smaller than an initial 64 -- that OOM'd MPS on batch 2 (cache wasn't the only issue)
 NUM_BEAMS = 5
 MAX_NEW_TOKENS = 128
 
@@ -96,6 +96,10 @@ def main() -> None:
                 assert "\t" not in t and "\n" not in t, "translation contains a tab or line break"
                 out_f.write(t + "\n")
             out_f.flush()
+
+            del enc, out_ids
+            if device.type == "mps":
+                torch.mps.empty_cache()
 
             done = i + len(batch_lines)
             elapsed = time.time() - t0
