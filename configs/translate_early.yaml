@@ -1,10 +1,10 @@
-# Translation config for mt_early (JoeyNMT "test" mode, which saves scores).
+# Translation config for mt_early, MT run 2 (JoeyNMT "test" mode, which saves scores).
 # Same model and decoding as mt_early.yaml; only the data section differs:
 # no dev set, and "test" points to the file to translate: data/mt/to_translate.en
 # (no .tr file must exist next to it, otherwise JoeyNMT treats it as references).
-name: "transformer_en_tr"
+name: "transformer_en_tr_v2"
 joeynmt_version: "2.3.0"
-model_dir: "models/transformer_en_tr"
+model_dir: "models/transformer_en_tr_v2"
 use_cuda: True
 random_seed: 42
 
@@ -18,23 +18,23 @@ data:
     lowercase: False
     normalize: False
     level: "bpe"
-    voc_file: "data/mt/opus_en_tr/sp.vocab"
+    voc_file: "data/mt/opus_en_tr/sp_cased.joey.vocab"
     tokenizer_type: "sentencepiece"
     tokenizer_cfg:
-      model_file: "data/mt/opus_en_tr/sp.model"
+      model_file: "data/mt/opus_en_tr/sp_cased.model"
   trg:
     lang: "tr"
     max_length: 100
     lowercase: False
     normalize: False
     level: "bpe"
-    voc_file: "data/mt/opus_en_tr/sp.vocab"
+    voc_file: "data/mt/opus_en_tr/sp_cased.joey.vocab"
     tokenizer_type: "sentencepiece"
     tokenizer_cfg:
-      model_file: "data/mt/opus_en_tr/sp.model"
+      model_file: "data/mt/opus_en_tr/sp_cased.model"
 
 testing:
-  load_model: "models/mt_early.ckpt"   # saved checkpoint closest to 25% of total training steps (rule fixed before training)
+  load_model: "models/run2_mt_early.ckpt"   # mt_early of run 2 (copy of the chosen early checkpoint, see DECISIONS)
   n_best: 1
   beam_size: 5
   beam_alpha: 1.0
@@ -59,7 +59,7 @@ training:
   batch_type: "token"
   validation_freq: 1000
   logging_freq: 100
-  epochs: 30
+  epochs: 12
   early_stopping_metric: "bleu"
   keep_best_ckpts: -1   # never delete checkpoints: the ~25% one is needed as mt_early (RQ4)
 
