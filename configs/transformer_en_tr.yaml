@@ -1,0 +1,93 @@
+name: "transformer_en_tr"
+joeynmt_version: "2.3.0"
+model_dir: "models/transformer_en_tr"
+use_cuda: True
+random_seed: 42
+
+data:
+  train: "data/mt/opus_en_tr/train"
+  dev: "data/mt/opus_en_tr/dev"
+  test: "data/mt/opus_en_tr/test"
+  dataset_type: "plain"
+  src:
+    lang: "en"
+    max_length: 100
+    lowercase: False
+    normalize: False
+    level: "bpe"
+    voc_file: "data/mt/opus_en_tr/sp.vocab"
+    tokenizer_type: "sentencepiece"
+    tokenizer_cfg:
+      model_file: "data/mt/opus_en_tr/sp.model"
+  trg:
+    lang: "tr"
+    max_length: 100
+    lowercase: False
+    normalize: False
+    level: "bpe"
+    voc_file: "data/mt/opus_en_tr/sp.vocab"
+    tokenizer_type: "sentencepiece"
+    tokenizer_cfg:
+      model_file: "data/mt/opus_en_tr/sp.model"
+
+testing:
+  n_best: 1
+  beam_size: 5
+  beam_alpha: 1.0
+  batch_size: 2048
+  batch_type: "token"
+  max_output_length: 100
+  eval_metrics: ["bleu", "chrf"]
+  return_prob: "hyp"   # output translation scores, needed for filter criterion 6
+  sacrebleu_cfg:
+    tokenize: "13a"
+
+training:
+  optimizer: "adam"
+  adam_betas: [0.9, 0.98]
+  scheduling: "noam"
+  warmup: 4000
+  loss: "crossentropy"
+  learning_rate: 0.0005
+  learning_rate_min: 1.0e-8
+  label_smoothing: 0.1
+  batch_size: 2048
+  batch_type: "token"
+  validation_freq: 1000
+  logging_freq: 100
+  epochs: 30
+  early_stopping_metric: "bleu"
+  keep_best_ckpts: -1   # never delete checkpoints: the ~25% one is needed as mt_early (RQ4)
+
+model:
+  initializer: "xavier_uniform"
+  bias_initializer: "zeros"
+  init_gain: 1.0
+  embed_initializer: "xavier_uniform"
+  tied_embeddings: False
+  encoder:
+    type: "transformer"
+    num_layers: 4
+    num_heads: 8
+    embeddings:
+      embedding_dim: 512
+      scale: True
+      dropout: 0.1
+    hidden_size: 512
+    ff_size: 1024
+    dropout: 0.1
+    layer_norm: "pre"
+    activation: "relu"
+  decoder:
+    type: "transformer"
+    num_layers: 4
+    num_heads: 8
+    embeddings:
+      embedding_dim: 512
+      scale: True
+      dropout: 0.1
+    hidden_size: 512
+    ff_size: 1024
+    dropout: 0.1
+    layer_norm: "pre"
+    activation: "relu"

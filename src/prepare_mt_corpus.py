@@ -15,6 +15,17 @@ whose token-length ratio falls outside 0.5-2.0, drop duplicate pairs, then
 pairs where langid doesn't confirm en/tr on each side respectively. Cap at
 100k pairs total, then hold out 2k for MT dev + 2k for MT test out of that
 100k, leaving the rest for MT train.
+
+Finally, remove every *train* pair whose English OR Turkish side also occurs
+in dev or test (dev and test stay unchanged). Dedup above only removes
+identical *pairs*; short subtitle lines ("Where were you?", "Down!") recur
+with slightly different translations, so without this step 74 dev and 65/67
+test sentences (EN/TR) also appeared in train, inflating BLEU/chrF slightly
+and biasing checkpoint selection on dev.
+ 
+To apply only this last step to an already-built corpus (no re-download):
+    python src/prepare_mt_corpus.py --from-existing
+This rewrites train.{en,tr} only.
 """
 import argparse
 import random
@@ -122,17 +133,53 @@ def split_and_cap(pairs, seed=SEED, cap=CAP, n_dev=N_DEV, n_test=N_TEST):
     train = pairs[n_test + n_dev:]
     return train, dev, test
 
+def remove_overlap(train, dev, test):
+    """Drop train pairs whose EN or TR side (whitespace-stripped) occurs in dev or test."""
+    held_en = {e.strip() for e, _ in dev + test}
+    held_tr = {t.strip() for _, t in dev + test}
+    kept = [(e, t) for e, t in train if e.strip() not in held_en and t.strip() not in held_tr]
+    stats = {
+        "train_before": len(train),
+        "removed_en_side": sum(e.strip() in held_en for e, _ in train),
+        "removed_tr_side": sum(t.strip() in held_tr for _, t in train),
+        "removed_total": len(train) - len(kept),
+        "train_after": len(kept),
+    }
+    # sanity: nothing left over
+    assert not ({e.strip() for e, _ in kept} & held_en)
+    assert not ({t.strip() for _, t in kept} & held_tr)
+    return kept, stats
+ 
+ 
+def read_split(out_dir: Path, split: str):
+    en = (out_dir / f"{split}.en").read_text(encoding="utf-8").splitlines()
+    tr = (out_dir / f"{split}.tr").read_text(encoding="utf-8").splitlines()
+    assert len(en) == len(tr), (split, len(en), len(tr))
+    return list(zip(en, tr))
+
 
 def write_moses(pairs, out_dir: Path, split: str) -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
-    (out_dir / f"{split}.en").write_text("\n".join(e for e, _ in pairs), encoding="utf-8")
-    (out_dir / f"{split}.tr").write_text("\n".join(t for _, t in pairs), encoding="utf-8")
-
-
+    # trailing newline so `wc -l` reports the real line count
+    (out_dir / f"{split}.en").write_text("\n".join(e for e, _ in pairs) + "\n", encoding="utf-8")
+    (out_dir / f"{split}.tr").write_text("\n".join(t for _, t in pairs) + "\n", encoding="utf-8")
+ 
+ 
+def print_overlap_stats(stats) -> None:
+    print("train/dev/test overlap removal:")
+    for k, v in stats.items():
+        print(f"  {k}: {v}")
+ 
+ 
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--en", required=True, type=Path)
-    ap.add_argument("--tr", required=True, type=Path)
+    ap.add_argument("--en", type=Path, help="raw English file (not needed with --from-existing)")
+    ap.add_argument("--tr", type=Path, help="raw Turkish file (not needed with --from-existing)")
+    ap.add_argument(
+        "--from-existing", action="store_true",
+        help="only remove the train/dev/test overlap from the corpus already in --out-dir "
+             "(rewrites train.{en,tr}; dev and test are not touched)",
+    )
     ap.add_argument("--out-dir", type=Path, default=Path("data/mt/opus_en_tr"))
     ap.add_argument(
         "--sample-before-langid", type=int, default=500_000,
@@ -144,7 +191,21 @@ def main() -> None:
              "(memory-safe for corpora much bigger than the 100k cap, e.g. OpenSubtitles)",
     )
     args = ap.parse_args()
-
+ 
+    if args.from_existing:
+        train = read_split(args.out_dir, "train")
+        dev = read_split(args.out_dir, "dev")
+        test = read_split(args.out_dir, "test")
+        print(f"read existing corpus: train={len(train)} dev={len(dev)} test={len(test)}")
+        train, overlap_stats = remove_overlap(train, dev, test)
+        print_overlap_stats(overlap_stats)
+        write_moses(train, args.out_dir, "train")
+        print(f"rewrote {args.out_dir}/train.{{en,tr}} (dev and test unchanged)")
+        return
+ 
+    if args.en is None or args.tr is None:
+        ap.error("--en and --tr are required unless --from-existing is given")
+ 
     pairs = read_pairs(args.en, args.tr, max_raw_lines=args.max_raw_lines)
     print(f"read {len(pairs)} raw pairs")
     filtered, stats = filter_pairs(
@@ -154,18 +215,21 @@ def main() -> None:
     for k, v in stats.items():
         removed = ""
         print(f"  {k}: {v}{removed}")
-
+ 
     if len(filtered) < CAP:
         print(f"WARNING: only {len(filtered)} pairs survived filtering, below the {CAP} cap.")
-
+ 
     train, dev, test = split_and_cap(filtered)
+    train, overlap_stats = remove_overlap(train, dev, test)
+    print_overlap_stats(overlap_stats)
     print(f"train={len(train)} dev={len(dev)} test={len(test)}")
-
+ 
     write_moses(train, args.out_dir, "train")
     write_moses(dev, args.out_dir, "dev")
     write_moses(test, args.out_dir, "test")
     print(f"wrote to {args.out_dir}")
-
-
+ 
+ 
 if __name__ == "__main__":
     main()
+ 
