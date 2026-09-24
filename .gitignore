@@ -226,3 +226,7 @@ data/raw/
 # MT model checkpoints (large, regenerable from configs/)
 models/
 data/spm/train_text.txt
+
+# local translation working files
+data/mt/sample*
+data/mt/to_translate.en
