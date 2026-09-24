@@ -98,7 +98,7 @@ def main() -> None:
     ap.add_argument("--dev", default="data/sentiment/real_dev.tsv")
     ap.add_argument("--test", default="data/sentiment/real_test.tsv")
     ap.add_argument("--extra-train", default=None, help="synthetic TSV to concat for C2/C3/C2b")
-    ap.add_argument("--mt-system", default="none", choices=["none", "final", "early"])
+    ap.add_argument("--mt-system", default="none", choices=["none", "final", "early", "pretrained"])
     ap.add_argument("--lr", type=float, default=2e-5)
     ap.add_argument("--batch-size", type=int, default=16)
     ap.add_argument("--results-csv", default="results/results_niyousha.csv")
