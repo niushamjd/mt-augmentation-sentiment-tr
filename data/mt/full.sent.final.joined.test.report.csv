@@ -1,0 +1,7 @@
+criterion,flagged,pct_flagged,flagged_only_by_this,pct_only_by_this
+length,44,0.2,0,0.0
+ratio,3328,16.6,1742,8.7
+repetition,242,1.2,145,0.7
+langid,60,0.3,1,0.0
+copy_through,5,0.0,1,0.0
+logprob_25th_pct,5000,25.0,3367,16.8
