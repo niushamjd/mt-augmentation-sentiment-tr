@@ -74,8 +74,12 @@ class SentimentDataset(Dataset):
 
 
 def load_tsv(path: Path) -> pd.DataFrame:
-    df = pd.read_csv(path, sep="\t")
+    # keep_default_na=False: an empty TSV cell is a genuine empty-string
+    # translation (real, unfiltered MT output for C2 -- not missing data),
+    # and pandas' default NaN-coercion on blank cells crashes the tokenizer.
+    df = pd.read_csv(path, sep="\t", keep_default_na=False)
     assert set(df.columns) >= {"text", "label"}, df.columns
+    df["label"] = df["label"].astype(int)
     return df
 
 
