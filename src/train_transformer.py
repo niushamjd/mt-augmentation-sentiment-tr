@@ -174,7 +174,7 @@ def main():
     ap.add_argument("--mt-system", default=None, choices=["final", "early", "pretrained"],
                     help="default: final (none for C1)")
     ap.add_argument("--synth-n", type=int, default=None, help="RQ3: use only this many synthetic examples")
-    ap.add_argument("--lr", type=float, default=5e-4)
+    ap.add_argument("--lr", type=float, default=3e-4)
     ap.add_argument("--batch-size", type=int, default=32)
     ap.add_argument("--dropout", type=float, default=0.1)
     ap.add_argument("--warmup-steps", type=int, default=200, help="same number of steps in every condition")
@@ -264,10 +264,10 @@ def main():
 
     run_id = f"transformer_{args.condition}_{args.mt_system}_{args.seed}"
     if args.synth_n is not None:
-        run_id += f"_n{args.synth_n}"  # RQ3 runs would otherwise overwrite the C2 predictions
+        run_id += f"_n{args.synth_n}"
 
     if args.tune:
-        # tuning: record dev only, never look at test (Section 1.2)
+        # tuning: record dev only, never look at test
         row = pd.DataFrame([{
             "run_id": run_id, "lr": args.lr, "batch_size": args.batch_size, "dropout": args.dropout,
             "warmup_steps": args.warmup_steps, "epochs_run": epochs_run, "best_epoch": best_epoch,
