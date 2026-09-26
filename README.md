@@ -1,4 +1,4 @@
-# Backtranslation for Low-Resource Sentiment Classification (EN→TR)
+# Translation-Based Data Augmentation for Low-Resource Sentiment Classification (EN→TR)
 
 Course project for "Introduction to Neural Networks and Sequence-to-Sequence 
 Learning" (Heidelberg University, SoSe 2026).
@@ -26,8 +26,8 @@ and real Turkish product reviews as ground truth.
 
 1. Clone this repository:
 ```bash
-   git clone https://github.com/<your-username>/backtranslation-sentiment-tr.git
-   cd backtranslation-sentiment-tr
+   git clone https://github.com/niushamjd/mt-augmentation-sentiment-tr.git
+   cd mt-augmentation-sentiment-tr
 ```
 
 2. Create and activate a dedicated conda environment:
