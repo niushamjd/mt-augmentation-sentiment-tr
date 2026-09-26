@@ -1,0 +1,254 @@
+device: mps
+train: 2000 (2000 real + 0 synthetic) | dev: 1000 | test: 2000
+parameters: embedding 2,048,000 | non-embedding 1,055,234 | total 3,103,234
+epoch  1 | train loss 0.6922 | dev macro-F1 0.5548 | 6s
+epoch  2 | train loss 0.6789 | dev macro-F1 0.6096 | 4s
+epoch  3 | train loss 0.6153 | dev macro-F1 0.6589 | 3s
+epoch  4 | train loss 0.5028 | dev macro-F1 0.7169 | 3s
+epoch  5 | train loss 0.4197 | dev macro-F1 0.7537 | 3s
+epoch  6 | train loss 0.3532 | dev macro-F1 0.7507 | 3s
+epoch  7 | train loss 0.2803 | dev macro-F1 0.7689 | 3s
+epoch  8 | train loss 0.2114 | dev macro-F1 0.7570 | 3s
+epoch  9 | train loss 0.1707 | dev macro-F1 0.7586 | 3s
+epoch 10 | train loss 0.1148 | dev macro-F1 0.7503 | 3s
+early stopping: no improvement for 3 epochs
+best epoch 7, dev macro-F1 0.7689, training took 33s
+--- eval report: transformer_C1_none_42 ---
+accuracy:      0.7350
+macro-F1:      0.7341
+F1   (neg/pos): 0.7187 / 0.7495
+prec (neg/pos): 0.7658 / 0.7106
+rec  (neg/pos): 0.6770 / 0.7930
+confusion matrix (rows=gold, cols=pred, order=[neg,pos]):
+[[677 323]
+ [207 793]]
+device: mps
+train: 22000 (2000 real + 20000 synthetic) | dev: 1000 | test: 2000
+parameters: embedding 2,048,000 | non-embedding 1,055,234 | total 3,103,234
+epoch  1 | train loss 0.6074 | dev macro-F1 0.6829 | 28s
+epoch  2 | train loss 0.5172 | dev macro-F1 0.7286 | 21s
+epoch  3 | train loss 0.4777 | dev macro-F1 0.7540 | 21s
+epoch  4 | train loss 0.4440 | dev macro-F1 0.7614 | 21s
+epoch  5 | train loss 0.4091 | dev macro-F1 0.7730 | 21s
+epoch  6 | train loss 0.3716 | dev macro-F1 0.7740 | 21s
+epoch  7 | train loss 0.3307 | dev macro-F1 0.7715 | 21s
+epoch  8 | train loss 0.2836 | dev macro-F1 0.7696 | 21s
+epoch  9 | train loss 0.2391 | dev macro-F1 0.7665 | 21s
+early stopping: no improvement for 3 epochs
+best epoch 6, dev macro-F1 0.7740, training took 196s
+--- eval report: transformer_C2_final_42 ---
+accuracy:      0.7640
+macro-F1:      0.7634
+F1   (neg/pos): 0.7516 / 0.7752
+prec (neg/pos): 0.7933 / 0.7400
+rec  (neg/pos): 0.7140 / 0.8140
+confusion matrix (rows=gold, cols=pred, order=[neg,pos]):
+[[714 286]
+ [186 814]]
+device: mps
+train: 15075 (2000 real + 13075 synthetic) | dev: 1000 | test: 2000
+parameters: embedding 2,048,000 | non-embedding 1,055,234 | total 3,103,234
+epoch  1 | train loss 0.6138 | dev macro-F1 0.6993 | 20s
+epoch  2 | train loss 0.4933 | dev macro-F1 0.7300 | 13s
+epoch  3 | train loss 0.4431 | dev macro-F1 0.7590 | 14s
+epoch  4 | train loss 0.4037 | dev macro-F1 0.7474 | 13s
+epoch  5 | train loss 0.3671 | dev macro-F1 0.7725 | 14s
+epoch  6 | train loss 0.3313 | dev macro-F1 0.7690 | 14s
+epoch  7 | train loss 0.2883 | dev macro-F1 0.7618 | 13s
+epoch  8 | train loss 0.2440 | dev macro-F1 0.7546 | 13s
+early stopping: no improvement for 3 epochs
+best epoch 5, dev macro-F1 0.7725, training took 115s
+--- eval report: transformer_C3_final_42 ---
+accuracy:      0.7665
+macro-F1:      0.7665
+F1   (neg/pos): 0.7654 / 0.7675
+prec (neg/pos): 0.7689 / 0.7641
+rec  (neg/pos): 0.7620 / 0.7710
+confusion matrix (rows=gold, cols=pred, order=[neg,pos]):
+[[762 238]
+ [229 771]]
+device: mps
+train: 15075 (2000 real + 13075 synthetic) | dev: 1000 | test: 2000
+parameters: embedding 2,048,000 | non-embedding 1,055,234 | total 3,103,234
+epoch  1 | train loss 0.6333 | dev macro-F1 0.6968 | 21s
+epoch  2 | train loss 0.5344 | dev macro-F1 0.7340 | 15s
+epoch  3 | train loss 0.4868 | dev macro-F1 0.7588 | 17s
+epoch  4 | train loss 0.4519 | dev macro-F1 0.7658 | 17s
+epoch  5 | train loss 0.4153 | dev macro-F1 0.7815 | 17s
+epoch  6 | train loss 0.3802 | dev macro-F1 0.7630 | 16s
+epoch  7 | train loss 0.3428 | dev macro-F1 0.7690 | 16s
+epoch  8 | train loss 0.2931 | dev macro-F1 0.7649 | 16s
+early stopping: no improvement for 3 epochs
+best epoch 5, dev macro-F1 0.7815, training took 136s
+--- eval report: transformer_C2b_final_42 ---
+accuracy:      0.7785
+macro-F1:      0.7785
+F1   (neg/pos): 0.7773 / 0.7797
+prec (neg/pos): 0.7816 / 0.7755
+rec  (neg/pos): 0.7730 / 0.7840
+confusion matrix (rows=gold, cols=pred, order=[neg,pos]):
+[[773 227]
+ [216 784]]
+device: mps
+train: 2000 (2000 real + 0 synthetic) | dev: 1000 | test: 2000
+parameters: embedding 2,048,000 | non-embedding 1,055,234 | total 3,103,234
+epoch  1 | train loss 0.7090 | dev macro-F1 0.4928 | 5s
+epoch  2 | train loss 0.6879 | dev macro-F1 0.5502 | 4s
+epoch  3 | train loss 0.6182 | dev macro-F1 0.7022 | 3s
+epoch  4 | train loss 0.5055 | dev macro-F1 0.7328 | 3s
+epoch  5 | train loss 0.4103 | dev macro-F1 0.7568 | 3s
+epoch  6 | train loss 0.3312 | dev macro-F1 0.7528 | 3s
+epoch  7 | train loss 0.2677 | dev macro-F1 0.7729 | 3s
+epoch  8 | train loss 0.2104 | dev macro-F1 0.7658 | 3s
+epoch  9 | train loss 0.1558 | dev macro-F1 0.7700 | 3s
+epoch 10 | train loss 0.1059 | dev macro-F1 0.7610 | 3s
+early stopping: no improvement for 3 epochs
+best epoch 7, dev macro-F1 0.7729, training took 33s
+--- eval report: transformer_C1_none_1337 ---
+accuracy:      0.7525
+macro-F1:      0.7525
+F1   (neg/pos): 0.7551 / 0.7499
+prec (neg/pos): 0.7473 / 0.7579
+rec  (neg/pos): 0.7630 / 0.7420
+confusion matrix (rows=gold, cols=pred, order=[neg,pos]):
+[[763 237]
+ [258 742]]
+device: mps
+train: 22000 (2000 real + 20000 synthetic) | dev: 1000 | test: 2000
+parameters: embedding 2,048,000 | non-embedding 1,055,234 | total 3,103,234
+epoch  1 | train loss 0.6163 | dev macro-F1 0.7092 | 29s
+epoch  2 | train loss 0.5132 | dev macro-F1 0.7330 | 24s
+epoch  3 | train loss 0.4702 | dev macro-F1 0.7550 | 26s
+epoch  4 | train loss 0.4351 | dev macro-F1 0.7740 | 26s
+epoch  5 | train loss 0.4032 | dev macro-F1 0.7660 | 24s
+epoch  6 | train loss 0.3675 | dev macro-F1 0.7750 | 23s
+epoch  7 | train loss 0.3312 | dev macro-F1 0.7629 | 23s
+epoch  8 | train loss 0.2920 | dev macro-F1 0.7630 | 23s
+epoch  9 | train loss 0.2461 | dev macro-F1 0.7630 | 23s
+early stopping: no improvement for 3 epochs
+best epoch 6, dev macro-F1 0.7750, training took 223s
+--- eval report: transformer_C2_final_1337 ---
+accuracy:      0.7665
+macro-F1:      0.7663
+F1   (neg/pos): 0.7592 / 0.7734
+prec (neg/pos): 0.7838 / 0.7512
+rec  (neg/pos): 0.7360 / 0.7970
+confusion matrix (rows=gold, cols=pred, order=[neg,pos]):
+[[736 264]
+ [203 797]]
+device: mps
+train: 15075 (2000 real + 13075 synthetic) | dev: 1000 | test: 2000
+parameters: embedding 2,048,000 | non-embedding 1,055,234 | total 3,103,234
+epoch  1 | train loss 0.6204 | dev macro-F1 0.7053 | 19s
+epoch  2 | train loss 0.4927 | dev macro-F1 0.7377 | 15s
+epoch  3 | train loss 0.4394 | dev macro-F1 0.7516 | 15s
+epoch  4 | train loss 0.3972 | dev macro-F1 0.7706 | 15s
+epoch  5 | train loss 0.3562 | dev macro-F1 0.7716 | 15s
+epoch  6 | train loss 0.3181 | dev macro-F1 0.7597 | 15s
+epoch  7 | train loss 0.2798 | dev macro-F1 0.7530 | 15s
+epoch  8 | train loss 0.2379 | dev macro-F1 0.7550 | 15s
+early stopping: no improvement for 3 epochs
+best epoch 5, dev macro-F1 0.7716, training took 126s
+--- eval report: transformer_C3_final_1337 ---
+accuracy:      0.7765
+macro-F1:      0.7765
+F1   (neg/pos): 0.7773 / 0.7757
+prec (neg/pos): 0.7746 / 0.7784
+rec  (neg/pos): 0.7800 / 0.7730
+confusion matrix (rows=gold, cols=pred, order=[neg,pos]):
+[[780 220]
+ [227 773]]
+device: mps
+train: 15075 (2000 real + 13075 synthetic) | dev: 1000 | test: 2000
+parameters: embedding 2,048,000 | non-embedding 1,055,234 | total 3,103,234
+epoch  1 | train loss 0.6400 | dev macro-F1 0.7118 | 21s
+epoch  2 | train loss 0.5346 | dev macro-F1 0.7469 | 17s
+epoch  3 | train loss 0.4852 | dev macro-F1 0.7714 | 17s
+epoch  4 | train loss 0.4464 | dev macro-F1 0.7540 | 17s
+epoch  5 | train loss 0.4105 | dev macro-F1 0.7620 | 17s
+epoch  6 | train loss 0.3718 | dev macro-F1 0.7720 | 17s
+epoch  7 | train loss 0.3284 | dev macro-F1 0.7739 | 17s
+epoch  8 | train loss 0.2869 | dev macro-F1 0.7796 | 17s
+epoch  9 | train loss 0.2444 | dev macro-F1 0.7458 | 17s
+epoch 10 | train loss 0.2043 | dev macro-F1 0.7459 | 17s
+epoch 11 | train loss 0.1634 | dev macro-F1 0.7500 | 17s
+early stopping: no improvement for 3 epochs
+best epoch 8, dev macro-F1 0.7796, training took 194s
+--- eval report: transformer_C2b_final_1337 ---
+accuracy:      0.7595
+macro-F1:      0.7595
+F1   (neg/pos): 0.7625 / 0.7565
+prec (neg/pos): 0.7532 / 0.7662
+rec  (neg/pos): 0.7720 / 0.7470
+confusion matrix (rows=gold, cols=pred, order=[neg,pos]):
+[[772 228]
+ [253 747]]
+device: mps
+train: 22000 (2000 real + 20000 synthetic) | dev: 1000 | test: 2000
+parameters: embedding 2,048,000 | non-embedding 1,055,234 | total 3,103,234
+epoch  1 | train loss 0.6063 | dev macro-F1 0.6619 | 28s
+epoch  2 | train loss 0.5353 | dev macro-F1 0.6986 | 22s
+epoch  3 | train loss 0.5067 | dev macro-F1 0.7300 | 23s
+epoch  4 | train loss 0.4755 | dev macro-F1 0.7295 | 22s
+epoch  5 | train loss 0.4476 | dev macro-F1 0.7429 | 22s
+epoch  6 | train loss 0.4157 | dev macro-F1 0.7529 | 21s
+epoch  7 | train loss 0.3804 | dev macro-F1 0.7396 | 22s
+epoch  8 | train loss 0.3427 | dev macro-F1 0.7410 | 21s
+epoch  9 | train loss 0.2962 | dev macro-F1 0.7430 | 21s
+early stopping: no improvement for 3 epochs
+best epoch 6, dev macro-F1 0.7529, training took 203s
+--- eval report: transformer_C2_early_42 ---
+accuracy:      0.7625
+macro-F1:      0.7625
+F1   (neg/pos): 0.7614 / 0.7636
+prec (neg/pos): 0.7649 / 0.7602
+rec  (neg/pos): 0.7580 / 0.7670
+confusion matrix (rows=gold, cols=pred, order=[neg,pos]):
+[[758 242]
+ [233 767]]
+device: mps
+train: 4000 (2000 real + 2000 synthetic) | dev: 1000 | test: 2000
+parameters: embedding 2,048,000 | non-embedding 1,055,234 | total 3,103,234
+epoch  1 | train loss 0.6927 | dev macro-F1 0.5736 | 9s
+epoch  2 | train loss 0.6405 | dev macro-F1 0.6600 | 6s
+epoch  3 | train loss 0.5385 | dev macro-F1 0.7359 | 6s
+epoch  4 | train loss 0.4779 | dev macro-F1 0.7558 | 6s
+epoch  5 | train loss 0.4198 | dev macro-F1 0.7809 | 6s
+epoch  6 | train loss 0.3680 | dev macro-F1 0.7718 | 6s
+epoch  7 | train loss 0.3108 | dev macro-F1 0.7757 | 5s
+epoch  8 | train loss 0.2537 | dev macro-F1 0.7770 | 6s
+early stopping: no improvement for 3 epochs
+best epoch 5, dev macro-F1 0.7809, training took 48s
+--- eval report: transformer_C2_final_42_n2000 ---
+accuracy:      0.7625
+macro-F1:      0.7625
+F1   (neg/pos): 0.7609 / 0.7640
+prec (neg/pos): 0.7660 / 0.7591
+rec  (neg/pos): 0.7560 / 0.7690
+confusion matrix (rows=gold, cols=pred, order=[neg,pos]):
+[[756 244]
+ [231 769]]
+device: mps
+train: 12000 (2000 real + 10000 synthetic) | dev: 1000 | test: 2000
+parameters: embedding 2,048,000 | non-embedding 1,055,234 | total 3,103,234
+epoch  1 | train loss 0.6494 | dev macro-F1 0.6930 | 19s
+epoch  2 | train loss 0.5449 | dev macro-F1 0.7445 | 14s
+epoch  3 | train loss 0.4937 | dev macro-F1 0.7657 | 14s
+epoch  4 | train loss 0.4513 | dev macro-F1 0.7759 | 15s
+epoch  5 | train loss 0.4121 | dev macro-F1 0.7708 | 14s
+epoch  6 | train loss 0.3651 | dev macro-F1 0.7650 | 14s
+epoch  7 | train loss 0.3235 | dev macro-F1 0.7790 | 14s
+epoch  8 | train loss 0.2752 | dev macro-F1 0.7698 | 14s
+epoch  9 | train loss 0.2230 | dev macro-F1 0.7720 | 14s
+epoch 10 | train loss 0.1809 | dev macro-F1 0.7649 | 14s
+early stopping: no improvement for 3 epochs
+best epoch 7, dev macro-F1 0.7790, training took 147s
+--- eval report: transformer_C2_final_42_n10000 ---
+accuracy:      0.7645
+macro-F1:      0.7643
+F1   (neg/pos): 0.7576 / 0.7710
+prec (neg/pos): 0.7805 / 0.7502
+rec  (neg/pos): 0.7360 / 0.7930
+confusion matrix (rows=gold, cols=pred, order=[neg,pos]):
+[[736 264]
+ [207 793]]
