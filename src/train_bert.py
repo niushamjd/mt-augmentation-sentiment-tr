@@ -108,6 +108,11 @@ def main() -> None:
     ap.add_argument("--results-csv", default="results/results_niyousha.csv")
     ap.add_argument("--notes", default="")
     ap.add_argument(
+        "--run-id-suffix", default="",
+        help="appended to run_id, e.g. '_1x' for RQ3 points that would otherwise "
+             "collide with the official C2/C3/C2b run_id at the same condition/seed",
+    )
+    ap.add_argument(
         "--dev-only", action="store_true",
         help="for hyperparameter search: train + pick best epoch on dev, skip test "
              "entirely (Section 1.2: no hyperparameter decision on the test set). "
@@ -201,7 +206,7 @@ def main() -> None:
     test_ds = SentimentDataset(test_df["text"], test_df["label"], tokenizer)
     test_loader = DataLoader(test_ds, batch_size=64, shuffle=False)
     test_preds = predict(model, test_loader, device)
-    run_id = f"bert_{args.condition}_{args.mt_system}_{args.seed}"
+    run_id = f"bert_{args.condition}_{args.mt_system}_{args.seed}{args.run_id_suffix}"
     evaluate_and_log(
         test_df["label"].tolist(), test_preds,
         run_id=run_id, model="bert", condition=args.condition, seed=args.seed,
