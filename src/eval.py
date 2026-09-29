@@ -201,7 +201,7 @@ def main() -> None:
     ap.add_argument("--results-csv", required=True, help="your own results/results_{name}.csv")
     ap.add_argument("--n-synth", type=int, default=0)
     ap.add_argument("--synth-ratio", type=float, default=0.0)
-    ap.add_argument("--mt-system", default="none", choices=["none", "final", "early"])
+    ap.add_argument("--mt-system", default="none", choices=["none", "final", "early", "pretrained"])
     ap.add_argument("--epochs-run", type=int, default=None)
     ap.add_argument("--best-epoch", type=int, default=None)
     ap.add_argument("--lr", type=float, default=None)

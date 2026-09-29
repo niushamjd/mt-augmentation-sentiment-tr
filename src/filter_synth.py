@@ -240,7 +240,7 @@ def main() -> None:
     ap.add_argument("--en", required=True, type=Path)
     ap.add_argument("--tr", required=True, type=Path)
     ap.add_argument("--labels", required=True, type=Path, help="en_reviews_20k.tsv (id, text, label)")
-    ap.add_argument("--mt-system", required=True, choices=["final", "early"])
+    ap.add_argument("--mt-system", required=True, choices=["final", "early", "pretrained"])
     ap.add_argument("--scores", type=Path, default=None, help="JoeyNMT --save-scores output, one value/line")
     ap.add_argument("--out-dir", type=Path, default=Path("data/sentiment"))
     ap.add_argument("--no-write", action="store_true", help="report only, don't write synth_*.tsv")
@@ -303,13 +303,13 @@ def main() -> None:
 
     # C2: all translations except empty ones
     all_idx = [i for i in range(n) if not empty[i]]
-    suffix = "" if args.mt_system == "final" else "_early"
+    suffix = "" if args.mt_system == "final" else f"_{args.mt_system}"
     path = args.out_dir / f"synth_all{suffix}.tsv"
     write_tsv(path, [tr_lines[i] for i in all_idx], [labels[i] for i in all_idx])
     print(f"wrote {path} ({len(all_idx)} rows, unfiltered; {n - len(all_idx)} empty translations left out)")
 
-    if args.mt_system == "early":
-        return  # RQ4 uses unfiltered mt_early output only
+    if args.mt_system != "final":
+        return  # only mt_final gets synth_clean/matched/rejected (C3/C2b are defined against it)
 
     # C3: passing all criteria (empty ones always fail criterion 1)
     clean_idx = [i for i in range(n) if mask[i]]

@@ -1,0 +1,6 @@
+criterion,flagged,pct_flagged,flagged_only_by_this,pct_only_by_this
+length,3,0.0,0,0.0
+ratio,117,0.6,111,0.6
+repetition,21,0.1,14,0.1
+langid,92,0.5,1,0.0
+copy_through,377,1.9,283,1.4
