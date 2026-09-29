@@ -1,20 +1,10 @@
-"""Train and evaluate our own Transformer sentiment classifier
+"""Train and evaluate our own Transformer sentiment classifier (Buse).
 
-Model:
+Model (fixed in PROJECT_INSTRUCTIONS v4, Section 1.5 / 4, matched to the LSTM):
     8,000 x 256 embedding -> sinusoidal positional encoding -> 2 encoder layers
     (d_model 256, 4 heads, feed-forward 512, dropout 0.1) -> mean pooling over the
     real tokens -> linear layer to 2 classes.  About 1.05M non-embedding parameters.
 
-Examples:
-
-    # tuning on C1: only looks at dev, never at test
-    python src/train_transformer.py --condition C1 --seed 42 --lr 5e-4 --tune
-
-    # a real run: trains, evaluates ONCE on test, writes results/results_buse.csv
-    python src/train_transformer.py --condition C1 --seed 42
-    python src/train_transformer.py --condition C3 --seed 1337
-    python src/train_transformer.py --condition C2 --seed 42 --mt-system early      # RQ4
-    python src/train_transformer.py --condition C2 --seed 42 --synth-n 2000         # RQ3, 1x
 """
 import argparse
 import copy
@@ -68,11 +58,12 @@ def load_training_data(args):
     if args.condition == "C1":
         train = real
     else:
-        synth = read_tsv(SYNTH_FILES[(args.condition, args.mt_system)])
-        if args.synth_n is not None:
-            # RQ3: nested subsamples, always the same shuffle (seed 42), so the
-            # 1x set is part of the 5x set, which is part of the 10x set
-            synth = synth.sample(frac=1, random_state=42).iloc[:args.synth_n]
+        if args.rq3:
+            # RQ3: the shared nested subsets (synth_1x.tsv is part of synth_5x.tsv,
+            # which is part of synth_all.tsv), the same files for all three models
+            synth = read_tsv(f"synth_{args.rq3}.tsv")
+        else:
+            synth = read_tsv(SYNTH_FILES[(args.condition, args.mt_system)])
         n_synth = len(synth)
         train = pd.concat([real, synth], ignore_index=True)
     return train, len(real), n_synth
@@ -163,7 +154,7 @@ def predict(model, loader, device):
     with torch.no_grad():
         for x, _ in loader:
             logits = model(x.to(device))
-            preds += logits.argmax(dim=-1).cpu().tolist()
+            preds += logits.argmax(dim=-1).cpu().tolist()   # argmax, no thresholds (Section 1.7)
     return preds
 
 
@@ -173,8 +164,9 @@ def main():
     ap.add_argument("--seed", type=int, required=True)
     ap.add_argument("--mt-system", default=None, choices=["final", "early", "pretrained"],
                     help="default: final (none for C1)")
-    ap.add_argument("--synth-n", type=int, default=None, help="RQ3: use only this many synthetic examples")
-    ap.add_argument("--lr", type=float, default=3e-4)
+    ap.add_argument("--rq3", default=None, choices=["1x", "5x"],
+                    help="RQ3: use data/sentiment/synth_{1x,5x}.tsv (with --condition C2)")
+    ap.add_argument("--lr", type=float, default=3e-4)  # tuned on C1 dev, see DECISIONS
     ap.add_argument("--batch-size", type=int, default=32)
     ap.add_argument("--dropout", type=float, default=0.1)
     ap.add_argument("--warmup-steps", type=int, default=200, help="same number of steps in every condition")
@@ -189,7 +181,9 @@ def main():
         args.mt_system = "none"
     elif args.mt_system is None:
         args.mt_system = "final"
-    if args.condition != "C1" and (args.condition, args.mt_system) not in SYNTH_FILES:
+    if args.rq3 and (args.condition != "C2" or args.mt_system != "final"):
+        ap.error("--rq3 is only defined for --condition C2 with mt_final")
+    if args.condition != "C1" and not args.rq3 and (args.condition, args.mt_system) not in SYNTH_FILES:
         ap.error(f"no synthetic file for {args.condition} with --mt-system {args.mt_system}")
 
     set_seed(args.seed)
@@ -263,11 +257,11 @@ def main():
     print(f"best epoch {best_epoch}, dev macro-F1 {best_f1:.4f}, training took {train_time:.0f}s")
 
     run_id = f"transformer_{args.condition}_{args.mt_system}_{args.seed}"
-    if args.synth_n is not None:
-        run_id += f"_n{args.synth_n}"
+    if args.rq3:
+        run_id += f"_{args.rq3}"  # same suffix as the BERT/LSTM runs; avoids overwriting C2
 
     if args.tune:
-        # tuning: record dev only, never look at test
+        # tuning: record dev only, never look at test (Section 1.2)
         row = pd.DataFrame([{
             "run_id": run_id, "lr": args.lr, "batch_size": args.batch_size, "dropout": args.dropout,
             "warmup_steps": args.warmup_steps, "epochs_run": epochs_run, "best_epoch": best_epoch,
