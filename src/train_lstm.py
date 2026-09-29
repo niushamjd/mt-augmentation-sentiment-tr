@@ -1,17 +1,58 @@
-import os
+"""Train and evaluate the self-built LSTM sentiment classifier (Ipek).
+
+Model:
+    8,000 x 256 embedding -> 1 bidirectional LSTM layer, hidden 256 ->
+    mean over the REAL tokens (padding excluded) -> linear layer to 2 classes.
+    About 1.05M non-embedding parameters.
+
+Changes from the first version (27.09):
+  - padding is ignored: sequences are packed (pack_padded_sequence), so the LSTM
+    never reads padding, the mean pooling only averages real tokens, and the
+    embedding has padding_idx so the padding vector is not trained;
+  - every text goes through text_utils.normalise_tr (agreed rule for all models);
+  - the training file is chosen from --condition / --mt_system (and --rq3), and
+    n_synth / synth_ratio are computed, not typed in;
+  - RQ3 runs get a suffix (_1x, _5x) so they no longer overwrite the C2 run's
+    predictions; they use the shared nested files synth_1x.tsv / synth_5x.tsv;
+  - C2b (size-matched control) is supported;
+  - --tune: dev only, never test, logged to results/tuning_ipek.csv;
+  - dev macro-F1 uses the shared eval.compute_metrics;
+  - batches are padded only to their longest review (faster).
+
+Examples (repo root, nn2026 environment):
+    python src/train_lstm.py --condition C1 --seed 42 --tune --lr 1e-3
+    python src/train_lstm.py --condition C1 --seed 42
+    python src/train_lstm.py --condition C2b --seed 1337
+    python src/train_lstm.py --condition C2 --seed 42 --mt_system early     # RQ4
+    python src/train_lstm.py --condition C2 --seed 42 --rq3 1x              # RQ3
+"""
 import argparse
+import copy
+import os
 import random
 import time
-import pandas as pd
+
 import numpy as np
+import pandas as pd
+import sentencepiece as spm
 import torch
 import torch.nn as nn
-from torch.utils.data import Dataset, DataLoader
-import sentencepiece as spm
-from sklearn.metrics import f1_score
+from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
+from torch.utils.data import DataLoader
 
+import eval as shared_eval
+from text_utils import normalise_tr
 
-import eval as shared_eval 
+MAX_LEN = 128
+DATA = "data/sentiment"
+SYNTH_FILES = {
+    ("C2", "final"): "synth_all.tsv",
+    ("C3", "final"): "synth_clean.tsv",
+    ("C2b", "final"): "synth_matched.tsv",
+    ("C2", "early"): "synth_all_early.tsv",
+    ("C2", "pretrained"): "synth_all_pretrained.tsv",
+}
+
 
 def set_seed(s):
     random.seed(s)
@@ -19,198 +60,201 @@ def set_seed(s):
     torch.manual_seed(s)
     torch.cuda.manual_seed_all(s)
 
-class TrendyolDataset(Dataset):
-    def __init__(self, data_path, sp_model, max_len=128):
-        self.data = pd.read_csv(data_path, sep='\t')
-        self.sp_model = sp_model
-        self.max_len = max_len
 
-    def __len__(self):
-        return len(self.data)
+def read_tsv(name):
+    # default pandas quoting (how all sentiment TSVs are written), no NA guessing
+    return pd.read_csv(os.path.join(DATA, name), sep="\t", keep_default_na=False)
 
-    def __getitem__(self, idx):
-        text = str(self.data.iloc[idx]['text'])
-        label = int(self.data.iloc[idx]['label'])
-        
-        # Tokenize and pad/truncate
-        tokens = self.sp_model.encode(text, out_type=int)
-        if len(tokens) > self.max_len:
-            tokens = tokens[:self.max_len]
-        else:
-            tokens = tokens + [self.sp_model.pad_id()] * (self.max_len - len(tokens))
-            
-        return torch.tensor(tokens, dtype=torch.long), torch.tensor(label, dtype=torch.long)
+
+def load_training_data(args):
+    real = read_tsv("real_train.tsv")
+    if args.condition == "C1":
+        return real, len(real), 0
+    if args.rq3:
+        synth = read_tsv(f"synth_{args.rq3}.tsv")   # shared nested RQ3 subsets
+    else:
+        synth = read_tsv(SYNTH_FILES[(args.condition, args.mt_system)])
+    return pd.concat([real, synth], ignore_index=True), len(real), len(synth)
+
+
+def encode(texts, sp):
+    out = []
+    for t in texts:
+        ids = sp.encode(normalise_tr(t), out_type=int)[:MAX_LEN]
+        out.append(ids if ids else [sp.unk_id()])  # never an empty sequence
+    return out
+
+
+def make_loader(ids, labels, batch_size, shuffle, pad_id, generator=None):
+    data = list(zip(ids, labels))
+
+    def collate(batch):
+        lengths = torch.tensor([len(b[0]) for b in batch], dtype=torch.long)
+        x = torch.full((len(batch), int(lengths.max())), pad_id, dtype=torch.long)
+        for i, (seq, _) in enumerate(batch):
+            x[i, :len(seq)] = torch.tensor(seq, dtype=torch.long)
+        y = torch.tensor([b[1] for b in batch], dtype=torch.long)
+        return x, lengths, y
+
+    return DataLoader(data, batch_size=batch_size, shuffle=shuffle,
+                      collate_fn=collate, generator=generator)
+
 
 class SentimentLSTM(nn.Module):
-    def __init__(self, vocab_size=8000, embed_size=256, hidden_size=256):
-        super(SentimentLSTM, self).__init__()
-        self.embedding = nn.Embedding(vocab_size, embed_size)
-        # One bidirectional LSTM layer, hidden size 256
-        self.lstm = nn.LSTM(embed_size, hidden_size, num_layers=1, 
+    def __init__(self, vocab_size, pad_id, embed_size=256, hidden_size=256):
+        super().__init__()
+        self.embedding = nn.Embedding(vocab_size, embed_size, padding_idx=pad_id)
+        # one bidirectional LSTM layer, hidden size 256
+        self.lstm = nn.LSTM(embed_size, hidden_size, num_layers=1,
                             bidirectional=True, batch_first=True)
-        # Mean-over-time pooling will output hidden_size * 2 (512)
         self.fc = nn.Linear(hidden_size * 2, 2)
 
-    def forward(self, x):
-        # x: [batch_size, seq_len]
+    def forward(self, x, lengths):
         embeds = self.embedding(x)
-        lstm_out, _ = self.lstm(embeds) # [batch_size, seq_len, 512]
-        
-        # Mean-over-time pooling across the sequence length (dim=1)
-        pooled = lstm_out.mean(dim=1)   # [batch_size, 512]
-        logits = self.fc(pooled)        # [batch_size, 2]
-        return logits
+        # packing: the LSTM only sees the real tokens of every review
+        packed = pack_padded_sequence(embeds, lengths.cpu(), batch_first=True,
+                                      enforce_sorted=False)
+        packed_out, _ = self.lstm(packed)
+        out, _ = pad_packed_sequence(packed_out, batch_first=True,
+                                     total_length=x.size(1))   # padding positions are 0
+        # mean over the real tokens only
+        mask = (torch.arange(x.size(1), device=x.device)[None, :]
+                < lengths.to(x.device)[:, None]).unsqueeze(-1).float()
+        pooled = (out * mask).sum(dim=1) / lengths.to(x.device).unsqueeze(1).float()
+        return self.fc(pooled)
 
-def evaluate_dev(model, dataloader, device):
+
+def predict(model, loader, device):
     model.eval()
-    all_preds = []
-    all_labels = []
-    
+    preds = []
     with torch.no_grad():
-        for inputs, labels in dataloader:
-            inputs, labels = inputs.to(device), labels.to(device)
-            logits = model(inputs)
-            preds = torch.argmax(logits, dim=1)
-            
-            all_preds.extend(preds.cpu().numpy())
-            all_labels.extend(labels.cpu().numpy())
-            
-    return f1_score(all_labels, all_preds, average='macro')
+        for x, lengths, _ in loader:
+            logits = model(x.to(device), lengths)
+            preds.extend(logits.argmax(dim=1).cpu().tolist())
+    return preds
+
 
 def main():
-    parser = argparse.ArgumentParser(description="Train self-built LSTM on Turkish sentiment")
-    parser.add_argument("--train_file", type=str, required=True, help="Path to training data TSV")
-    parser.add_argument("--dev_file", type=str, default="data/sentiment/real_dev.tsv")
-    parser.add_argument("--test_file", type=str, default="data/sentiment/real_test.tsv")
-    parser.add_argument("--spm_model", type=str, default="data/spm/tr_sp8k.model")
-    
-    # Tracking arguments for results.csv
-    parser.add_argument("--condition", type=str, required=True, choices=["C1", "C2", "C3", "C2b"])
-    parser.add_argument("--seed", type=int, required=True)
-    parser.add_argument("--synth_ratio", type=float, required=True)
-    parser.add_argument("--mt_system", type=str, default="none", choices=["none", "final", "early"])
-    parser.add_argument("--notes", type=str, default="")
-    
-    args = parser.parse_args()
-    
+    ap = argparse.ArgumentParser(description="Train self-built LSTM on Turkish sentiment")
+    ap.add_argument("--condition", required=True, choices=["C1", "C2", "C3", "C2b"])
+    ap.add_argument("--seed", type=int, required=True)
+    ap.add_argument("--mt_system", default=None, choices=["final", "early", "pretrained"],
+                    help="default: final (none for C1)")
+    ap.add_argument("--rq3", default=None, choices=["1x", "5x"],
+                    help="RQ3: use data/sentiment/synth_{1x,5x}.tsv (with --condition C2)")
+    ap.add_argument("--lr", type=float, default=1e-3)
+    ap.add_argument("--batch_size", type=int, default=32)
+    ap.add_argument("--max_epochs", type=int, default=20)
+    ap.add_argument("--patience", type=int, default=3)
+    ap.add_argument("--device", default="cpu", choices=["cpu", "mps"],
+                    help="cpu is the safe default for packed LSTMs; try mps if it is faster")
+    ap.add_argument("--tune", action="store_true",
+                    help="dev only (no test), logged to results/tuning_ipek.csv")
+    ap.add_argument("--results_csv", default="results/results_ipek.csv")
+    ap.add_argument("--notes", default="")
+    args = ap.parse_args()
+
+    if args.condition == "C1":
+        args.mt_system = "none"
+        if args.rq3:
+            ap.error("--rq3 needs --condition C2")
+    elif args.mt_system is None:
+        args.mt_system = "final"
+    if args.rq3 and (args.condition != "C2" or args.mt_system != "final"):
+        ap.error("--rq3 is only defined for --condition C2 with mt_final")
+    if args.condition != "C1" and not args.rq3 and (args.condition, args.mt_system) not in SYNTH_FILES:
+        ap.error(f"no synthetic file for {args.condition} with --mt_system {args.mt_system}")
+
     set_seed(args.seed)
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    
-    # 1. Load Tokenizer
-    sp = spm.SentencePieceProcessor(model_file=args.spm_model)
-    # Ensure pad token is defined; if not, we assume index 0 is <pad>
-    if sp.pad_id() == -1:
-        sp.set_default_extra_options(':bos_id=-1:eos_id=-1:unk_id=0:pad_id=0')
-    vocab_size = sp.vocab_size()
-    
-    # 2. Prepare Data
-    train_dataset = TrendyolDataset(args.train_file, sp)
-    dev_dataset = TrendyolDataset(args.dev_file, sp)
-    test_dataset = TrendyolDataset(args.test_file, sp)
-    
-    batch_size = 32
-    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
-    dev_loader = DataLoader(dev_dataset, batch_size=batch_size, shuffle=False)
-    test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
-    
-    # 3. Initialize Model & Count Parameters
-    model = SentimentLSTM(vocab_size=vocab_size).to(device)
-    
-    embed_params = sum(p.numel() for n, p in model.named_parameters() if 'embedding' in n)
-    non_embed_params = sum(p.numel() for n, p in model.named_parameters() if 'embedding' not in n)
-    total_params = sum(p.numel() for p in model.parameters())
-    
-    print(f"Embedding parameters: {embed_params:,}")
-    print(f"Non-embedding parameters: {non_embed_params:,}")
-    print(f"Total parameters: {total_params:,}")
-    
-    # 4. Training Loop setup
-    optimizer = torch.optim.Adam(model.parameters(), lr=1e-3)
+    device = torch.device(args.device)
+    print("device:", device)
+
+    sp = spm.SentencePieceProcessor(model_file="data/spm/tr_sp8k.model")
+    pad_id = sp.pad_id()  # 0 in tr_sp8k (unk is 1): never hard-code it
+
+    train, n_real, n_synth = load_training_data(args)
+    dev = read_tsv("real_dev.tsv")
+    test = read_tsv("real_test.tsv")
+    print(f"train: {len(train)} ({n_real} real + {n_synth} synthetic) | dev: {len(dev)} | test: {len(test)}")
+
+    g = torch.Generator()
+    g.manual_seed(args.seed)
+    train_loader = make_loader(encode(train["text"], sp), train["label"].astype(int).tolist(),
+                               args.batch_size, True, pad_id, generator=g)
+    dev_loader = make_loader(encode(dev["text"], sp), dev["label"].tolist(),
+                             args.batch_size, False, pad_id)
+    test_loader = make_loader(encode(test["text"], sp), test["label"].tolist(),
+                              args.batch_size, False, pad_id)
+
+    model = SentimentLSTM(sp.get_piece_size(), pad_id).to(device)
+    embed_params = model.embedding.weight.numel()
+    total_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
+    print(f"parameters: embedding {embed_params:,} | non-embedding {total_params - embed_params:,} | total {total_params:,}")
+
+    optimizer = torch.optim.Adam(model.parameters(), lr=args.lr)
     criterion = nn.CrossEntropyLoss()
-    
-    max_epochs = 20
-    patience = 3
-    best_dev_f1 = -1.0
+
+    best_dev_f1, best_epoch, best_state = -1.0, 0, None
     epochs_no_improve = 0
-    best_model_path = f"results/best_lstm_{args.condition}_{args.seed}.pt"
-    best_epoch = 0
-    
     start_time = time.time()
-    
-    # 5. Train
-    for epoch in range(1, max_epochs + 1):
+
+    for epoch in range(1, args.max_epochs + 1):
         model.train()
-        for inputs, labels in train_loader:
-            inputs, labels = inputs.to(device), labels.to(device)
+        epoch_start = time.time()
+        for x, lengths, y in train_loader:
+            x, y = x.to(device), y.to(device)
             optimizer.zero_grad()
-            logits = model(inputs)
-            loss = criterion(logits, labels)
+            loss = criterion(model(x, lengths), y)
             loss.backward()
             optimizer.step()
-            
-        dev_f1 = evaluate_dev(model, dev_loader, device)
-        print(f"Epoch {epoch}/{max_epochs} | Dev Macro-F1: {dev_f1:.4f}")
-        
+
+        dev_preds = predict(model, dev_loader, device)
+        dev_f1 = shared_eval.compute_metrics(dev["label"].tolist(), dev_preds)["macro_f1"]
+        print(f"Epoch {epoch}/{args.max_epochs} | Dev Macro-F1: {dev_f1:.4f} | {time.time() - epoch_start:.0f}s")
+
         if dev_f1 > best_dev_f1:
-            best_dev_f1 = dev_f1
-            best_epoch = epoch
+            best_dev_f1, best_epoch = dev_f1, epoch
+            best_state = copy.deepcopy(model.state_dict())
             epochs_no_improve = 0
-            torch.save(model.state_dict(), best_model_path)
         else:
             epochs_no_improve += 1
-            if epochs_no_improve >= patience:
+            if epochs_no_improve >= args.patience:
                 print(f"Early stopping triggered at epoch {epoch}")
                 break
-                
+
+    epochs_run = epoch
     train_time_s = int(time.time() - start_time)
-    
-    # 6. Test & Evaluate (using Niyousha's eval framework)
-    model.load_state_dict(torch.load(best_model_path))
-    model.eval()
-    
-    test_preds = []
-    test_labels = []
-    
-    with torch.no_grad():
-        for inputs, labels in test_loader:
-            inputs = inputs.to(device)
-            logits = model(inputs)
-            preds = torch.argmax(logits, dim=1)
-            test_preds.extend(preds.cpu().tolist())
-            test_labels.extend(labels.tolist())
-            
-    # Format properties to pass to Niyousha's eval.py
-    # Format properties to pass to Niyousha's eval.py
+    model.load_state_dict(best_state)   # best dev checkpoint before testing
+    print(f"best epoch {best_epoch}, dev macro-F1 {best_dev_f1:.4f}, {train_time_s}s")
+
     run_id = f"lstm_{args.condition}_{args.mt_system}_{args.seed}"
-    n_real = 2000
-    n_synth = len(train_dataset) - n_real if args.condition != "C1" else 0
-    
-    # Extract original text so eval.py can include it in the predictions TSV
-    test_texts = test_dataset.data['text'].tolist()
-    
-    # Call the shared evaluation script
+    if args.rq3:
+        run_id += f"_{args.rq3}"   # same suffix convention as the BERT runs
+
+    if args.tune:
+        os.makedirs("results", exist_ok=True)
+        path = "results/tuning_ipek.csv"
+        row = pd.DataFrame([{
+            "run_id": run_id, "lr": args.lr, "batch_size": args.batch_size,
+            "epochs_run": epochs_run, "best_epoch": best_epoch,
+            "dev_macro_f1": round(best_dev_f1, 4), "train_time_s": train_time_s, "notes": args.notes,
+        }])
+        row.to_csv(path, mode="a", header=not os.path.exists(path), index=False)
+        print(f"tuning run logged to {path} (test set not used)")
+        return
+
+    test_preds = predict(model, test_loader, device)
     shared_eval.evaluate_and_log(
-        y_true=test_labels,
-        y_pred=test_preds,
-        run_id=run_id,
-        model='lstm',
-        condition=args.condition,
-        seed=args.seed,
-        n_real=n_real,
-        results_csv='results/results_ipek.csv',  # Writing to your designated file
-        n_synth=n_synth,
-        synth_ratio=args.synth_ratio,
-        mt_system=args.mt_system,
-        epochs_run=epoch,
-        best_epoch=best_epoch,
-        lr=1e-3,
-        batch_size=batch_size,
-        dev_macro_f1=best_dev_f1,
-        train_time_s=train_time_s,
-        texts=test_texts,
-        notes=args.notes
+        y_true=test["label"].tolist(), y_pred=test_preds,
+        run_id=run_id, model="lstm", condition=args.condition, seed=args.seed,
+        n_real=n_real, n_synth=n_synth, synth_ratio=round(n_synth / n_real, 4),
+        mt_system=args.mt_system, epochs_run=epochs_run, best_epoch=best_epoch,
+        lr=args.lr, batch_size=args.batch_size, dev_macro_f1=round(best_dev_f1, 4),
+        train_time_s=train_time_s, texts=test["text"].tolist(),
+        results_csv=args.results_csv, notes=args.notes,
     )
-    print(f"Finished {run_id}. Results appended to results_ipek.csv.")
+    print(f"Finished {run_id}. Results appended to {args.results_csv}.")
+
 
 if __name__ == "__main__":
     main()
