@@ -23,7 +23,9 @@ DATA = Path("data/sentiment")
 SPM_MODEL = "data/spm/tr_sp8k.model"
 REAL = {"real_train.tsv": 2000, "real_dev.tsv": 1000, "real_test.tsv": 2000}
 SYNTH = ["synth_all.tsv", "synth_clean.tsv", "synth_matched.tsv",
-         "synth_rejected.tsv", "synth_all_early.tsv"]
+         "synth_rejected.tsv", "synth_all_early.tsv",
+         "synth_1x.tsv", "synth_5x.tsv",  # RQ3 nested subsamples of synth_all.tsv
+         "synth_all_pretrained.tsv", "synth_clean_pretrained.tsv"]  # RQ4 pretrained-MT tier
 MAX_SYNTH_UNK_RATE = 0.005   # 0.5% of pieces; real dev is ~0
 
 errors, warnings = [], []
