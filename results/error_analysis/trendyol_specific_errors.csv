@@ -1,11 +1,11 @@
 idx,text,gold,lstm_correct,lstm_pred,tf_correct,tf_pred,bert_correct,bert_pred,keyword_count
 1015,termal macunun önemsiz gibi görünse de pc için çok önemli ve dikkat edilmesi gereken bir unsurdur. ürüne gelecek olursak daha kullanmadım ama ihtiyacım olacağı için sipariş ettim kutusu kargolanması güzel ihtiyacı olanlara tavsiye ederim ....,0,0,1,0,1,0,1,2
-324,"çeşitlik güzel, kutu güzel ve kullanışlı. duvara falan asma aparatı var. çift bölmeli ve bölmeler kapaklı falan.",0,0,1,0,1,0,1,1
 138,kedim resmen nefes almadan yedi. diğer mamalarda olan kemik parçaları içinde olmadığı için benim ufaklık paket bitene kadar nefes almadı resmen:),1,0,0,0,0,0,0,1
+324,"çeşitlik güzel, kutu güzel ve kullanışlı. duvara falan asma aparatı var. çift bölmeli ve bölmeler kapaklı falan.",0,0,1,0,1,0,1,1
 482,"süper hızlı gonderi olmasına güvenip doğum günü hediyesi olarak almıştım, günler sonra elime ulaştı. kargo fiyasko ama urun kullanisli",0,0,1,0,1,0,1,1
 616,ürün üretilme amacını yerine getiriyor. mantar pano içinde olmazsa olmaz. ama renk dağılımı homojen değil. sarı renk çok az. renk renk kutulanıp satılırsa daha uygun olur kanımca.,1,0,0,0,0,0,0,1
-760,eksileri:kutuyu açınca kötü bi koku var o kadar.,1,0,0,0,0,0,0,1
 660,verdiğim sipariş aynı gün işleme alındı ve ertesi gün sabahtan elime geçti.  1 paket fiyatına 2 paket ürün almış oldum. teşekkürler,0,0,1,0,1,0,1,1
+760,eksileri:kutuyu açınca kötü bi koku var o kadar.,1,0,0,0,0,0,0,1
 800,arkadaşlar ürünü eşim kullandı güzel markete gitmeden ürün eve kadar geldi hemde kargo ücretsiz herkese tavsiye ederim hepsi burada teşekkür ederim,0,0,1,0,1,0,1,1
 1084,urunun kargoya verilme suresi biraz daha kisa tutulabilir onun disinda surekli kullandigim urun sorun yok 5 bicaga devam...,1,0,0,0,0,0,0,1
 1303,gerçekten hızlı bir şekilde şarj ediyor ama eli yakacak derecede fişe taktığım zaman ısındı gerçi her şarj aleti ısınıyor ama bu çok ısındı ben alır almaz power bankımı şarj ettim onda çok sıcak oldu ama hemende doldurdu telefonum samsung galaxy s3 şarj ettim onda normal derecede ısındı power banktakı gibi eli yakacak derecede ısınmadı ve kargo 24 saat içinde bana ulaştı,1,0,0,0,0,0,0,1
