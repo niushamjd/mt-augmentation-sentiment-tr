@@ -1,0 +1,133 @@
+idx,text,gold,pred_c1,correct_c1,pred_c3,correct_c3
+7,sağlam bir ütü düşürdüm fln bir şey olmadı. ütülemede sıkıntısı yok. tavsiye edilir,1,1,1,0,0
+10,"ürünü aldım ve memnun kalmadım. % 50 şarj altından telefon aniden kapanıyor , bataryayı çıkarıp takmadan da açılmıyor. bataryayı çıkarıp taktıktan sonra da batarya kaldığı pil seviyesinden devam ediyor.",0,0,1,1,0
+36,ürünü almadan önce braun es2 den herhangi bir farkı var mı diye kuşkuluyduk. oysaki ürünün daha birçok artısı varmış. boyalı saçları hakikaten daha parlak ve daha canlı gösteriyor. kullanımı çok kolay. tabi saçınız boyalı olmasa bile ürünü kullanabilirsiniz. boyalı olmayan saçlardada etki aynı daha parlak. yıpratmıyor.,1,1,1,0,0
+42,hizmetleriniz için teşekkür başka bi üründe görüşmek üzere...,0,0,1,1,0
+51,prize taktığımda iyi olduğunu düşündüm ancak kullanımda üzerindeki delikler gereken yere gelmediğini gördüm. dönmesi için torna vida yardımı ile her seferinde delikleri bulmaya çalışıyorsunuz.,0,0,1,1,0
+53,ürün inanılmaz kokuyor,0,0,1,1,0
+82,normalde termin süresine birhafta varken ürün elime ulaştı henüs içeriğine bakamadım.h b teşekkürler.,1,1,1,0,0
+100,köşeleri düşmeye karşı korumuyor ürünü düşürmemek lazım.,0,0,1,1,0
+105,"kömürün üzerine döktüm. yakmadı, ateşi söndürdü!",0,0,1,1,0
+112,2. wd hdd im. öncekini alalı neredeyse 10 sene oldu bir gün tık demeden çalıştı. veri transfer hızı da oldukça başarılı. boyut ve ağırlıkta gömlek cebinde taşınabilicek kadar uygun...,1,1,1,0,0
+128,fiyat performans telofonu ses tatminkar kamera güzel kasma donma yok ısınma yok iyi telofon,1,1,1,0,0
+132,umarım siz değerli kullanıcılara yol gösterici ve yardımcı olur.,0,0,1,1,0
+179,"tam bir visco yatak olmadığını bilerek aldım,evimde gerçek visco yatağım var onun gibi kesinlikle değil, zaten orijinal visco yatakların fiyatı belli. kız arkadaşıma hediye olarak aldım bende yatıyorum gayet rahat fakat fazla kilolu kişilerin çok rahat edebileceğini düşünmüyorum. ben 73 kiloyum benim popo kısmım fazla çöküyor gibi sabah biraz bel ağrım oluyor. fakat kız arkadaşım çok çok memnun yattığı gibi uyuyor. bence yastığınızı daha yumuşak seçerseniz yatakla uyum sağlayabilir.genellemede bu fiyata gayet iyi bir yatak diyebilirim.",1,1,1,0,0
+219,"merhaba, ürünü yılbaşında bu fiyata aldım, fiyat gerçekten piyasanın altında. parfümde çok güzel kokusu en az 2 gün üzerinizde kalıyor. yalnız şunu belirtmeden gecemiyeceğim parfüm bana kapalı kutuda gelmedi kutu açıktı bu beni rahatsız etti... ama parfümü beğendiğim için sorun etmedim sizinde haberniz olsun. dikkat edin.",1,1,1,0,0
+227,sar değeri baya yüksek bir telefon fiyatı uygun özelliği iyi diye almayın sağlığınızdan olmayın,0,0,1,1,0
+229,koltuk için fazla sert.,0,0,1,1,0
+239,"kitaplara olan saygımdan dolayı zorlanarak ta olsa  bitirdiğim, ve kitap okumaktan soğutan bir kitap daha...",0,0,1,1,0
+240,yağ akışının önlenmesi için gerekli önlem alınmamış,0,0,1,1,0
+273,"ürünü almadan önce su şişeleriyle çalışmayı denedim, ancak bu işi bir dambılla yapınca daha iyi olacağını düşündüm. şimdi iyi ki almışım diyorum.ürün köşegen olduğu için kayma derdi de yok. kullanmadan önce yıkamanızı tavsiye ederim.",1,1,1,0,0
+306,o kadar cilalı şampuan denedim böyle parlaklık vereni sonax ta gordun şampuan cilalı değil ama cilalı gibi parlıyor kesinlikle tavsiye ederim,1,1,1,0,0
+340,denemek amaci i̇le en küçük boyundan si̇pari̇ş verdi̇m. denedi̇kten hemen sonra 100 ml si̇pari̇şi̇ni̇de verdi̇m. gerçekten çok güzel ve de kalici bi̇r koku.,1,1,1,0,0
+348,"sesi çıkışı gayet güzel ve net, fiyatıda gayet uygun, fm radyoya nasıl bağlanacağımı bulamadım sadece özelliği yok galiba..",1,1,1,0,0
+364,"alkol iceriyor bu yuzden agizda ozellile dilde fazlaca yanma yapiyor. fiyati piyasaya gore oldukca uygun, ozellikle sepet indirimleri ile birlikte..",0,0,1,1,0
+375,fiyat kalite uyumu başarılı. düşünmeden alınır.,1,1,1,0,0
+397,kesinlikle alan pişman olmaz. şimdi bu ürünün 20000 yada daha fazla mah. çıkarmasını bekliyorum.,1,1,1,0,0
+410,"üst katlarda oturup da cam silmekten korkanlar için kullanışlı, ancak çok büyük beklenti içinde olmayın :)",0,0,1,1,0
+471,saçlarım uzun ve kalın telli çok araştırdım ve yorumlara bakarak bu ürüne kara verdim ama memnun kalmadım        .belki ince telli saçlara iyi olur bilemem. saçıma uyguladıktan  2 saat sonra bozuluyor ve elektrikleniyor.,0,0,1,1,0
+489,"ürün geldi ve şok içindeyim woman değilde man olmalıydı bence erkek parfümüyle aynı,hiç beğenmedim.",0,0,1,1,0
+518,kendinizi yormadan süper temizliyor. diğer makinemize göre sesi oldukça az çıkıyor. temizliği de zor değil. alacak olanlara tavsiye ederim boşuna çok para vermeyin.,1,1,1,0,0
+522,"öncelikle mikroskop plastik aksamdan yapılmıs hafif kucuk bir mikroskop. ancak buyutme secenekleri , gosterme kalitesi gayet güzel. ayrıca hicbir urunde bu kadar cok ek parca yok. ilk etapta inceleyebileceginiz cok fazla hazır ornekleri var. cocukların hem ilgisini cekecek hemde birseyler ögretecek cok guzel bir aygıt. alacaksanız bundan alın derim tavsiye ederim.",1,1,1,0,0
+535,"ürün 3 gün içerisinde elime ulaştı ürün gerçekten çok başarılı bu ürünü almayı düşünenler direk alsınlar derim parasının hakkını veriyor mouse tıklama ayarı eli terletmeyen bir tasarıma sahip klavye üstündeki w,a,s,d tuşlarıda farklı malzemeden yapılmış klavyenin bileği yormaması için ek parçası bulunuyor iki vida ile bu parça geliyor ister vidalayın isterseniz vidalamayın size kalmış klavye ve mouse aydınlatmaları göz alıyor :d baya fena makine",1,1,1,0,0
+559,ürünü 30.08.2016 tarihinde saat 13:04 sipariş ettim. 01.09.2016 öğle sıralarında elime ulaştı. yani siparişimin 2.gününde ürün elime ulaşmış ve kullanmaktaydım. ''süper hizli'' gönderi gerçekten öyleydi.,1,1,1,0,0
+576,içinden bir tane lastik çıktı,0,0,1,1,0
+584,sağlam ve dayanıklı yapıdadır.,0,0,1,1,0
+585,olumlu kısımları: öncelikle çocukları eğlendiriyor. montajı basit. farklı bir ortam sağlıyor.,0,0,1,1,0
+597,iyiki almışım dediğim bir samsung daha..  note 2 kullanıcısıyım 2 sorunum vardı ki biri prizsiz ortamda şarj sıkıntısı diğeride çabuk bozulan kulaklıklar..  önceliğim şarj sorunu oldu samsung 11300 mah taşınabilir şarj cihazı aldım gerçekten kurtarıcı bi cihaz.. yolda sinemada vs.. şarjım bitti sorunu bitti,1,1,1,0,0
+630,"renk seçeneği sunmuyorlar mavi ve sarı ışık geldi, yetersiz",0,0,1,1,0
+659,3-urun ufak bi sey olmasina ragmen gereksiz pahali haberiniz  olsun,0,0,1,1,0
+680,arkadaşlar öncelikle iyi günler dilerim.2 gün kadar önce siparişini verdim bugün elime geçti izlenimlerimi ve değerlendirmelerimi paylaşacağım.ürün altına yapılan tüm yorumları okuyarak almış ve pc konusunda acemi olmayan biriyim.ama şunu belirteceğim en başta ekran kartı 740 m değil 740 mx olarak geliyor (daha iyisi) windows 10 home işletim sistemi kurulu halde geliyor ürünüm siyah renkte geldi 7. nesil i5 işlemciye sahip u serisi 2 usb girişi bulunmakta klavyedeki tuşlar biraz aralıklı fakat basması yumuşak ve narin pc dilinden anlarsan gayet güzel bir pc fakat bazı arkadaşlar yavaşlıktan şikayet etmişler şunuda unutmamak gerekki bir pcnin yavaşlığı hızlılığı sadece ram işlemci vb ile bitmiyor biliyorsunuz ki içerisine kurulan programlar zamanla pcyi yavaşlatabilir açılış etkisi yüksek olanlar özellikle o yüzden biraz oyun oynayayım biraz işime bakayım derseniz tavsiye ederim gayet şık tasarlanmış yorumlara aldanmayın office 365 içinde geldi pcmin kullanmaya başladım sesi gayet gür ve net eski pclerdekinden bariz şekilde farklı diğer arkadaşlar ne aradı ne umdu bilmiyorum fakat gerçekler bu yönde aldırış etmeyin fazla olumsuzluğu henüz gözüme çarpmadı her yanını inceledim,1,1,1,0,0
+750,2gun oldu lastikler bora aracima taktirdim cok guzel.tavsiye ederim.tsk.hepsiburada,1,1,1,0,0
+786,aldığım gün hortum başlığının olduğu kısımdan sıyrıldı ve çıktı. kullanılmaz şekilde. musluga takılan kısmındanda hep su sızdı,0,0,1,1,0
+802,bu fiyata cok iyi fakat litre olcumu yapmadigini bilseydim bir kez daha dusunurdum. hassas tatifler uygulamak isteyenler biraz daha iyi bisey almali bence...,0,0,1,1,0
+824,"aldım kutusunu açtım, ilk çalıştırdım şırıl şırıl su akıtıyor.",0,0,1,1,0
+848,sıkıntı yok teslim aldık,1,1,1,0,0
+854,konu başlıkları güzel ama çok yüzeysel. sebep var ama sonuca ulaşma yollarına ustun körü yer verilmiş. okunabilir tabiki ama daha güzel kitaplarda mevcut. kargo hızı için ise teşekkürler hb.,0,0,1,1,0
+859,"ürün başarılı, kampanyada güzel olunca, almamak olmazdı.",1,1,1,0,0
+864,ürün kaliteli güzel gözüküyo kullandıkça kalitesini anlıyacağım.,1,1,1,0,0
+870,günde iki kez kullandım. benm yüzü kuru olmasına rağmen bir sürü sivilce yaptı. biraz yağlı heralde. kullanacaklara bebekler için olanı öneriyorum.,0,0,1,1,0
+871,kutulusuna bosuna fazla para vermeyin,1,1,1,0,0
+874,1. kuru zemin için performansı ortalama lastik düzeyinde.,0,0,1,1,0
+882,ekran cozunurlugu fotograf kalitesi eksileri,1,1,1,0,0
+889,çekiş gücü ve ses seviyesi çok yüksek.,0,0,1,1,0
+919,"tavada ne pişirirseniz pişirin çok çok az yağ istiyor. i̇lk olarak köfte yaptım gayet güzel oldu. yapışmıyor, çabuk pişiyor fakat tam olarak ızgara tadında olmuyor. tek olumsuzluk denilebilecek şey içinde az et varsa döndürüp kapağı açıldığında monte yerlerinden ocağa yağ akıyor bu yüzden hem yağı çok az koymak gerekiyor hem de içi tam doluysa çevirmek mantıklı oluyor. tavsiye ederim et ve balık ürünleri ürünleri için gayet kullanışlı bir ürün.",1,1,1,0,0
+946,"fotodakini değil siyahını gönderdiler. ürünü şarjlı traş makinelerinin bataryasının bittiği zamanlarda kurtarıcı olarak aldım, işe yarıyor, tak çalıştır. şarj sorunu yok. bu fiyata almadığına değmez :)",1,1,1,0,0
+959,arkadaşlar elastik yapısı sayesinde güzel bir şekilde sarıyor aşılı bölgeyi..su veya hava almasının imkanı yok iyi bir şekilde sararsanız..ben memnun kaldım..en az 200-300 tane aşı yaparsınız bu aşı bağıyla..,1,1,1,0,0
+963,gorugun en kotu urunlerden biri,0,0,1,1,0
+965,fiyat performans idare eder.küçük pratik...,1,1,1,0,0
+974,kaydırmaz özelliği iyi. fare atlama felanda yapmıyor.koku yok. alınır..,1,1,1,0,0
+1000,2 yıl içerisinde 3 kez servise götürdüm ve hala aynı sorunları devam ediyor. başka bir ütü deneyin yoksa pişman olursunuz.,0,0,1,1,0
+1006,aldigim urunden gayet cok memnunum tesekur ederim size,1,1,1,0,0
+1028,"daha kalitelisi vardir ancak gonderim hizli oldu, rahat, şik bir kask, fiyatina gore yeterli bence",1,1,1,0,0
+1038,"kompresör çalışrken sesli,onun dışında sıkıntı yok.tavsiye ederim.yalnız ürünün garanti belgesi gönderilmemiş.umarım (hepsiburada)yetkilileri garanti belgesini en kısa zamanda göndereceklerdir.",1,1,1,0,0
+1056,yaklaşık 1 aydır kullanıyorum bu zamana kadar karda ve buzda test etmek için yorum yazmadım. çok soğuklarda ıslak kuru zeminde gayet başarılı bi lastik. karda performansı son derece iyi. yaklaşık 30 cm karda hiç bi sıkıntı yaşamadan yola tutundu yani karlı bi yolda zincire falan kesinlikle ihtiyaç yok. hafif buzlu yolda yokuş yukarı denedim rahatlıkla kalktı araba ve yola devam etti yokuş aşağı buzda frene sert bastığımda biraz kayma yaptı o da gayet normal buz çünkü. yani sonuç olarak kış lastiğinden beklediğiniz herşeyi veriyo bu lastikler. aynı işlem için yaklaşık iki katı para vermeye gerek yok bence.,1,1,1,0,0
+1057,birkaç foto çektim kamerasıda iyi sayılır.,1,1,1,0,0
+1065,kesinlikle yapışmıyor. krep de mücver de yaptım; çok iyi. ama ocak üzerinde emanet duruyor; her an devrilebilir. dikkatli yerleştirilmeli ve tutulmalı. sapının çıkıyor olması iyi düşünülmüş. bi yerlere sığdırmakta zorlanmıyorum,1,1,1,0,0
+1104,dizimde varolan sporcu sakatlığı sonucunda çok fazla ağrı çekmekteydim. bu ürün elime geçtikten sonra ilk maçımda çok faydasını gördüm. maç boyunca dizimde en ufak bir zorlanma hissetmedim. ayrıca konforlu bir ürün varlığı herhangi bir rahatsızlık vermemekte. teşekkür ederim.,1,1,1,0,0
+1107,ilk izlenimim tv gayet guzel,1,1,1,0,0
+1113,"bu ürüne gelince önce bir adet aldım bu fiyata orjinal olmaz diye çünkü apple storde 0.5 m si 89 tl, 2 m olanı 129 tl. kullandığım orjinal 3 adet lightining eskidi özellikle lightining uçundaki kablosu soyuldu. i̇lk ürün geldikten sonra inanamadım tamamen orjinal duruyor ve bence orjinal. araba ve pc de denedim hiç bir sorun yok. 3 tane daha aldım. kaldı ise hemen alın kalmadı ise geçmiş olsun. bu fiyata bu ürün çok iyi. önce satıcıya teşekkür ediyorum. sonra bu kadar yazıdan sonra 1 ürün bedava bekliyorum. bu yazıyı yazmamım asıl nedeni çakma ürünlerin arabada yangın çıkaracak kadar tehlike yaratabileceğini farketmem.",1,1,1,0,0
+1114,"aydınlatma gücü gayet iyi, tasarruflu ampullerden 3-4 kat daha az yakıyor. daha dayanıklı ve uzun ömürlü.",1,1,1,0,0
+1171,pelikan ismini dünyaya tanıtmış bir markadır keşke siyahıda olsaydı daha güzel olurdu ama maviside güzel kısaca pelikan farkı. hemen kendini gösteriyor tavsiye ederim,1,1,1,0,0
+1179,"daha öncede aynı markayı kullanmıştım.yorumları okuyarak tercih ettim.kullandıktan sonra doğru tercih olduğunu anladım.hızı çok iyi,şarjı yeterli 1-1,5 saat gidiyor.üzerinde ışık baya işe yarıyor.isınma problemi de yok.",1,1,1,0,0
+1227,5+ modelini alırken 5 den büyük olacağını sanmıştım ama yanılmışım . o kadar da farkı yok ebat olarak . bence emiciliğinin de 5 ten farkı yok. ama genel olarak bakıldığında prima kalitesini görüyorsunuz . piyasaya göre fiyatı da gayet iyi,0,0,1,1,0
+1253,"yazıcımda ve okulumuzdaki fotokopi makinalarında sorunsuz kullanıyorum, yapışma olmuyor, kağıtların kesimi güzel, yazması sorunsunz. ve en güzeli evinize kadar geliyor. fiyat konusunda bu kalite için fazlasıyla ucuz. ambalajı plastik olduğu için dayanıksız oluyor ama bir defa açtığımda kısa sürede bitirdiğim için pek önemli değil bana göre. çekimden alın, fiyatı güzel kalitesi iyi",1,1,1,0,0
+1267,bu kadar güzel koku cağını beklemiyordum  gerçekten parasını hak eden bir parfüm,1,1,1,0,0
+1271,bazı olumsuz yorumlar yüzünden çok tereddütte kaldım. s4  5s yoksa s4 mini mi alsam diye çok düşündüm. s4 ler çok büyük geldi gözüme tek el telefonu değildi. 5s lerde kişiselleştirme ve sınırlamalar hoşuma gitmedi. s4 mininin fiyatının indirime girmesiyle bir heves aldım. diğer bazı arkadaşların batarya konusundaki memnuniyetsizliğini anlayamadım. telefon normal günlük kullanımda gayet 24 saat gidiyor. hatta bu süreyi aşabilir de ama ben beklemeden şarja takıyorum. dokunmatik hassasiyeti süper. fotoğraf çekimleri tatmin edici. wifi bağlantısı sorunsuz. kesinlikle öneriyorum.,1,1,1,0,0
+1282,"sonuçta ürün orijinal geldi. yorumlarda şarj az tutuyor falan diyenler var, ne bekliyordunuz ki sanki sıfır aldığınız telefonların i̇çindeki bataryalar 2 gün gidiyor da?.. :)",1,1,1,0,0
+1284,ürün kullanım olarak kolay yalnız ürün kendiliğinden yamuk ayarlı gelmiş olacak ki kesimleri eğimli olarak yapmakta. onun dışında işlev bakımından başarılı bir ürün,0,0,1,1,0
+1312,"küçük top patlak geldi,büyük top da çok fazla esniyor..diğer ürünler iyi",0,0,1,1,0
+1317,şarjı çok kısa süre gidiyor.,0,0,1,1,0
+1329,kenarlarda egılme bukulme yok. gercekten guzel urun.,1,1,1,0,0
+1336,ye olarak aldım zincir çok kısa geldi bana boyuna yapışacak gibi 40 cm zincir. bilmiyorum verdiğim kişide nasıl olacak . ceylan gibi boyun lazım :),0,0,1,1,0
+1354,yaklaşık 2 yıldır kullandığım çok başarılı bir ürün. 18-135 stm lens tercih edilmeli,1,1,1,0,0
+1355,tek sıkıntısı baş aşağı sıkılamıyor ve içinden uzatma çubuğu çıkmıyor.,1,1,1,0,0
+1361,bu tip ürünlerden kullanmayarak tasarrufu baştan yapmış olursunuz...,0,0,1,1,0
+1377,kitap baslangic olarak merak uyandirici fakat ikinci kisimda yogun betimlemeler ayrintilar beni biraz rahatsiz etti acikcasi.yorumlara bakip almistim.bence fazla puan alan bir kitap..,0,0,1,1,0
+1421,önce hepsi burada coma tşk.siparişi verdikten sonra anbean takip ettim elime dedikleri sürede ulaştı.ürüne gelince görselde normal boyutta bir saat olarak görünüyor ama bi aldım oyuncak gibi ben beğenmedim 14 yaşındaki oğluma verdim görsel olarak gzl değil başka bir sorun yok tabi bence iyi alışverişler,0,0,1,1,0
+1431,"ürünü 2-3 haftadır kullanıyorum. cama gayet iyi yapışıyor. bazen bozuk yollardan gitmeme rağmen hiç düşmedi, sarsılmıyor, ses yapmıyor. telefonu da iyi kavrıyor. memnunum.",1,1,1,0,0
+1450,esıme almıstım gercekten guzel bır parfüm,1,1,1,0,0
+1451,telefonla birlikte gelen android lollipop güncellemesini sakın yapmayın zira yaptıktan sonra 3g hızında internet diye birşey kalmıyor lenovo yazılım altyapısını tamamlamadığı için problem yaşayabilirsiniz onun dışında güzel telefon şarjı çok iyi gidiyor.,0,0,1,1,0
+1453,"daha önce (2 yıldan beri marka vermiyecem,) kullandığım adaptör le modemin yanında 2-3  ender olarak  4  diş alıyordum sinyalleri. bu durumda sayfaları açarken haliyle bi yavaşlava olabilir  diye  düşünüyordum. bu  ürün 24  saatte  elime geçti. eski adaptörü söktüm",1,1,1,0,0
+1465,overlocku biraz zayıf ve halıya göre parlak renk iple olması dışında güzel.,1,1,1,0,0
+1470,"daha önceleri en yakın rakibi olan markanın bir ürününü kullanmış hiç memnun kalmamıştım. çizik ve tahriş yüzünden de birdaha mı asla demiş olmama rağmen, jilet ve köpükle uğraşmaktan bıkıp yorumlara güvendim ve aldım. acemiliğim sebebiyle jilet ve köpükten daha uzun sürdü ilk traşım, ancak bukadar sürtünme ve uğraşmama rağmen ne bir çizik ne bir kızarıklık. cildim çok hassastır, bende bile tahriş yaratmadıysa gönül rahatlığıyla alıp kullanabilirsiniz. pişman olmayacaksınız, jilet ve köpükle geçen günlerime acıdım, meğer traş ne kadar rahat ve kolaymış. fiyat olarak hbdan daha hesaplısı yok",1,1,1,0,0
+1479,değişken uçlar çok kalitesiz ki bu fiyata daha iyisi olmazdı zaten. tşk hb.,0,0,1,1,0
+1493,hemen noktalari almio bir sure bekliorum,0,0,1,1,0
+1500,"telefonu alır almaz ilk başta 10 saat şarjda tuttum. ardından bütün güncellemeleri yaptım. 16gb dahili hafıza eğer müzik indirmiyorsanız uygulamalar için gayet yeterli. arka kapağını açması biraz zahmetli ancak ilk başta sim kartları taktıktan sonra sık sık açma ihtiyacı olmayacağından çok da önemli değil bu konu. daha önce 2 sim kartlı telefon kullanmamışlar için whatsapp, facebook gibi uygulamaları her iki hattınızda ayrı ayrı hesaplarla kullanmanız mümkün, bunun için uygulamalar mevcut. şarjı gayet uzun dayanıyor. sürekli video, oyun oynanmayacaksa 2 gün gidiyor.",1,1,1,0,0
+1514,okuma hızı 100mb/s olmasina ragmen yazma hizi 10mb/s yi gecmiyor bunu bilerek alirsaniz baska bi sorunu yok gayet basarili,1,1,1,0,0
+1534,ürün çok gecikmeli olarak elime ulaştı.çok şirin ve küçük duruyor.rahatsız edecek derecede ses çıkarmıyor bence.10 dakika içerisinde 15-20 m2 odanın soğuğunu kırıyor.fakat nekadar uzun çalıştırırsanız çalıştırın terletecek kadar ısıtmıyor.oyüzden kısa süreli çalıştırıyorum.henüz elektrik faturası gelmedi ama çok yakacağını düşünmüyorum.,1,1,1,0,0
+1535,i̇lk defa şarjlı traş makinası aldım kaliteli iyi bir şey olsun diye bu ürünü seçtim fakat boyun bölgesini hiç kesmiyor 50 defa üstünden geçiyorum almıyor yüz üzerindede kıllar bırakıyor bu ürünü kullandıktan sonra ayrıca jiletle boyun bölgesini ve yüzde alamadığı kılları alıyorum,0,0,1,1,0
+1565,mükemmel olduğu söylenemez ama fiyatına göre oldukça iyi. ben mağaralarda kullanacağım için yürüdükçe dizlik aşağıya inecek gibi. motor kullananlar sürekli motorda olacağı için böyle bir sorun olmaz tabi...,0,0,1,1,0
+1596,ürünü bilen biliyor bunun için söylenecek birşey yok. başka yerde bu fiyat ve bu kadar hızlı kargo yok.,1,1,1,0,0
+1603,küçük çocuklara çalışma masası olur.,0,0,1,1,0
+1615,ürün elime geçeli 1 hafta oldu. fiyatına göre muhteşem bi ürün. elinize aldığınızda duruşuyla philips kalitesinin hissettiriyor zaten. ancak hava akımı gücü biraz zayıf.,1,1,1,0,0
+1624,söylemelerine göre iphone 6s özelliklerinde bi telefon fakat iphone 5s ayarında. sonuç olarak iphone kalitesi almanızı tavsiye ederim.,1,1,1,0,0
+1687,araştırmalarım sonucunda rowenta ro6221 almaya karar verdim ürünü teslim aldığım gibi denedim önceki süpürgem sadece halının üzerini süpürüyormuş  ro6221 halının derinliklerine kadar temizliyor kesinlikle tavsiye ederim inşallah uzun süre sorunsuz kullanırım.hepsi̇ burada  sizede ayrıca teşekkürler,1,1,1,0,0
+1694,kargom 1 haftada ancak geldi.,0,0,1,1,0
+1702,ince sakallar için ideal olabilir. benim ince sakallarımı aldı kalınlar yüzümde kaldı yine jiletle aldım onları.,0,0,1,1,0
+1738,"mama sahane, kopegim mamayi gordukce zipliyor :)",1,1,1,0,0
+1740,çok paranız varsa süper bir makine alabilirsiniz ancak 500ytlye kadar alabileceğiniz standart ürünlrin performansı emin olun bu makineden iyi olmayacaktır. fiyatının iki katını hakediyor yani. annemde kuru süpürgesi bende halı yıkamalı modeli var. kaçırmamak gerekir.,1,1,1,0,0
+1751,daha önce 5 tane satın alıp iade etmiştim kimisi ses çıkarıyordu kimisi üflemiyordu bile. ürün gerçekten inanılmaz performanslı ve kullanışlı fakat bilgisayarını ortalamanın üzerinde ağırsa ne kadar kullanışlı olur bilemem. ama ses 0 ve o kadar güçlü ki hayran kalacaksınız. 1 haftadır kullanıyorum gece gündüz devam ediyor kesinlikle tavsiye ederim. kargoda anında verildi ertesi gün teslim aldım o olay tamamen doğru yani,1,1,1,0,0
+1786,"kapakla firin arasindaki̇ lasti̇k fi̇ti̇l i̇lk kullanimda eli̇mde kaldi, çünki̇ o kadar basi̇t bi̇r şeki̇lde yapilmiş ki̇ anlatamam şöyle köşelerde bi̇rleşme noktalari var ve yapiştirici i̇le onlara tutturulmuş. satana kadar dayansin yeter di̇ye düşünmüşler sanirim",0,0,1,1,0
+1796,puan vermek gerekırse 100 üzerinden 60 verilebilir.,0,0,1,1,0
+1797,öncelikle hepsiburadaya hızlı teslimat için teşekkür ederim...12.09.2015 tarihinde sipariş verdim 15.09.2015 tarihinde teslim ettiler..ilçede bulunmam nedeniyle ( horoz kargo ) ...iki eleman 6.kata taşıdılar...,1,1,1,0,0
+1813,ergonomik bir tasarım.,1,1,1,0,0
+1814,ürün elime bügün ulaştı. beğenmeyenler kesinlikle yanlış kullanıyor. araç soğuken kullanırsanız  umduğunuz sonucu alırsınız. motora sıktıktan 15 dk sonra bi bezle temizleyin ilk günki gibi bi görünüm sağlarsınız.,1,1,1,0,0
+1827,6 7 aydir kullanıyorum oldukca memnunum sadece eksi olarak alarmi ayarlarken ekran isigi kapaniyor.,1,1,1,0,0
+1843,"eğer benim gibi jiletsiz makina ile traş oluyorsanız bir üst model olan ürünü tavsiye ederim çünkü onun 0,5 mm kesme özelliği var.bu üründe sakalı gayet güzel kısaltıyor ancak diğer üründeki performans çok daha iyi.",1,1,1,0,0
+1844,oyunu aldım üzerinde türkce yazmasına rağmen türkce cikmadi oyun ingilizce onun dışında oyun guzel zevkle oynanır arşivde bulunması gereken oyunlardan biri bence,0,0,1,1,0
+1847,çok donuyor,0,0,1,1,0
+1849,makina biraz küçük ayrıca malzemesi çok dayanaklı durmuyor ama ısıtması güzel. küçük aileler için kullanışlı olabilir,0,0,1,1,0
+1853,tost makinesini 3 aydır kullanıyorum.tost yapmak için almıştım fakat tavuk yapmayı denedim.çok güzel oldu.izgaradaki lezzeti yalkalayabildim.almadan önce çok araştırma yapmıştım.şimdi doğru seçim yaptığımı daha iyi anlıyorum.,1,1,1,0,0
+1865,"ben memnunum. tavsiye konusunda fikrim yok. ama ben pişman değilim. aracım eski, yıpranan kısımları kısmen kapattığına inanıyorum. arabam daha sessiz çalışıyor. motoru da zorlanmıyor. nedeni mobil1 yağı ile bor power kullandığım için de olabilir.",1,1,1,0,0
+1874,şarj süresi inanılmaz kötü gidiyor. telefonla görüşemiyorsunuz. ama onun dışında bu fiyata araçta sadece ses gönderimi için kullanılacaksa ve sürekli şarj da bırakabilecekseniz alınabilir..,0,0,1,1,0
+1888,"ürün kullanışlı.ancak benim gibi çevirdiğinizde prizi kullanacağınızı zannetmeyin, tamamen kapatıyor",1,1,1,0,0
+1896,kitap başta çok güzel gidiyordu normalde tam tersi olur ya. ben sonlara doğru sıkılmaya başladım. ne oldu diye merak ederek değil de bitirmek için okudum. ama herkesin bakış açısı farklıdır tabi... keyifli okumalar...,0,0,1,1,0
+1925,2-çok hafif,1,1,1,0,0
+1931,"ama genel olarak bu fiyatlara daha iyisini bulmak zor,samsung da olsa alınabilir bir telefon olduğunu belirtmek isterim.",0,0,1,1,0
+1932,"yazması çok rahat bir kalem, ancak imza dışında kullanılması biraz zor. çünkü 1.0mm ucu normal yazım için çok kalın ve fazla mürekkep veriyor",0,0,1,1,0
+1940,fiyatına göre  cok uygun ürün,1,1,1,0,0
+1961,"yazıcıda buruşma yapmıyor, kağıt kalitesi çok güzel, daha pahalı kağıtların yerine tercih edilir bir ürün, memnun kaldım ürün de çok kısa sürede geldi",1,1,1,0,0
+1967,özet: etkisi dışında her şeyi güzel,0,0,1,1,0
+1968,selamlar. nicd pilli einhell şarjlı matkabımın pilleri birince kalitesine güvendiğim einhellin bu ürününü tereddğtsüz aldım ve beni yanıltmadı. 2. pilinin olması ayrı bir artı. herkese tavsiye ediyorum.,1,1,1,0,0
+1982,"ürün tam bir ayda ulastı elime. kalitesi umduğum gibi, fiyatına göre iyi.",0,0,1,1,0
