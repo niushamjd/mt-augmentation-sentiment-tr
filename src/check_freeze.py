@@ -24,8 +24,8 @@ SPM_MODEL = "data/spm/tr_sp8k.model"
 REAL = {"real_train.tsv": 2000, "real_dev.tsv": 1000, "real_test.tsv": 2000}
 SYNTH = ["synth_all.tsv", "synth_clean.tsv", "synth_matched.tsv",
          "synth_rejected.tsv", "synth_all_early.tsv",
-         "synth_1x.tsv", "synth_5x.tsv",  # RQ3 nested subsamples of synth_all.tsv
-         "synth_all_pretrained.tsv", "synth_clean_pretrained.tsv"]  # RQ4 pretrained-MT tier
+         "synth_1x.tsv", "synth_5x.tsv",                       # RQ3 nested subsets
+         "synth_all_pretrained.tsv", "synth_clean_pretrained.tsv"]  # RQ4 extension
 MAX_SYNTH_UNK_RATE = 0.005   # 0.5% of pieces; real dev is ~0
 
 errors, warnings = [], []
@@ -132,6 +132,18 @@ if "synth_clean.tsv" in synth and "synth_all.tsv" in synth:
     extra = set(synth["synth_clean.tsv"]["text"]) - set(synth["synth_all.tsv"]["text"])
     if extra:
         errors.append(f"synth_clean.tsv has {len(extra)} texts that are not in synth_all.tsv")
+
+# RQ3: nested subsets, 1x inside 5x inside synth_all, with the right sizes
+sizes = {"synth_1x.tsv": 2000, "synth_5x.tsv": 10000}
+for name, n in sizes.items():
+    if name in synth and len(synth[name]) != n:
+        errors.append(f"{name} has {len(synth[name])} rows, expected {n}")
+if "synth_1x.tsv" in synth and "synth_5x.tsv" in synth:
+    if not set(synth["synth_1x.tsv"]["text"]) <= set(synth["synth_5x.tsv"]["text"]):
+        errors.append("synth_1x.tsv is not a subset of synth_5x.tsv")
+if "synth_5x.tsv" in synth and "synth_all.tsv" in synth:
+    if not set(synth["synth_5x.tsv"]["text"]) <= set(synth["synth_all.tsv"]["text"]):
+        errors.append("synth_5x.tsv is not a subset of synth_all.tsv")
 
 # ---------- read-aloud sample ----------
 if "synth_all.tsv" in synth:
