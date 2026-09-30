@@ -65,9 +65,9 @@ What each of us is training on — matters for how ambitious MT/classifier train
 
 | Person | Machine | GPU | Notes |
 |---|---|---|---|
-| Niyousha | Apple M1 Pro, 16GB RAM | none usable | JoeyNMT/torch==2.1.2 has no MPS (Apple GPU) support here — everything trains on CPU. |
-| Ipek | *TODO* | *TODO* | |
-| Buse | *TODO* | *TODO* | |
+| Niyousha | Apple M1 Pro, 16GB RAM | MPS (classifiers only) | JoeyNMT/torch==2.1.2 has no MPS (Apple GPU) support, so anything using JoeyNMT trains on CPU regardless of machine; BERT fine-tuning and the pretrained-MT translation (both plain `transformers`/PyTorch, not JoeyNMT) ran on MPS here. |
+| Ipek | *TODO: fill in before submission* | *TODO* | LSTM classifier trained on CPU (see `src/train_lstm.py`'s `--device` default). |
+| Buse | MacBook Air, Apple Silicon | MPS (classifier only) | MT training (`transformer_en_tr_v2.yaml`) and all translation ran on CPU, same JoeyNMT/MPS limitation as above. Transformer classifier trained on MPS. |
 
 ## MT pipeline (EN→TR)
 
@@ -84,15 +84,41 @@ Parallel corpus: OPUS OpenSubtitles v2018 (en-tr), downloaded directly from OPUS
 ```
    `--max-raw-lines` stream-subsamples before filtering, since the raw file is ~45M line pairs (~1.5GB) — far more than needed and too large to safely load whole into memory on a laptop. Writes `data/mt/opus_en_tr/{train,dev,test}.{en,tr}`.
 
-2. Build the joint SentencePiece **BPE** vocab (8k merges, trained on the train split only, per the project spec):
-```bash
-   python src/build_mt_vocab.py
-```
-   This does **not** use `joeynmt/scripts/build_vocab.py`: that script's dataset-subsampling path is broken in the installed joeynmt==2.3.0 (calls a `sample_random_subset()` method that doesn't exist on `BaseDataset`, and its `get_list()` does an O(n) `idx in self.indices` check per row regardless — O(n²) over a large corpus, effectively hangs). `src/build_mt_vocab.py` calls `sentencepiece` directly instead.
+2. **Superseded, do not use:** `src/build_mt_vocab.py` was written for an earlier MT
+   run and still does Moses pretokenisation + `.lower()` before training the
+   SentencePiece vocab, to match that run's (also superseded) `lowercase: True`
+   JoeyNMT config. If the *model* is later trained on raw cased text (as the
+   current config does) while the *vocab* was built this way, every capital letter
+   and apostrophe becomes `<unk>` -- this is exactly what happened in MT run 1 and
+   is why its translations came out as mostly `⁇` characters. Use step 2 below
+   instead, which trains the vocab on the same raw cased text the model actually
+   sees.
 
-3. Train:
+2. Build the joint SentencePiece **BPE** vocab (8k merges, character_coverage 1.0,
+   trained on the train split only, per the project spec) with the corrected script:
 ```bash
-   cd joeynmt
-   python -m joeynmt train ../configs/en_tr_opus.yaml
+   python src/train_mt_spm.py
 ```
-   `use_cuda: False` since JoeyNMT/torch 2.1.2 has no MPS support here, so this trains on CPU. See the config's header comment for how to capture the `mt_early`/`mt_final` checkpoints the project needs for RQ4 — JoeyNMT only keeps checkpoints that beat the previous best, so this needs a deliberate manual step once training finishes.
+   This must end with `OK, wrote ...` -- it self-checks by encoding a cased test
+   sentence and asserting zero `<unk>` pieces before declaring success. If it
+   doesn't, stop and don't train; something about the training text changed.
+
+3. Train (this is MT run 2, `transformer_en_tr_v2.yaml`; see the file's header
+   comment for exactly how it differs from the superseded `transformer_en_tr.yaml`):
+```bash
+   python -m joeynmt train configs/transformer_en_tr_v2.yaml
+```
+   `use_cuda: True` falls back to CPU automatically when no GPU is found, so this
+   trains on CPU on a laptop without MPS. JoeyNMT only saves a checkpoint when it
+   beats the previous best (`keep_best_ckpts: -1` keeps every one of those), so
+   after training finishes, check `models/transformer_en_tr_v2/validations.txt` for
+   the step-by-step BLEU/chrF curve and copy out two checkpoints:
+   - `mt_final`: the best checkpoint (highest dev BLEU/chrF).
+   - `mt_early`: the *latest* checkpoint whose dev chrF is at least 6 points below
+     `mt_final`'s, chosen *before* looking at any translations, so quality was not
+     cherry-picked. For our actual run this was step 6000 vs step 20000 for
+     `mt_final` -- don't assume those step numbers on a re-run with different data.
+```bash
+   cp models/transformer_en_tr_v2/<mt_final_step>.ckpt models/run2_mt_final.ckpt
+   cp models/transformer_en_tr_v2/<mt_early_step>.ckpt models/run2_mt_early.ckpt
+```
