@@ -66,7 +66,7 @@ What each of us is training on — matters for how ambitious MT/classifier train
 | Person | Machine | GPU | Notes |
 |---|---|---|---|
 | Niyousha | Apple M1 Pro, 16GB RAM | MPS (classifiers only) | JoeyNMT/torch==2.1.2 has no MPS (Apple GPU) support, so anything using JoeyNMT trains on CPU regardless of machine; BERT fine-tuning and the pretrained-MT translation (both plain `transformers`/PyTorch, not JoeyNMT) ran on MPS here. |
-| Ipek | *TODO: fill in before submission* | *TODO* | LSTM classifier trained on CPU (see `src/train_lstm.py`'s `--device` default). |
+| Ipek | MacBook Pro, Intel | None| JoeyNMT MT  and LSTM classifier trained on CPU. |
 | Buse | MacBook Air, Apple Silicon | MPS (classifier only) | MT training (`transformer_en_tr_v2.yaml`) and all translation ran on CPU, same JoeyNMT/MPS limitation as above. Transformer classifier trained on MPS. |
 
 ## MT pipeline (EN→TR)
